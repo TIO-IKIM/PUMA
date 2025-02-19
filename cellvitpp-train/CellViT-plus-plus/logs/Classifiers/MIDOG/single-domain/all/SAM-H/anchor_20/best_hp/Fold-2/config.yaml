@@ -1,0 +1,47 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 19
+gpu: 0
+data:
+  dataset: MIDOG
+  dataset_path: midog-volume/data
+  train_filelist: midog-volume/split/single-domain/all/train_2.csv
+  val_filelist: midog-volume/split/single-domain/all/valid_2.csv
+  normalize_stains_train: false
+  normalize_stains_val: false
+  label_map:
+    0: Mitotic
+    1: Hard-Negative
+  num_classes: 2
+  gt_json_path: midog-volume/data/gt_dataset.json
+  cell_graph_path: midog-data-volume/SAM-H
+  x_valid_path: midog-volume/data/datasets_xvalidation.csv
+cellvit_path: ./checkpoints/CellViT-SAM-H-x40-AMP.pth
+model:
+  hidden_dim: 512
+training:
+  anchor_cells: 20
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 100
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 1.3720338613429816e-05
+    weight_decay: 0.0009752830235894076
+  early_stopping_patience: 5
+  weighted_sampling: true
+  scheduler:
+    scheduler_type: exponential
+  weight_factor: 1
+  mixed_precision: true
+  eval_every: 1

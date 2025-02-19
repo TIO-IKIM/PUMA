@@ -1,0 +1,1198 @@
+[37m2024-09-11 05:38:02,967 [INFO] - Instantiated Logger. WandB init and config update finished.
+[37m2024-09-11 05:38:02,968 [INFO] - Run ist stored here: /cellvit-data/cellvit/logs_paper/Head-Evaluation/MIDOG/single-domain/all/SAM-H/anchor_200/best_hp/2024-09-11T053754_CellViT-SAM-H-Classifier-Head-Fold-1
+[37m2024-09-11 05:38:03,029 [INFO] - Cuda devices: [<torch.cuda.device object at 0x7fadc104f0a0>]
+[37m2024-09-11 05:38:03,030 [INFO] - Using GPU: cuda:0
+[37m2024-09-11 05:38:03,035 [INFO] - Using device: cuda:0
+[37m2024-09-11 05:38:03,065 [INFO] - Loss function:
+[37m2024-09-11 05:38:03,066 [INFO] - CrossEntropyLoss()
+[37m2024-09-11 05:38:16,853 [INFO] - Loading checkpoint /cellvit-data./checkpoints/CellViT-SAM-H-x40-AMP.pth
+[37m2024-09-11 05:38:17,181 [INFO] - <All keys matched successfully>
+[37m2024-09-11 05:38:19,010 [INFO] -
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+LinearClassifier                         [1, 2]                    --
+├─Linear: 1-1                            [1, 512]                  655,872
+├─ReLU: 1-2                              [1, 512]                  --
+├─Dropout: 1-3                           [1, 512]                  --
+├─Linear: 1-4                            [1, 2]                    1,026
+==========================================================================================
+Total params: 656,898
+Trainable params: 656,898
+Non-trainable params: 0
+Total mult-adds (M): 0.66
+==========================================================================================
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.00
+Params size (MB): 2.63
+Estimated Total Size (MB): 2.64
+==========================================================================================
+[37m2024-09-11 05:38:19,013 [INFO] - Loaded AdamW Optimizer with following hyperparameters:
+[37m2024-09-11 05:38:19,018 [INFO] - {'betas': [0.85, 0.9], 'lr': 1.3720338613429816e-05, 'weight_decay': 0.0009752830235894076}
+[37m2024-09-11 05:38:19,023 [INFO] - Using early stopping with a range of 5 and maximize strategy
+[37m2024-09-11 05:38:20,056 [INFO] - Instantiate Trainer
+[37m2024-09-11 05:38:20,097 [INFO] - Calling Trainer Fit
+[37m2024-09-11 05:38:20,098 [INFO] - Dataset is cached after first epoch
+[37m2024-09-11 05:38:20,107 [INFO] - Starting training, total number of epochs: 100
+[37m2024-09-11 05:38:20,112 [INFO] - Epoch: 1/100
+[37m2024-09-11 05:38:20,118 [INFO] - Extracting training cells
+[37m2024-09-11 05:38:32,641 [INFO] - Num cells used: 1594
+[37m2024-09-11 05:38:37,684 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:38:43,828 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:38:50,464 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:38:56,089 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:39:01,050 [INFO] - Num cells used: 1597
+[37m2024-09-11 05:39:05,751 [INFO] - Num cells used: 1458
+[37m2024-09-11 05:39:10,671 [INFO] - Num cells used: 1579
+[37m2024-09-11 05:39:15,338 [INFO] - Num cells used: 1489
+[37m2024-09-11 05:39:20,362 [INFO] - Num cells used: 1596
+[37m2024-09-11 05:39:25,227 [INFO] - Num cells used: 1570
+[37m2024-09-11 05:39:30,596 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:39:35,816 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:39:40,315 [INFO] - Num cells used: 1410
+[37m2024-09-11 05:39:44,407 [INFO] - Num cells used: 1246
+[37m2024-09-11 05:39:49,425 [INFO] - Num cells used: 1516
+[37m2024-09-11 05:39:54,608 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:39:59,950 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:40:05,050 [INFO] - Num cells used: 1487
+[37m2024-09-11 05:40:09,447 [INFO] - Num cells used: 1347
+[37m2024-09-11 05:40:14,109 [INFO] - Num cells used: 1541
+[37m2024-09-11 05:40:19,281 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:40:25,178 [INFO] - Num cells used: 1630
+[37m2024-09-11 05:40:31,142 [INFO] - Num cells used: 1633
+[37m2024-09-11 05:40:37,102 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:40:42,601 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:40:48,076 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:40:53,424 [INFO] - Num cells used: 1597
+[37m2024-09-11 05:40:58,373 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:41:03,426 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:41:09,659 [INFO] - Num cells used: 1623
+[37m2024-09-11 05:41:15,542 [INFO] - Num cells used: 1629
+[37m2024-09-11 05:41:21,809 [INFO] - Num cells used: 1633
+[37m2024-09-11 05:41:27,844 [INFO] - Num cells used: 1626
+[37m2024-09-11 05:41:33,792 [INFO] - Num cells used: 1623
+[37m2024-09-11 05:41:39,241 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:41:44,028 [INFO] - Num cells used: 1580
+[37m2024-09-11 05:41:48,742 [INFO] - Num cells used: 1600
+[37m2024-09-11 05:41:54,092 [INFO] - Num cells used: 1602
+[37m2024-09-11 05:41:59,602 [INFO] - Num cells used: 1621
+[37m2024-09-11 05:42:05,450 [INFO] - Num cells used: 1621
+[37m2024-09-11 05:42:10,661 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:42:15,936 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:42:20,708 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:42:25,743 [INFO] - Num cells used: 1598
+[37m2024-09-11 05:42:30,137 [INFO] - Num cells used: 1397
+[37m2024-09-11 05:42:34,573 [INFO] - Num cells used: 1452
+[37m2024-09-11 05:42:39,838 [INFO] - Num cells used: 1597
+[37m2024-09-11 05:42:45,916 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:42:50,579 [INFO] - Num cells used: 1593
+[37m2024-09-11 05:42:55,351 [INFO] - Num cells used: 1534
+[37m2024-09-11 05:43:01,670 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:43:08,023 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:43:13,218 [INFO] - Num cells used: 1524
+[37m2024-09-11 05:43:17,466 [INFO] - Num cells used: 1277
+[37m2024-09-11 05:43:22,330 [INFO] - Num cells used: 1583
+[37m2024-09-11 05:43:27,645 [INFO] - Num cells used: 1632
+[37m2024-09-11 05:43:32,519 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:43:37,820 [INFO] - Num cells used: 1626
+[37m2024-09-11 05:43:42,775 [INFO] - Num cells used: 1576
+[37m2024-09-11 05:43:48,371 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:43:54,015 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:43:59,623 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:44:05,118 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:44:08,589 [INFO] - Num cells used: 795
+[37m2024-09-11 05:44:13,813 [INFO] - Num cells used: 1447
+[37m2024-09-11 05:44:19,713 [INFO] - Num cells used: 1610
+[37m2024-09-11 05:44:25,485 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:44:30,157 [INFO] - Num cells used: 1594
+[37m2024-09-11 05:44:35,180 [INFO] - Num cells used: 1610
+[37m2024-09-11 05:44:40,091 [INFO] - Num cells used: 1583
+[37m2024-09-11 05:44:44,512 [INFO] - Num cells used: 1490
+[37m2024-09-11 05:44:49,424 [INFO] - Num cells used: 1442
+[37m2024-09-11 05:44:56,100 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:45:01,653 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:45:07,256 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:45:12,518 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:45:17,022 [INFO] - Num cells used: 1461
+[37m2024-09-11 05:45:21,493 [INFO] - Num cells used: 1481
+[37m2024-09-11 05:45:25,689 [INFO] - Num cells used: 1223
+[37m2024-09-11 05:45:31,648 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:45:37,485 [INFO] - Num cells used: 1610
+[37m2024-09-11 05:45:43,420 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:45:49,599 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:45:55,204 [INFO] - Num cells used: 1624
+[37m2024-09-11 05:46:01,255 [INFO] - Num cells used: 1626
+[37m2024-09-11 05:46:07,681 [INFO] - Num cells used: 1632
+[37m2024-09-11 05:46:13,971 [INFO] - Num cells used: 1632
+[37m2024-09-11 05:46:20,031 [INFO] - Num cells used: 1630
+[37m2024-09-11 05:46:25,202 [INFO] - Num cells used: 1601
+[37m2024-09-11 05:46:29,977 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:46:35,952 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:46:41,996 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:46:46,955 [INFO] - Num cells used: 1607
+[37m2024-09-11 05:46:51,508 [INFO] - Num cells used: 1489
+[37m2024-09-11 05:46:55,861 [INFO] - Num cells used: 1502
+[37m2024-09-11 05:47:00,587 [INFO] - Num cells used: 1586
+[37m2024-09-11 05:47:04,903 [INFO] - Num cells used: 1433
+[37m2024-09-11 05:47:09,543 [INFO] - Num cells used: 1585
+[37m2024-09-11 05:47:13,830 [INFO] - Num cells used: 1459
+[37m2024-09-11 05:47:18,006 [INFO] - Num cells used: 1313
+[37m2024-09-11 05:47:22,481 [INFO] - Num cells used: 1539
+[37m2024-09-11 05:47:27,526 [INFO] - Num cells used: 1584
+[37m2024-09-11 05:47:32,474 [INFO] - Num cells used: 1461
+[37m2024-09-11 05:47:37,960 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:47:43,293 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:47:48,731 [INFO] - Num cells used: 1568
+[37m2024-09-11 05:47:53,699 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:47:58,879 [INFO] - Num cells used: 1495
+[37m2024-09-11 05:48:03,176 [INFO] - Num cells used: 1386
+[37m2024-09-11 05:48:07,295 [INFO] - Num cells used: 1241
+[37m2024-09-11 05:48:13,046 [INFO] - Num cells used: 1555
+[37m2024-09-11 05:48:19,646 [INFO] - Num cells used: 1646
+[37m2024-09-11 05:48:27,197 [INFO] - Num cells used: 1652
+[37m2024-09-11 05:48:34,280 [INFO] - Num cells used: 1646
+[37m2024-09-11 05:48:41,435 [INFO] - Num cells used: 1645
+[37m2024-09-11 05:48:48,189 [INFO] - Num cells used: 1640
+[37m2024-09-11 05:48:55,359 [INFO] - Num cells used: 1635
+[37m2024-09-11 05:49:01,142 [INFO] - Num cells used: 1532
+[37m2024-09-11 05:49:05,523 [INFO] - Num cells used: 1380
+[37m2024-09-11 05:49:10,568 [INFO] - Num cells used: 1591
+[37m2024-09-11 05:49:16,584 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:49:22,620 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:49:27,488 [INFO] - Num cells used: 1598
+[37m2024-09-11 05:49:33,331 [INFO] - Num cells used: 1584
+[37m2024-09-11 05:49:38,648 [INFO] - Num cells used: 1533
+[37m2024-09-11 05:49:43,434 [INFO] - Num cells used: 1471
+[37m2024-09-11 05:49:48,669 [INFO] - Num cells used: 1589
+[37m2024-09-11 05:49:55,008 [INFO] - Num cells used: 1624
+[37m2024-09-11 05:50:01,187 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:50:07,141 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:50:13,321 [INFO] - Num cells used: 1619
+[37m2024-09-11 05:50:19,118 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:50:24,987 [INFO] - Num cells used: 1610
+[37m2024-09-11 05:50:30,770 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:50:35,420 [INFO] - Num cells used: 1474
+[37m2024-09-11 05:50:39,611 [INFO] - Num cells used: 1357
+[37m2024-09-11 05:50:45,583 [INFO] - Num cells used: 1595
+[37m2024-09-11 05:50:51,495 [INFO] - Num cells used: 1620
+[37m2024-09-11 05:50:57,766 [INFO] - Num cells used: 1620
+[37m2024-09-11 05:51:04,771 [INFO] - Num cells used: 1631
+[37m2024-09-11 05:51:09,709 [INFO] - Num cells used: 1487
+[37m2024-09-11 05:51:14,464 [INFO] - Num cells used: 1544
+[37m2024-09-11 05:51:19,045 [INFO] - Num cells used: 1553
+[37m2024-09-11 05:51:23,716 [INFO] - Num cells used: 1564
+[37m2024-09-11 05:51:28,147 [INFO] - Num cells used: 1563
+[37m2024-09-11 05:51:32,979 [INFO] - Num cells used: 1587
+[37m2024-09-11 05:51:37,661 [INFO] - Num cells used: 1512
+[37m2024-09-11 05:51:43,604 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:51:50,193 [INFO] - Num cells used: 1633
+[37m2024-09-11 05:51:57,315 [INFO] - Num cells used: 1642
+[37m2024-09-11 05:52:04,442 [INFO] - Num cells used: 1645
+[37m2024-09-11 05:52:12,122 [INFO] - Num cells used: 1657
+[37m2024-09-11 05:52:19,326 [INFO] - Num cells used: 1642
+[37m2024-09-11 05:52:25,564 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:52:32,381 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:52:38,257 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:52:44,287 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:52:50,371 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:52:56,041 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:53:01,785 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:53:08,864 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:53:15,601 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:53:21,619 [INFO] - Num cells used: 1528
+[37m2024-09-11 05:53:25,231 [INFO] - Num cells used: 933
+[37m2024-09-11 05:53:28,890 [INFO] - Num cells used: 962
+[37m2024-09-11 05:53:32,618 [INFO] - Num cells used: 1015
+[37m2024-09-11 05:53:37,070 [INFO] - Num cells used: 1480
+[37m2024-09-11 05:53:41,329 [INFO] - Num cells used: 1504
+[37m2024-09-11 05:53:47,068 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:53:52,867 [INFO] - Num cells used: 1599
+[37m2024-09-11 05:53:57,045 [INFO] - Num cells used: 1507
+[37m2024-09-11 05:54:01,257 [INFO] - Num cells used: 1470
+[37m2024-09-11 05:54:05,481 [INFO] - Num cells used: 1467
+[37m2024-09-11 05:54:11,882 [INFO] - Num cells used: 1625
+[37m2024-09-11 05:54:18,505 [INFO] - Num cells used: 1630
+[37m2024-09-11 05:54:25,360 [INFO] - Num cells used: 1622
+[37m2024-09-11 05:54:31,492 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:54:37,671 [INFO] - Num cells used: 1627
+[37m2024-09-11 05:54:43,832 [INFO] - Num cells used: 1622
+[37m2024-09-11 05:54:49,958 [INFO] - Num cells used: 1621
+[37m2024-09-11 05:54:56,455 [INFO] - Num cells used: 1625
+[37m2024-09-11 05:55:02,944 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:55:09,234 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:55:15,395 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:55:22,023 [INFO] - Num cells used: 1622
+[37m2024-09-11 05:55:28,679 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:55:35,281 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:55:41,934 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:55:48,801 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:55:55,596 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:56:02,180 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:56:08,232 [INFO] - Num cells used: 1529
+[37m2024-09-11 05:56:13,766 [INFO] - Num cells used: 1621
+[37m2024-09-11 05:56:19,359 [INFO] - Num cells used: 1624
+[37m2024-09-11 05:56:24,812 [INFO] - Num cells used: 1597
+[37m2024-09-11 05:56:30,918 [INFO] - Num cells used: 1622
+[37m2024-09-11 05:56:37,575 [INFO] - Num cells used: 1617
+[37m2024-09-11 05:56:44,626 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:56:51,296 [INFO] - Num cells used: 1619
+[37m2024-09-11 05:56:57,046 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:57:03,616 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:57:10,092 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:57:16,029 [INFO] - Num cells used: 1618
+[37m2024-09-11 05:57:21,851 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:57:28,052 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:57:33,866 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:57:42,495 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:57:50,286 [INFO] - Num cells used: 1612
+[37m2024-09-11 05:57:57,085 [INFO] - Num cells used: 1615
+[37m2024-09-11 05:58:03,165 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:58:07,946 [INFO] - Num cells used: 1605
+[37m2024-09-11 05:58:12,960 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:58:18,782 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:58:24,824 [INFO] - Num cells used: 1608
+[37m2024-09-11 05:58:34,018 [INFO] - Num cells used: 1616
+[37m2024-09-11 05:58:43,089 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:58:51,818 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:58:59,364 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:59:05,962 [INFO] - Num cells used: 1611
+[37m2024-09-11 05:59:12,743 [INFO] - Num cells used: 1609
+[37m2024-09-11 05:59:21,564 [INFO] - Num cells used: 1613
+[37m2024-09-11 05:59:31,417 [INFO] - Num cells used: 1614
+[37m2024-09-11 05:59:43,126 [INFO] - Num cells used: 1633
+[37m2024-09-11 05:59:54,014 [INFO] - Num cells used: 1636
+[37m2024-09-11 06:00:04,097 [INFO] - Num cells used: 1634
+[37m2024-09-11 06:00:13,496 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:00:20,524 [INFO] - Num cells used: 1626
+[37m2024-09-11 06:00:27,707 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:00:34,096 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:00:42,569 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:00:50,974 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:00:58,818 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:01:05,752 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:01:11,538 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:01:17,945 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:01:24,484 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:01:31,156 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:01:38,806 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:01:46,994 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:01:54,423 [INFO] - Num cells used: 1615
+[37m2024-09-11 06:02:02,021 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:02:09,913 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:02:17,593 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:02:23,663 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:02:30,542 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:02:36,899 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:02:43,223 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:02:49,211 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:02:55,046 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:03:01,385 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:03:07,904 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:03:19,541 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:03:34,239 [INFO] - Num cells used: 1634
+[37m2024-09-11 06:03:48,902 [INFO] - Num cells used: 1647
+[37m2024-09-11 06:04:03,443 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:04:17,816 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:04:31,931 [INFO] - Num cells used: 1652
+[37m2024-09-11 06:04:42,770 [INFO] - Num cells used: 1648
+[37m2024-09-11 06:04:52,850 [INFO] - Num cells used: 1669
+[37m2024-09-11 06:05:03,072 [INFO] - Num cells used: 1655
+[37m2024-09-11 06:05:13,165 [INFO] - Num cells used: 1658
+[37m2024-09-11 06:05:23,547 [INFO] - Num cells used: 1659
+[37m2024-09-11 06:05:33,504 [INFO] - Num cells used: 1668
+[37m2024-09-11 06:05:45,050 [INFO] - Num cells used: 1661
+[37m2024-09-11 06:05:58,590 [INFO] - Num cells used: 1669
+[37m2024-09-11 06:06:11,798 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:06:24,678 [INFO] - Num cells used: 1658
+[37m2024-09-11 06:06:37,563 [INFO] - Num cells used: 1654
+[37m2024-09-11 06:06:50,142 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:07:02,657 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:07:14,313 [INFO] - Num cells used: 1667
+[37m2024-09-11 06:07:26,318 [INFO] - Num cells used: 1693
+[37m2024-09-11 06:07:38,162 [INFO] - Num cells used: 1680
+[37m2024-09-11 06:07:49,827 [INFO] - Num cells used: 1686
+[37m2024-09-11 06:08:01,347 [INFO] - Num cells used: 1687
+[37m2024-09-11 06:08:12,944 [INFO] - Num cells used: 1679
+[37m2024-09-11 06:08:24,484 [INFO] - Num cells used: 1712
+[37m2024-09-11 06:08:36,876 [INFO] - Num cells used: 1698
+[37m2024-09-11 06:08:50,535 [INFO] - Num cells used: 1644
+[37m2024-09-11 06:09:04,572 [INFO] - Num cells used: 1661
+[37m2024-09-11 06:09:18,651 [INFO] - Num cells used: 1659
+[37m2024-09-11 06:09:32,783 [INFO] - Num cells used: 1654
+[37m2024-09-11 06:09:46,435 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:10:00,350 [INFO] - Num cells used: 1653
+[37m2024-09-11 06:10:12,587 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:10:24,808 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:10:36,909 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:10:49,096 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:11:02,366 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:11:14,641 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:11:28,737 [INFO] - Num cells used: 1634
+[37m2024-09-11 06:11:43,065 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:11:57,858 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:12:12,528 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:12:27,137 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:12:40,826 [INFO] - Num cells used: 1627
+[37m2024-09-11 06:12:53,441 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:13:06,688 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:13:19,492 [INFO] - Num cells used: 1644
+[37m2024-09-11 06:13:32,028 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:13:46,447 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:14:02,473 [INFO] - Num cells used: 1627
+[37m2024-09-11 06:14:18,206 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:14:34,000 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:14:48,040 [INFO] - Num cells used: 1638
+[37m2024-09-11 06:14:57,432 [INFO] - Num cells used: 1644
+[37m2024-09-11 06:15:07,166 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:15:16,665 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:15:25,883 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:15:35,241 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:15:44,486 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:15:55,953 [INFO] - Num cells used: 1667
+[37m2024-09-11 06:16:07,694 [INFO] - Num cells used: 1648
+[37m2024-09-11 06:16:19,562 [INFO] - Num cells used: 1657
+[37m2024-09-11 06:16:31,532 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:16:42,189 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:16:54,331 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:17:06,674 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:17:19,287 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:17:32,196 [INFO] - Num cells used: 1632
+[37m2024-09-11 06:17:45,045 [INFO] - Num cells used: 1626
+[37m2024-09-11 06:17:57,782 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:18:11,103 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:18:24,932 [INFO] - Num cells used: 1638
+[37m2024-09-11 06:18:39,343 [INFO] - Num cells used: 1632
+[37m2024-09-11 06:18:54,619 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:19:09,842 [INFO] - Num cells used: 1626
+[37m2024-09-11 06:19:20,736 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:19:30,962 [INFO] - Num cells used: 1666
+[37m2024-09-11 06:19:42,083 [INFO] - Num cells used: 1654
+[37m2024-09-11 06:19:52,916 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:20:03,358 [INFO] - Num cells used: 1645
+[37m2024-09-11 06:20:13,684 [INFO] - Num cells used: 1655
+[37m2024-09-11 06:20:25,897 [INFO] - Num cells used: 1652
+[37m2024-09-11 06:20:38,464 [INFO] - Num cells used: 1661
+[37m2024-09-11 06:20:51,555 [INFO] - Num cells used: 1654
+[37m2024-09-11 06:21:05,688 [INFO] - Num cells used: 1657
+[37m2024-09-11 06:21:19,071 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:21:32,494 [INFO] - Num cells used: 1663
+[37m2024-09-11 06:21:46,245 [INFO] - Num cells used: 1657
+[37m2024-09-11 06:21:58,159 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:22:07,443 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:22:16,856 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:22:26,520 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:22:36,569 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:22:46,715 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:22:57,406 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:23:07,607 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:23:17,492 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:23:27,563 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:23:37,625 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:23:47,441 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:23:58,175 [INFO] - Num cells used: 1674
+[37m2024-09-11 06:24:09,528 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:24:21,151 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:24:32,149 [INFO] - Num cells used: 1648
+[37m2024-09-11 06:24:43,404 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:24:54,841 [INFO] - Num cells used: 1647
+[37m2024-09-11 06:25:08,453 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:25:24,966 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:25:40,838 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:25:56,442 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:26:09,191 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:26:20,861 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:26:32,274 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:26:44,342 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:26:55,784 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:27:09,258 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:27:23,225 [INFO] - Num cells used: 1645
+[37m2024-09-11 06:27:40,325 [INFO] - Num cells used: 1627
+[37m2024-09-11 06:27:57,014 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:28:13,473 [INFO] - Num cells used: 1636
+[37m2024-09-11 06:28:29,229 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:28:44,136 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:28:59,133 [INFO] - Num cells used: 1648
+[37m2024-09-11 06:29:14,027 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:29:28,603 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:29:42,568 [INFO] - Num cells used: 1632
+[37m2024-09-11 06:29:53,325 [INFO] - Num cells used: 1638
+[37m2024-09-11 06:30:04,149 [INFO] - Num cells used: 1650
+[37m2024-09-11 06:30:14,862 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:30:25,397 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:30:36,116 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:30:49,023 [INFO] - Num cells used: 1674
+[37m2024-09-11 06:31:02,383 [INFO] - Num cells used: 1675
+[37m2024-09-11 06:31:15,587 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:31:29,077 [INFO] - Num cells used: 1686
+[37m2024-09-11 06:31:42,679 [INFO] - Num cells used: 1672
+[37m2024-09-11 06:31:56,051 [INFO] - Num cells used: 1697
+[37m2024-09-11 06:32:10,033 [INFO] - Num cells used: 1682
+[37m2024-09-11 06:32:24,469 [INFO] - Num cells used: 1669
+[37m2024-09-11 06:32:37,544 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:32:52,714 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:33:07,566 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:33:21,802 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:33:36,714 [INFO] - Num cells used: 1692
+[37m2024-09-11 06:33:51,638 [INFO] - Num cells used: 1694
+[37m2024-09-11 06:34:07,265 [INFO] - Num cells used: 1691
+[37m2024-09-11 06:34:21,196 [INFO] - Num cells used: 1730
+[37m2024-09-11 06:34:36,255 [INFO] - Num cells used: 1717
+[37m2024-09-11 06:34:50,569 [INFO] - Num cells used: 1696
+[37m2024-09-11 06:35:04,812 [INFO] - Num cells used: 1728
+[37m2024-09-11 06:35:19,707 [INFO] - Num cells used: 1712
+[37m2024-09-11 06:35:30,943 [INFO] - Num cells used: 1649
+[37m2024-09-11 06:35:42,481 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:35:53,770 [INFO] - Num cells used: 1665
+[37m2024-09-11 06:36:04,697 [INFO] - Num cells used: 1653
+[37m2024-09-11 06:36:15,771 [INFO] - Num cells used: 1656
+[37m2024-09-11 06:36:26,811 [INFO] - Num cells used: 1662
+[37m2024-09-11 06:36:37,000 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:36:46,664 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:36:56,142 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:37:06,026 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:37:15,958 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:37:28,551 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:37:40,601 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:37:51,446 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:38:01,612 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:38:11,884 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:38:21,680 [INFO] - Num cells used: 1636
+[37m2024-09-11 06:38:31,239 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:38:42,191 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:38:52,764 [INFO] - Num cells used: 1654
+[37m2024-09-11 06:39:03,872 [INFO] - Num cells used: 1627
+[37m2024-09-11 06:39:14,669 [INFO] - Num cells used: 1639
+[37m2024-09-11 06:39:25,965 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:39:36,764 [INFO] - Num cells used: 1642
+[37m2024-09-11 06:39:48,349 [INFO] - Num cells used: 1650
+[37m2024-09-11 06:39:59,864 [INFO] - Num cells used: 1645
+[37m2024-09-11 06:40:11,288 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:40:22,738 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:40:34,230 [INFO] - Num cells used: 1647
+[37m2024-09-11 06:40:45,655 [INFO] - Num cells used: 1653
+[37m2024-09-11 06:40:57,231 [INFO] - Num cells used: 1650
+[37m2024-09-11 06:41:04,345 [INFO] - Num cells used: 1671
+[37m2024-09-11 06:41:12,346 [INFO] - Num cells used: 1652
+[37m2024-09-11 06:41:19,967 [INFO] - Num cells used: 1679
+[37m2024-09-11 06:41:27,443 [INFO] - Num cells used: 1666
+[37m2024-09-11 06:41:34,930 [INFO] - Num cells used: 1662
+[37m2024-09-11 06:41:42,557 [INFO] - Num cells used: 1661
+[37m2024-09-11 06:41:50,711 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:42:00,331 [INFO] - Num cells used: 1690
+[37m2024-09-11 06:42:09,765 [INFO] - Num cells used: 1676
+[37m2024-09-11 06:42:19,488 [INFO] - Num cells used: 1670
+[37m2024-09-11 06:42:29,107 [INFO] - Num cells used: 1677
+[37m2024-09-11 06:42:38,750 [INFO] - Num cells used: 1671
+[37m2024-09-11 06:42:48,193 [INFO] - Num cells used: 1676
+[37m2024-09-11 06:42:57,585 [INFO] - Num cells used: 1653
+[37m2024-09-11 06:43:05,090 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:43:12,875 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:43:20,914 [INFO] - Num cells used: 1675
+[37m2024-09-11 06:43:28,989 [INFO] - Num cells used: 1662
+[37m2024-09-11 06:43:37,484 [INFO] - Num cells used: 1671
+[37m2024-09-11 06:43:46,446 [INFO] - Num cells used: 1652
+[37m2024-09-11 06:43:55,418 [INFO] - Num cells used: 1674
+[37m2024-09-11 06:44:03,837 [INFO] - Num cells used: 1661
+[37m2024-09-11 06:44:12,282 [INFO] - Num cells used: 1564
+[37m2024-09-11 06:44:22,898 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:44:33,823 [INFO] - Num cells used: 1643
+[37m2024-09-11 06:44:44,950 [INFO] - Num cells used: 1667
+[37m2024-09-11 06:44:56,249 [INFO] - Num cells used: 1649
+[37m2024-09-11 06:45:06,674 [INFO] - Num cells used: 1653
+[37m2024-09-11 06:45:16,172 [INFO] - Num cells used: 1646
+[37m2024-09-11 06:45:24,098 [INFO] - Num cells used: 1630
+[37m2024-09-11 06:45:32,192 [INFO] - Num cells used: 1652
+[37m2024-09-11 06:45:40,049 [INFO] - Num cells used: 1651
+[37m2024-09-11 06:45:48,505 [INFO] - Num cells used: 1665
+[37m2024-09-11 06:45:57,062 [INFO] - Num cells used: 1664
+[37m2024-09-11 06:46:05,587 [INFO] - Num cells used: 1671
+[37m2024-09-11 06:46:13,919 [INFO] - Num cells used: 1662
+[37m2024-09-11 06:46:21,807 [INFO] - Num cells used: 1650
+[37m2024-09-11 06:46:29,323 [INFO] - Num cells used: 1609
+[37m2024-09-11 06:46:36,390 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:46:42,258 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:46:47,628 [INFO] - Num cells used: 1611
+[37m2024-09-11 06:46:55,112 [INFO] - Num cells used: 1640
+[37m2024-09-11 06:47:03,270 [INFO] - Num cells used: 1638
+[37m2024-09-11 06:47:11,561 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:47:20,040 [INFO] - Num cells used: 1648
+[37m2024-09-11 06:47:27,995 [INFO] - Num cells used: 1636
+[37m2024-09-11 06:47:35,628 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:47:43,212 [INFO] - Num cells used: 1611
+[37m2024-09-11 06:47:50,264 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:47:57,312 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:48:03,945 [INFO] - Num cells used: 1621
+[37m2024-09-11 06:48:10,696 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:48:17,903 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:48:25,703 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:48:33,428 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:48:40,535 [INFO] - Num cells used: 1629
+[37m2024-09-11 06:48:49,915 [INFO] - Num cells used: 1680
+[37m2024-09-11 06:49:00,627 [INFO] - Num cells used: 1672
+[37m2024-09-11 06:49:09,767 [INFO] - Num cells used: 1668
+[37m2024-09-11 06:49:19,026 [INFO] - Num cells used: 1665
+[37m2024-09-11 06:49:28,911 [INFO] - Num cells used: 1660
+[37m2024-09-11 06:49:37,588 [INFO] - Num cells used: 1666
+[37m2024-09-11 06:49:46,006 [INFO] - Num cells used: 1637
+[37m2024-09-11 06:49:54,234 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:50:01,636 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:50:09,728 [INFO] - Num cells used: 1644
+[37m2024-09-11 06:50:17,626 [INFO] - Num cells used: 1659
+[37m2024-09-11 06:50:26,068 [INFO] - Num cells used: 1673
+[37m2024-09-11 06:50:34,640 [INFO] - Num cells used: 1663
+[37m2024-09-11 06:50:43,278 [INFO] - Num cells used: 1641
+[37m2024-09-11 06:50:51,326 [INFO] - Num cells used: 1650
+[37m2024-09-11 06:50:57,794 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:51:03,765 [INFO] - Num cells used: 1609
+[37m2024-09-11 06:51:09,406 [INFO] - Num cells used: 1611
+[37m2024-09-11 06:51:18,749 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:51:27,839 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:51:35,187 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:51:42,085 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:51:48,190 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:51:54,384 [INFO] - Num cells used: 1607
+[37m2024-09-11 06:52:01,253 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:52:08,570 [INFO] - Num cells used: 1624
+[37m2024-09-11 06:52:15,767 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:52:23,246 [INFO] - Num cells used: 1636
+[37m2024-09-11 06:52:30,645 [INFO] - Num cells used: 1633
+[37m2024-09-11 06:52:37,612 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:52:44,592 [INFO] - Num cells used: 1624
+[37m2024-09-11 06:52:52,232 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:53:00,150 [INFO] - Num cells used: 1618
+[37m2024-09-11 06:53:08,035 [INFO] - Num cells used: 1628
+[37m2024-09-11 06:53:15,011 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:53:22,073 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:53:29,664 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:53:37,529 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:53:45,228 [INFO] - Num cells used: 1622
+[37m2024-09-11 06:53:51,974 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:53:58,720 [INFO] - Num cells used: 1626
+[37m2024-09-11 06:54:05,652 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:54:12,682 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:54:18,894 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:54:25,223 [INFO] - Num cells used: 1609
+[37m2024-09-11 06:54:31,097 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:54:37,420 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:54:43,768 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:54:49,904 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:54:55,961 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:55:01,620 [INFO] - Num cells used: 1611
+[37m2024-09-11 06:55:06,996 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:55:12,432 [INFO] - Num cells used: 1625
+[37m2024-09-11 06:55:17,673 [INFO] - Num cells used: 1595
+[37m2024-09-11 06:55:23,085 [INFO] - Num cells used: 1577
+[37m2024-09-11 06:55:28,418 [INFO] - Num cells used: 1620
+[37m2024-09-11 06:55:34,347 [INFO] - Num cells used: 1575
+[37m2024-09-11 06:55:41,466 [INFO] - Num cells used: 1608
+[37m2024-09-11 06:55:48,911 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:55:56,974 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:56:04,368 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:56:10,579 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:56:16,094 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:56:23,375 [INFO] - Num cells used: 1623
+[37m2024-09-11 06:56:29,545 [INFO] - Num cells used: 1584
+[37m2024-09-11 06:56:35,569 [INFO] - Num cells used: 1606
+[37m2024-09-11 06:56:41,863 [INFO] - Num cells used: 1635
+[37m2024-09-11 06:56:47,632 [INFO] - Num cells used: 1555
+[37m2024-09-11 06:56:53,213 [INFO] - Num cells used: 1585
+[37m2024-09-11 06:56:59,258 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:57:05,974 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:57:12,476 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:57:19,161 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:57:26,058 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:57:31,991 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:57:37,972 [INFO] - Num cells used: 1609
+[37m2024-09-11 06:57:43,869 [INFO] - Num cells used: 1611
+[37m2024-09-11 06:57:50,783 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:57:57,969 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:58:05,141 [INFO] - Num cells used: 1612
+[37m2024-09-11 06:58:13,691 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:58:22,983 [INFO] - Num cells used: 1614
+[37m2024-09-11 06:58:31,958 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:58:40,624 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:58:49,172 [INFO] - Num cells used: 1608
+[37m2024-09-11 06:58:56,583 [INFO] - Num cells used: 1608
+[37m2024-09-11 06:59:03,884 [INFO] - Num cells used: 1610
+[37m2024-09-11 06:59:11,172 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:59:16,905 [INFO] - Num cells used: 1613
+[37m2024-09-11 06:59:22,606 [INFO] - Num cells used: 1609
+[37m2024-09-11 06:59:28,686 [INFO] - Num cells used: 1619
+[37m2024-09-11 06:59:35,152 [INFO] - Num cells used: 1616
+[37m2024-09-11 06:59:41,940 [INFO] - Num cells used: 1617
+[37m2024-09-11 06:59:48,900 [INFO] - Num cells used: 1615
+[37m2024-09-11 06:59:55,025 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:00:01,411 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:00:07,629 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:00:13,730 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:00:19,672 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:00:27,034 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:00:35,724 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:00:42,900 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:00:50,250 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:00:57,739 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:01:05,011 [INFO] - Num cells used: 1628
+[37m2024-09-11 07:01:12,512 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:01:20,078 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:01:27,448 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:01:32,956 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:01:38,443 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:01:44,107 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:01:49,851 [INFO] - Num cells used: 1584
+[37m2024-09-11 07:01:55,853 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:02:02,924 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:02:09,902 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:02:16,612 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:02:24,904 [INFO] - Num cells used: 1635
+[37m2024-09-11 07:02:33,159 [INFO] - Num cells used: 1642
+[37m2024-09-11 07:02:41,483 [INFO] - Num cells used: 1653
+[37m2024-09-11 07:02:49,631 [INFO] - Num cells used: 1643
+[37m2024-09-11 07:02:57,737 [INFO] - Num cells used: 1629
+[37m2024-09-11 07:03:06,133 [INFO] - Num cells used: 1638
+[37m2024-09-11 07:03:11,932 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:03:17,375 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:03:23,609 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:03:29,690 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:03:35,422 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:03:41,347 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:03:50,242 [INFO] - Num cells used: 1640
+[37m2024-09-11 07:03:59,149 [INFO] - Num cells used: 1641
+[37m2024-09-11 07:04:08,188 [INFO] - Num cells used: 1638
+[37m2024-09-11 07:04:17,152 [INFO] - Num cells used: 1638
+[37m2024-09-11 07:04:26,546 [INFO] - Num cells used: 1648
+[37m2024-09-11 07:04:37,726 [INFO] - Num cells used: 1643
+[37m2024-09-11 07:04:46,389 [INFO] - Num cells used: 1635
+[37m2024-09-11 07:04:55,371 [INFO] - Num cells used: 1633
+[37m2024-09-11 07:05:03,689 [INFO] - Num cells used: 1637
+[37m2024-09-11 07:05:11,373 [INFO] - Num cells used: 1639
+[37m2024-09-11 07:05:17,083 [INFO] - Num cells used: 1275
+[37m2024-09-11 07:05:22,984 [INFO] - Num cells used: 1419
+[37m2024-09-11 07:05:30,347 [INFO] - Num cells used: 1634
+[37m2024-09-11 07:05:37,556 [INFO] - Num cells used: 1637
+[37m2024-09-11 07:05:44,914 [INFO] - Num cells used: 1639
+[37m2024-09-11 07:05:52,112 [INFO] - Num cells used: 1623
+[37m2024-09-11 07:05:59,838 [INFO] - Num cells used: 1623
+[37m2024-09-11 07:06:05,356 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:06:10,632 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:06:15,609 [INFO] - Num cells used: 1532
+[37m2024-09-11 07:06:20,036 [INFO] - Num cells used: 1489
+[37m2024-09-11 07:06:24,168 [INFO] - Num cells used: 1368
+[37m2024-09-11 07:06:28,485 [INFO] - Num cells used: 1497
+[37m2024-09-11 07:06:34,278 [INFO] - Num cells used: 1604
+[37m2024-09-11 07:06:41,452 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:06:48,595 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:06:54,956 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:07:00,806 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:07:05,321 [INFO] - Num cells used: 1544
+[37m2024-09-11 07:07:10,991 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:07:17,378 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:07:23,580 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:07:30,201 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:07:36,672 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:07:43,495 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:07:50,263 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:07:56,824 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:08:03,461 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:08:11,157 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:08:20,480 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:08:28,601 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:08:34,834 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:08:41,340 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:08:47,296 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:08:53,636 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:08:59,538 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:09:05,989 [INFO] - Num cells used: 1624
+[37m2024-09-11 07:09:12,929 [INFO] - Num cells used: 1624
+[37m2024-09-11 07:09:19,985 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:09:26,957 [INFO] - Num cells used: 1630
+[37m2024-09-11 07:09:33,796 [INFO] - Num cells used: 1641
+[37m2024-09-11 07:09:40,964 [INFO] - Num cells used: 1634
+[37m2024-09-11 07:09:46,923 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:09:52,888 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:09:59,199 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:10:05,830 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:10:12,786 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:10:18,863 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:10:23,830 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:10:28,996 [INFO] - Num cells used: 1626
+[37m2024-09-11 07:10:34,255 [INFO] - Num cells used: 1603
+[37m2024-09-11 07:10:40,847 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:10:46,382 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:10:53,534 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:11:01,114 [INFO] - Num cells used: 1623
+[37m2024-09-11 07:11:08,619 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:11:14,942 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:11:19,866 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:11:24,948 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:11:30,207 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:11:35,940 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:11:41,953 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:11:49,281 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:11:56,421 [INFO] - Num cells used: 1631
+[37m2024-09-11 07:12:03,461 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:12:10,545 [INFO] - Num cells used: 1626
+[37m2024-09-11 07:12:16,792 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:12:21,861 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:12:26,776 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:12:31,679 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:12:36,848 [INFO] - Num cells used: 1590
+[37m2024-09-11 07:12:42,207 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:12:47,433 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:12:55,272 [INFO] - Num cells used: 1656
+[37m2024-09-11 07:13:03,892 [INFO] - Num cells used: 1645
+[37m2024-09-11 07:13:12,196 [INFO] - Num cells used: 1653
+[37m2024-09-11 07:13:20,794 [INFO] - Num cells used: 1647
+[37m2024-09-11 07:13:29,226 [INFO] - Num cells used: 1635
+[37m2024-09-11 07:13:37,511 [INFO] - Num cells used: 1655
+[37m2024-09-11 07:13:45,948 [INFO] - Num cells used: 1662
+[37m2024-09-11 07:13:53,033 [INFO] - Num cells used: 1630
+[37m2024-09-11 07:13:59,702 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:14:06,107 [INFO] - Num cells used: 1624
+[37m2024-09-11 07:14:12,687 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:14:18,748 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:14:24,580 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:14:30,400 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:14:36,017 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:14:41,671 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:14:47,326 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:14:52,962 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:14:58,889 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:15:04,215 [INFO] - Num cells used: 1594
+[37m2024-09-11 07:15:09,166 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:15:14,235 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:15:19,699 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:15:26,712 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:15:34,482 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:15:41,721 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:15:49,264 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:15:55,018 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:16:01,113 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:16:07,999 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:16:15,225 [INFO] - Num cells used: 1633
+[37m2024-09-11 07:16:22,829 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:16:30,249 [INFO] - Num cells used: 1627
+[37m2024-09-11 07:16:37,567 [INFO] - Num cells used: 1632
+[37m2024-09-11 07:16:44,751 [INFO] - Num cells used: 1626
+[37m2024-09-11 07:16:51,296 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:16:57,945 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:17:05,153 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:17:13,229 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:17:21,085 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:17:28,059 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:17:34,295 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:17:40,909 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:17:44,691 [INFO] - Num cells used: 1147
+[37m2024-09-11 07:17:51,963 [INFO] - Num cells used: 1437
+[37m2024-09-11 07:18:01,544 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:18:11,363 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:18:17,775 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:18:22,680 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:18:27,389 [INFO] - Num cells used: 1601
+[37m2024-09-11 07:18:32,482 [INFO] - Num cells used: 1587
+[37m2024-09-11 07:18:39,676 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:18:46,131 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:18:51,527 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:18:58,161 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:19:07,092 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:19:16,022 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:19:24,514 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:19:31,163 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:19:37,768 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:19:43,954 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:19:49,614 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:19:56,927 [INFO] - Num cells used: 1529
+[37m2024-09-11 07:20:04,630 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:20:12,437 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:20:20,127 [INFO] - Num cells used: 1621
+[37m2024-09-11 07:20:28,015 [INFO] - Num cells used: 1633
+[37m2024-09-11 07:20:35,242 [INFO] - Num cells used: 1627
+[37m2024-09-11 07:20:42,074 [INFO] - Num cells used: 1627
+[37m2024-09-11 07:20:48,230 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:20:53,663 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:21:00,387 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:21:07,072 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:21:13,570 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:21:22,191 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:21:30,270 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:21:37,856 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:21:44,060 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:21:49,990 [INFO] - Num cells used: 1498
+[37m2024-09-11 07:21:54,823 [INFO] - Num cells used: 1547
+[37m2024-09-11 07:22:00,893 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:22:06,437 [INFO] - Num cells used: 1562
+[37m2024-09-11 07:22:11,297 [INFO] - Num cells used: 1548
+[37m2024-09-11 07:22:16,872 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:22:22,180 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:22:28,453 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:22:36,816 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:22:44,873 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:22:51,989 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:22:57,496 [INFO] - Num cells used: 1550
+[37m2024-09-11 07:23:03,678 [INFO] - Num cells used: 1438
+[37m2024-09-11 07:23:10,358 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:23:16,903 [INFO] - Num cells used: 1463
+[37m2024-09-11 07:23:22,442 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:23:27,531 [INFO] - Num cells used: 1496
+[37m2024-09-11 07:23:35,699 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:23:42,258 [INFO] - Num cells used: 1625
+[37m2024-09-11 07:23:47,886 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:23:53,756 [INFO] - Num cells used: 1389
+[37m2024-09-11 07:24:03,230 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:24:12,624 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:24:19,210 [INFO] - Num cells used: 1633
+[37m2024-09-11 07:24:25,977 [INFO] - Num cells used: 1635
+[37m2024-09-11 07:24:32,412 [INFO] - Num cells used: 1640
+[37m2024-09-11 07:24:38,746 [INFO] - Num cells used: 1633
+[37m2024-09-11 07:24:45,115 [INFO] - Num cells used: 1630
+[37m2024-09-11 07:24:50,517 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:24:55,537 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:25:01,084 [INFO] - Num cells used: 1605
+[37m2024-09-11 07:25:06,468 [INFO] - Num cells used: 1606
+[37m2024-09-11 07:25:10,805 [INFO] - Num cells used: 1394
+[37m2024-09-11 07:25:14,856 [INFO] - Num cells used: 1266
+[37m2024-09-11 07:25:19,634 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:25:25,545 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:25:33,542 [INFO] - Num cells used: 1631
+[37m2024-09-11 07:25:41,781 [INFO] - Num cells used: 1623
+[37m2024-09-11 07:25:50,092 [INFO] - Num cells used: 1627
+[37m2024-09-11 07:25:57,728 [INFO] - Num cells used: 1630
+[37m2024-09-11 07:26:05,941 [INFO] - Num cells used: 1622
+[37m2024-09-11 07:26:12,200 [INFO] - Num cells used: 1585
+[37m2024-09-11 07:26:17,272 [INFO] - Num cells used: 1602
+[37m2024-09-11 07:26:22,217 [INFO] - Num cells used: 1596
+[37m2024-09-11 07:26:27,281 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:26:32,365 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:26:37,588 [INFO] - Num cells used: 1472
+[37m2024-09-11 07:26:42,764 [INFO] - Num cells used: 1544
+[37m2024-09-11 07:26:47,972 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:26:53,157 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:26:58,076 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:27:03,267 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:27:09,345 [INFO] - Num cells used: 1607
+[37m2024-09-11 07:27:15,520 [INFO] - Num cells used: 1649
+[37m2024-09-11 07:27:21,624 [INFO] - Num cells used: 1674
+[37m2024-09-11 07:27:27,976 [INFO] - Num cells used: 1663
+[37m2024-09-11 07:27:34,547 [INFO] - Num cells used: 1658
+[37m2024-09-11 07:27:41,394 [INFO] - Num cells used: 1681
+[37m2024-09-11 07:27:48,038 [INFO] - Num cells used: 1667
+[37m2024-09-11 07:27:55,181 [INFO] - Num cells used: 1663
+[37m2024-09-11 07:28:01,874 [INFO] - Num cells used: 1677
+[37m2024-09-11 07:28:08,996 [INFO] - Num cells used: 1663
+[37m2024-09-11 07:28:15,896 [INFO] - Num cells used: 1662
+[37m2024-09-11 07:28:21,565 [INFO] - Num cells used: 1608
+[37m2024-09-11 07:28:26,992 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:28:32,373 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:28:38,024 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:28:43,593 [INFO] - Num cells used: 1624
+[37m2024-09-11 07:28:49,168 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:28:54,740 [INFO] - Num cells used: 1626
+[37m2024-09-11 07:28:59,504 [INFO] - Num cells used: 1563
+[37m2024-09-11 07:29:03,869 [INFO] - Num cells used: 1538
+[37m2024-09-11 07:29:08,278 [INFO] - Num cells used: 1547
+[37m2024-09-11 07:29:12,651 [INFO] - Num cells used: 1516
+[37m2024-09-11 07:29:21,497 [INFO] - Num cells used: 1588
+[37m2024-09-11 07:29:30,165 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:29:35,578 [INFO] - Num cells used: 804
+[37m2024-09-11 07:29:35,704 [INFO] - Extraction detection metrics - F1: 0.012, Precision: 0.006, Recall: 0.950, Detected-Cells: 1378066
+[37m2024-09-11 07:29:35,706 [INFO] - Caching dataset 9d2c0e36d45d85ea89baa71723b2538043fe561b4876a4c85117e41744457a1f to disk...
+[37m2024-09-11 07:56:22,061 [INFO] - Training epoch stats:     Loss: 0.0166 - F1-Score: 0.9972 - Accuracy-Score: 0.9944 - AUROC: 0.9895 - AP: 0.9999
+[37m2024-09-11 07:56:22,076 [INFO] - Extracting validation cells
+[37m2024-09-11 07:56:33,446 [INFO] - Num cells used: 1610
+[37m2024-09-11 07:56:38,687 [INFO] - Num cells used: 1546
+[37m2024-09-11 07:56:44,262 [INFO] - Num cells used: 1616
+[37m2024-09-11 07:56:49,936 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:56:56,202 [INFO] - Num cells used: 1613
+[37m2024-09-11 07:57:02,488 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:57:08,423 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:57:13,969 [INFO] - Num cells used: 1624
+[37m2024-09-11 07:57:19,602 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:57:25,103 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:57:30,693 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:57:34,764 [INFO] - Num cells used: 1140
+[37m2024-09-11 07:57:39,900 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:57:45,265 [INFO] - Num cells used: 1612
+[37m2024-09-11 07:57:50,712 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:57:55,870 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:58:00,987 [INFO] - Num cells used: 1611
+[37m2024-09-11 07:58:05,434 [INFO] - Num cells used: 1435
+[37m2024-09-11 07:58:10,777 [INFO] - Num cells used: 1609
+[37m2024-09-11 07:58:16,664 [INFO] - Num cells used: 1615
+[37m2024-09-11 07:58:21,671 [INFO] - Num cells used: 1477
+[37m2024-09-11 07:58:27,740 [INFO] - Num cells used: 1535
+[37m2024-09-11 07:58:34,315 [INFO] - Num cells used: 1623
+[37m2024-09-11 07:58:40,715 [INFO] - Num cells used: 1617
+[37m2024-09-11 07:58:47,471 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:58:52,916 [INFO] - Num cells used: 1513
+[37m2024-09-11 07:58:57,362 [INFO] - Num cells used: 1393
+[37m2024-09-11 07:59:02,635 [INFO] - Num cells used: 1466
+[37m2024-09-11 07:59:09,052 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:59:15,985 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:59:22,702 [INFO] - Num cells used: 1614
+[37m2024-09-11 07:59:28,545 [INFO] - Num cells used: 1628
+[37m2024-09-11 07:59:34,445 [INFO] - Num cells used: 1620
+[37m2024-09-11 07:59:39,970 [INFO] - Num cells used: 1619
+[37m2024-09-11 07:59:45,383 [INFO] - Num cells used: 1618
+[37m2024-09-11 07:59:51,017 [INFO] - Num cells used: 1552
+[37m2024-09-11 07:59:55,235 [INFO] - Num cells used: 1420
+[37m2024-09-11 07:59:59,970 [INFO] - Num cells used: 1485
+[37m2024-09-11 08:00:04,950 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:00:11,408 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:00:16,565 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:00:21,382 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:00:25,840 [INFO] - Num cells used: 1571
+[37m2024-09-11 08:00:30,537 [INFO] - Num cells used: 1481
+[37m2024-09-11 08:00:36,191 [INFO] - Num cells used: 1562
+[37m2024-09-11 08:00:41,817 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:00:47,695 [INFO] - Num cells used: 1618
+[37m2024-09-11 08:00:54,244 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:01:01,087 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:01:06,322 [INFO] - Num cells used: 1506
+[37m2024-09-11 08:01:12,344 [INFO] - Num cells used: 1502
+[37m2024-09-11 08:01:21,740 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:01:29,858 [INFO] - Num cells used: 1626
+[37m2024-09-11 08:01:37,386 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:01:45,038 [INFO] - Num cells used: 1613
+[37m2024-09-11 08:01:52,490 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:01:57,860 [INFO] - Num cells used: 1580
+[37m2024-09-11 08:02:02,312 [INFO] - Num cells used: 1551
+[37m2024-09-11 08:02:11,461 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:02:20,174 [INFO] - Num cells used: 1630
+[37m2024-09-11 08:02:28,921 [INFO] - Num cells used: 1626
+[37m2024-09-11 08:02:37,091 [INFO] - Num cells used: 1644
+[37m2024-09-11 08:02:42,228 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:02:47,110 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:02:53,974 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:03:01,185 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:03:08,099 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:03:16,099 [INFO] - Num cells used: 1610
+[37m2024-09-11 08:03:25,256 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:03:32,151 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:03:38,668 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:03:46,064 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:03:54,203 [INFO] - Num cells used: 1642
+[37m2024-09-11 08:04:02,642 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:04:11,333 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:04:21,528 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:04:34,857 [INFO] - Num cells used: 1626
+[37m2024-09-11 08:04:48,329 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:05:00,867 [INFO] - Num cells used: 1626
+[37m2024-09-11 08:05:13,448 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:05:25,337 [INFO] - Num cells used: 1633
+[37m2024-09-11 08:05:36,066 [INFO] - Num cells used: 1632
+[37m2024-09-11 08:05:47,097 [INFO] - Num cells used: 1627
+[37m2024-09-11 08:05:59,621 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:06:11,469 [INFO] - Num cells used: 1630
+[37m2024-09-11 08:06:22,752 [INFO] - Num cells used: 1629
+[37m2024-09-11 08:06:33,040 [INFO] - Num cells used: 1660
+[37m2024-09-11 08:06:43,457 [INFO] - Num cells used: 1648
+[37m2024-09-11 08:06:54,180 [INFO] - Num cells used: 1643
+[37m2024-09-11 08:07:05,036 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:07:15,760 [INFO] - Num cells used: 1636
+[37m2024-09-11 08:07:27,193 [INFO] - Num cells used: 1642
+[37m2024-09-11 08:07:37,694 [INFO] - Num cells used: 1658
+[37m2024-09-11 08:07:48,682 [INFO] - Num cells used: 1652
+[37m2024-09-11 08:07:59,735 [INFO] - Num cells used: 1649
+[37m2024-09-11 08:08:10,568 [INFO] - Num cells used: 1660
+[37m2024-09-11 08:08:21,466 [INFO] - Num cells used: 1668
+[37m2024-09-11 08:08:33,009 [INFO] - Num cells used: 1656
+[37m2024-09-11 08:08:42,800 [INFO] - Num cells used: 1648
+[37m2024-09-11 08:08:50,539 [INFO] - Num cells used: 1632
+[37m2024-09-11 08:08:58,522 [INFO] - Num cells used: 1633
+[37m2024-09-11 08:09:06,294 [INFO] - Num cells used: 1627
+[37m2024-09-11 08:09:14,351 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:09:23,927 [INFO] - Num cells used: 1630
+[37m2024-09-11 08:09:35,431 [INFO] - Num cells used: 1627
+[37m2024-09-11 08:09:47,805 [INFO] - Num cells used: 1646
+[37m2024-09-11 08:10:00,634 [INFO] - Num cells used: 1643
+[37m2024-09-11 08:10:13,016 [INFO] - Num cells used: 1664
+[37m2024-09-11 08:10:25,204 [INFO] - Num cells used: 1648
+[37m2024-09-11 08:10:40,117 [INFO] - Num cells used: 1620
+[37m2024-09-11 08:10:56,731 [INFO] - Num cells used: 1625
+[37m2024-09-11 08:11:09,248 [INFO] - Num cells used: 1645
+[37m2024-09-11 08:11:20,431 [INFO] - Num cells used: 1656
+[37m2024-09-11 08:11:31,452 [INFO] - Num cells used: 1657
+[37m2024-09-11 08:11:43,109 [INFO] - Num cells used: 1649
+[37m2024-09-11 08:11:56,322 [INFO] - Num cells used: 1661
+[37m2024-09-11 08:12:08,618 [INFO] - Num cells used: 1652
+[37m2024-09-11 08:12:20,238 [INFO] - Num cells used: 1657
+[37m2024-09-11 08:12:31,480 [INFO] - Num cells used: 1646
+[37m2024-09-11 08:12:43,271 [INFO] - Num cells used: 1637
+[37m2024-09-11 08:12:55,255 [INFO] - Num cells used: 1638
+[37m2024-09-11 08:13:07,268 [INFO] - Num cells used: 1626
+[37m2024-09-11 08:13:18,862 [INFO] - Num cells used: 1621
+[37m2024-09-11 08:13:25,205 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:13:31,260 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:13:35,898 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:13:41,609 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:13:48,037 [INFO] - Num cells used: 1613
+[37m2024-09-11 08:13:55,048 [INFO] - Num cells used: 1619
+[37m2024-09-11 08:14:01,743 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:14:10,329 [INFO] - Num cells used: 1628
+[37m2024-09-11 08:14:18,881 [INFO] - Num cells used: 1630
+[37m2024-09-11 08:14:27,454 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:14:36,095 [INFO] - Num cells used: 1628
+[37m2024-09-11 08:14:43,196 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:14:49,672 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:14:55,273 [INFO] - Num cells used: 1639
+[37m2024-09-11 08:15:01,268 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:15:06,993 [INFO] - Num cells used: 1638
+[37m2024-09-11 08:15:13,052 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:15:18,994 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:15:25,178 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:15:31,331 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:15:37,859 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:15:45,222 [INFO] - Num cells used: 1609
+[37m2024-09-11 08:15:51,914 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:15:57,684 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:16:03,452 [INFO] - Num cells used: 1602
+[37m2024-09-11 08:16:08,458 [INFO] - Num cells used: 1600
+[37m2024-09-11 08:16:13,273 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:16:23,658 [INFO] - Num cells used: 1636
+[37m2024-09-11 08:16:33,521 [INFO] - Num cells used: 1648
+[37m2024-09-11 08:16:42,956 [INFO] - Num cells used: 1638
+[37m2024-09-11 08:16:52,247 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:17:02,063 [INFO] - Num cells used: 1634
+[37m2024-09-11 08:17:11,787 [INFO] - Num cells used: 1640
+[37m2024-09-11 08:17:20,678 [INFO] - Num cells used: 1633
+[37m2024-09-11 08:17:27,600 [INFO] - Num cells used: 1632
+[37m2024-09-11 08:17:33,164 [INFO] - Num cells used: 1580
+[37m2024-09-11 08:17:39,126 [INFO] - Num cells used: 1499
+[37m2024-09-11 08:17:46,887 [INFO] - Num cells used: 1619
+[37m2024-09-11 08:17:55,179 [INFO] - Num cells used: 1619
+[37m2024-09-11 08:18:02,904 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:18:09,900 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:18:16,447 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:18:23,083 [INFO] - Num cells used: 1619
+[37m2024-09-11 08:18:30,901 [INFO] - Num cells used: 1618
+[37m2024-09-11 08:18:38,450 [INFO] - Num cells used: 1621
+[37m2024-09-11 08:18:46,100 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:18:53,453 [INFO] - Num cells used: 1643
+[37m2024-09-11 08:19:01,529 [INFO] - Num cells used: 1634
+[37m2024-09-11 08:19:09,493 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:19:17,090 [INFO] - Num cells used: 1628
+[37m2024-09-11 08:19:24,215 [INFO] - Num cells used: 1627
+[37m2024-09-11 08:19:29,868 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:19:35,811 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:19:41,607 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:19:47,267 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:19:53,975 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:20:00,456 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:20:06,467 [INFO] - Num cells used: 1623
+[37m2024-09-11 08:20:12,663 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:20:18,580 [INFO] - Num cells used: 1617
+[37m2024-09-11 08:20:24,917 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:20:31,924 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:20:37,961 [INFO] - Num cells used: 1613
+[37m2024-09-11 08:20:44,349 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:20:50,526 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:20:56,406 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:21:01,959 [INFO] - Num cells used: 1610
+[37m2024-09-11 08:21:07,597 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:21:13,708 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:21:19,762 [INFO] - Num cells used: 1611
+[37m2024-09-11 08:21:24,923 [INFO] - Num cells used: 1594
+[37m2024-09-11 08:21:31,248 [INFO] - Num cells used: 1561
+[37m2024-09-11 08:21:39,124 [INFO] - Num cells used: 1610
+[37m2024-09-11 08:21:47,188 [INFO] - Num cells used: 1615
+[37m2024-09-11 08:21:53,038 [INFO] - Num cells used: 1623
+[37m2024-09-11 08:21:58,945 [INFO] - Num cells used: 1620
+[37m2024-09-11 08:22:04,686 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:22:10,693 [INFO] - Num cells used: 1614
+[37m2024-09-11 08:22:16,420 [INFO] - Num cells used: 1618
+[37m2024-09-11 08:22:22,577 [INFO] - Num cells used: 1612
+[37m2024-09-11 08:22:28,877 [INFO] - Num cells used: 1613
+[37m2024-09-11 08:22:34,892 [INFO] - Num cells used: 1561
+[37m2024-09-11 08:22:40,965 [INFO] - Num cells used: 1468
+[37m2024-09-11 08:22:47,037 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:22:53,339 [INFO] - Num cells used: 1620
+[37m2024-09-11 08:22:59,423 [INFO] - Num cells used: 1624
+[37m2024-09-11 08:23:05,181 [INFO] - Num cells used: 1622
+[37m2024-09-11 08:23:11,044 [INFO] - Num cells used: 1616
+[37m2024-09-11 08:23:19,102 [INFO] - Num cells used: 1642
+[37m2024-09-11 08:23:27,244 [INFO] - Num cells used: 1651
+[37m2024-09-11 08:23:35,790 [INFO] - Num cells used: 1644
+[37m2024-09-11 08:23:43,980 [INFO] - Num cells used: 1654
+[37m2024-09-11 08:23:52,755 [INFO] - Num cells used: 1631
+[37m2024-09-11 08:24:01,124 [INFO] - Num cells used: 1630
+[37m2024-09-11 08:24:06,468 [INFO] - Num cells used: 1593
+[37m2024-09-11 08:24:11,413 [INFO] - Num cells used: 1608
+[37m2024-09-11 08:24:13,459 [INFO] - Num cells used: 395
+[37m2024-09-11 08:24:13,956 [INFO] - Extraction detection metrics - F1: 0.012, Precision: 0.006, Recall: 0.941, Detected-Cells: 353114
+[37m2024-09-11 08:24:13,959 [INFO] - Caching dataset ed7ece71a3a247954fff92f4f618d8ec0f190d338a495bf96cb54f52a9d98ffb to disk...
+[37m2024-09-11 08:29:45,128 [INFO] - Validation epoch stats:   Loss: 0.0109 - F1-Score: 0.9980 - Accuracy-Score: 0.9960 - AUROC: 0.9945 - AP: 1.0000
+[37m2024-09-11 08:29:45,131 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:30:31,195 [INFO] - Final WSI level detection score (mAP): 0.4726
+[37m2024-09-11 08:30:31,204 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:30:31,633 [INFO] - Epoch: 2/100
+[37m2024-09-11 08:31:50,533 [INFO] - Training epoch stats:     Loss: 0.0115 - F1-Score: 0.9978 - Accuracy-Score: 0.9956 - AUROC: 0.9955 - AP: 1.0000
+[37m2024-09-11 08:32:02,373 [INFO] - Validation epoch stats:   Loss: 0.0102 - F1-Score: 0.9981 - Accuracy-Score: 0.9962 - AUROC: 0.9950 - AP: 1.0000
+[37m2024-09-11 08:32:02,374 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:33:07,863 [INFO] - Final WSI level detection score (mAP): 0.5245
+[37m2024-09-11 08:33:07,888 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:33:08,360 [INFO] - Epoch: 3/100
+[37m2024-09-11 08:34:29,521 [INFO] - Training epoch stats:     Loss: 0.0105 - F1-Score: 0.9980 - Accuracy-Score: 0.9960 - AUROC: 0.9965 - AP: 1.0000
+[37m2024-09-11 08:34:39,332 [INFO] - Validation epoch stats:   Loss: 0.0097 - F1-Score: 0.9981 - Accuracy-Score: 0.9963 - AUROC: 0.9955 - AP: 1.0000
+[37m2024-09-11 08:34:39,333 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:35:33,606 [INFO] - Final WSI level detection score (mAP): 0.5357
+[37m2024-09-11 08:35:33,617 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:35:34,063 [INFO] - Epoch: 4/100
+[37m2024-09-11 08:36:45,024 [INFO] - Training epoch stats:     Loss: 0.0097 - F1-Score: 0.9981 - Accuracy-Score: 0.9963 - AUROC: 0.9967 - AP: 1.0000
+[37m2024-09-11 08:36:55,338 [INFO] - Validation epoch stats:   Loss: 0.0098 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9955 - AP: 1.0000
+[37m2024-09-11 08:36:55,338 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:37:50,044 [INFO] - Final WSI level detection score (mAP): 0.5363
+[37m2024-09-11 08:37:50,060 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:37:50,542 [INFO] - Epoch: 5/100
+[37m2024-09-11 08:38:59,596 [INFO] - Training epoch stats:     Loss: 0.0091 - F1-Score: 0.9982 - Accuracy-Score: 0.9965 - AUROC: 0.9972 - AP: 1.0000
+[37m2024-09-11 08:39:08,971 [INFO] - Validation epoch stats:   Loss: 0.0098 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9951 - AP: 1.0000
+[37m2024-09-11 08:39:08,971 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:40:03,355 [INFO] - Final WSI level detection score (mAP): 0.5408
+[37m2024-09-11 08:40:03,373 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:40:03,829 [INFO] - Epoch: 6/100
+[37m2024-09-11 08:41:11,692 [INFO] - Training epoch stats:     Loss: 0.0087 - F1-Score: 0.9983 - Accuracy-Score: 0.9967 - AUROC: 0.9974 - AP: 1.0000
+[37m2024-09-11 08:41:20,957 [INFO] - Validation epoch stats:   Loss: 0.0099 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9947 - AP: 0.9999
+[37m2024-09-11 08:41:20,957 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:42:13,036 [INFO] - Final WSI level detection score (mAP): 0.5378
+[37m2024-09-11 08:42:13,199 [INFO] - Epoch: 7/100
+[37m2024-09-11 08:43:22,393 [INFO] - Training epoch stats:     Loss: 0.0082 - F1-Score: 0.9984 - Accuracy-Score: 0.9969 - AUROC: 0.9975 - AP: 1.0000
+[37m2024-09-11 08:43:31,441 [INFO] - Validation epoch stats:   Loss: 0.0097 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9959 - AP: 1.0000
+[37m2024-09-11 08:43:31,442 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:44:25,430 [INFO] - Final WSI level detection score (mAP): 0.5587
+[37m2024-09-11 08:44:25,450 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:44:25,871 [INFO] - Epoch: 8/100
+[37m2024-09-11 08:45:30,653 [INFO] - Training epoch stats:     Loss: 0.0078 - F1-Score: 0.9985 - Accuracy-Score: 0.9971 - AUROC: 0.9978 - AP: 1.0000
+[37m2024-09-11 08:45:39,897 [INFO] - Validation epoch stats:   Loss: 0.0099 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9946 - AP: 0.9999
+[37m2024-09-11 08:45:39,898 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:46:31,952 [INFO] - Final WSI level detection score (mAP): 0.5465
+[37m2024-09-11 08:46:32,093 [INFO] - Epoch: 9/100
+[37m2024-09-11 08:47:41,626 [INFO] - Training epoch stats:     Loss: 0.0074 - F1-Score: 0.9986 - Accuracy-Score: 0.9972 - AUROC: 0.9980 - AP: 1.0000
+[37m2024-09-11 08:47:50,844 [INFO] - Validation epoch stats:   Loss: 0.0097 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9948 - AP: 0.9999
+[37m2024-09-11 08:47:50,844 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:48:43,104 [INFO] - Final WSI level detection score (mAP): 0.5689
+[37m2024-09-11 08:48:43,116 [INFO] - New best model - save checkpoint
+[37m2024-09-11 08:48:43,544 [INFO] - Epoch: 10/100
+[37m2024-09-11 08:49:51,464 [INFO] - Training epoch stats:     Loss: 0.0071 - F1-Score: 0.9986 - Accuracy-Score: 0.9973 - AUROC: 0.9983 - AP: 1.0000
+[37m2024-09-11 08:50:00,458 [INFO] - Validation epoch stats:   Loss: 0.0101 - F1-Score: 0.9982 - Accuracy-Score: 0.9963 - AUROC: 0.9944 - AP: 0.9999
+[37m2024-09-11 08:50:00,459 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:50:54,298 [INFO] - Final WSI level detection score (mAP): 0.5496
+[37m2024-09-11 08:50:54,442 [INFO] - Epoch: 11/100
+[37m2024-09-11 08:52:05,942 [INFO] - Training epoch stats:     Loss: 0.0068 - F1-Score: 0.9987 - Accuracy-Score: 0.9975 - AUROC: 0.9983 - AP: 1.0000
+[37m2024-09-11 08:52:15,043 [INFO] - Validation epoch stats:   Loss: 0.0097 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9950 - AP: 1.0000
+[37m2024-09-11 08:52:15,044 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:53:08,263 [INFO] - Final WSI level detection score (mAP): 0.5552
+[37m2024-09-11 08:53:08,410 [INFO] - Epoch: 12/100
+[37m2024-09-11 08:54:15,633 [INFO] - Training epoch stats:     Loss: 0.0065 - F1-Score: 0.9988 - Accuracy-Score: 0.9976 - AUROC: 0.9984 - AP: 1.0000
+[37m2024-09-11 08:54:25,254 [INFO] - Validation epoch stats:   Loss: 0.0098 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9938 - AP: 0.9999
+[37m2024-09-11 08:54:25,255 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:55:17,989 [INFO] - Final WSI level detection score (mAP): 0.5520
+[37m2024-09-11 08:55:18,136 [INFO] - Epoch: 13/100
+[37m2024-09-11 08:56:27,249 [INFO] - Training epoch stats:     Loss: 0.0062 - F1-Score: 0.9989 - Accuracy-Score: 0.9977 - AUROC: 0.9984 - AP: 1.0000
+[37m2024-09-11 08:56:36,599 [INFO] - Validation epoch stats:   Loss: 0.0099 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9933 - AP: 0.9999
+[37m2024-09-11 08:56:36,599 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:57:28,426 [INFO] - Final WSI level detection score (mAP): 0.5469
+[37m2024-09-11 08:57:28,567 [INFO] - Epoch: 14/100
+[37m2024-09-11 08:58:37,210 [INFO] - Training epoch stats:     Loss: 0.0060 - F1-Score: 0.9989 - Accuracy-Score: 0.9978 - AUROC: 0.9985 - AP: 1.0000
+[37m2024-09-11 08:58:46,742 [INFO] - Validation epoch stats:   Loss: 0.0099 - F1-Score: 0.9982 - Accuracy-Score: 0.9964 - AUROC: 0.9939 - AP: 0.9999
+[37m2024-09-11 08:58:46,742 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-09-11 08:59:40,240 [INFO] - Final WSI level detection score (mAP): 0.5604
+[37m2024-09-11 08:59:40,248 [INFO] - Performing early stopping!
+[37m2024-09-11 08:59:40,364 [INFO] - Finished run u07oieae

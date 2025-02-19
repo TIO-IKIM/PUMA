@@ -1,0 +1,48 @@
+FROM pytorch/pytorch:2.4.1-cuda11.8-cudnn9-runtime
+
+# Ensures that Python output to stdout/stderr is not buffered: prevents missing information when terminating
+ENV PYTHONUNBUFFERED=1
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=Etc/UTC
+
+
+# Install git (required for some packages in requirements.txt)
+# Install system dependencies and pip
+RUN apt-get update \
+ && apt-get install -y libgl1-mesa-glx libgtk2.0-0 libsm6 libxext6\
+ && rm -rf /var/lib/apt/lists/*
+
+
+# create new group (name=user) and create new user (name=user)
+RUN groupadd -r user && useradd -m --no-log-init -r -g user user
+
+# make 3 directories and set permissions
+RUN mkdir -p /opt/app /input /output  \
+    && chown -R user:user /opt/app /input /output \
+    && chmod -R 777 /output
+
+USER user
+
+WORKDIR /opt/app
+
+# Install Python dependencies as root user
+COPY --chown=user:user requirements.txt /opt/app/
+RUN pip install -r requirements.txt
+
+# update pip and install wheel
+RUN python -m pip install --user -U pip
+RUN python -m pip install --user wheel
+
+# copy all related files
+COPY --chown=user:user cellvit-inference/ ./cellvit-inference/
+COPY --chown=user:user nnunet-inference/  ./nnunet-inference/
+
+WORKDIR /opt/app/nnunet-inference/nnUNet
+RUN pip install -e . 
+WORKDIR /opt/app
+
+COPY --chown=user:user inference.sh ./
+
+# entrypoint to run
+ENTRYPOINT ["./inference.sh"]

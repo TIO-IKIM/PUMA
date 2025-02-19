@@ -1,0 +1,74 @@
+logging:
+  mode: online
+  project: puma
+  notes: CellViT-SAM-H
+  log_comment: CellViT-SAM-H
+  tags:
+  - Classifier
+  - puma
+  - Baseline
+  wandb_dir: /home/jovyan/PUMA-CellViT/model-logs/wandb
+  log_dir: /home/jovyan/PUMA-CellViT/model-logs/track-2/
+  level: Info
+
+random_seed: 19
+gpu: 0
+
+data:
+  dataset: SegmentationDataset
+  dataset_path: /home/jovyan/data/PUMA-CellViT/track-2
+  normalize_stains_train: false
+  normalize_stains_val: false
+  input_shape:
+  - 1024
+  - 1024
+  num_classes: 10
+  train_filelist: /home/jovyan/data/PUMA-CellViT/track-2/splits/train.csv
+  val_filelist: /home/jovyan/data/PUMA-CellViT/track-2/splits/val.csv
+  label_map:
+    '0': Endothelium
+    '1': Plasma cell
+    '2': Stroma
+    '3': Tumor
+    '4': Histiocyte
+    '5': Apoptosis
+    '6': Epithelium
+    '7': Melanophage
+    '8': Neutrophil
+    '9': Lymphocyte
+
+cellvit_path: /home/jovyan/cellvitpp/checkpoints/CellViT-SAM-H-x40-AMP.pth
+
+training:
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.00019395764571288664
+    weight_decay: 0.0007665004192592943
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  weighted_sampling: true
+  scheduler:
+    scheduler_type: exponential
+  weight_list:
+  - 2
+  - 5
+  - 1.5
+  - 1
+  - 1.5
+  - 5
+  - 3
+  - 3
+  - 5
+  - 1
+
+just_load_model: false
+model:
+  hidden_dim: 512

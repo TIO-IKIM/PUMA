@@ -1,0 +1,73 @@
+[37m2024-07-10 20:15:45,846 [INFO] - <All keys matched successfully>
+[37m2024-07-10 20:15:46,240 [INFO] - <All keys matched successfully>
+[37m2024-07-10 20:15:46,241 [INFO] - Loading inference transformations
+[37m2024-07-10 20:15:57,908 [INFO] - Extraction detection metrics - F1: 0.770, Precision: 0.883, Recall: 0.695
+[37m2024-07-10 20:15:58,164 [INFO] - Global Scores - Without taking cell detection quality into account:
+[37m2024-07-10 20:15:58,164 [INFO] - F1: 0.807 - Prec: 0.807 - Rec: 0.807 - Acc: 0.807 - Auroc: 0.941
+[37m2024-07-10 20:16:00,327 [INFO] - Updating PanNuke-cell-preds with dataset specific classes
+[37m2024-07-10 20:16:01,410 [INFO] - Calculating dataset scores according to TIA Evaluation guidelines
+[37m2024-07-10 20:16:03,244 [INFO] - {'Pre/tumor_any': 0.704, 'Rec/tumor_any': 0.8953, 'F1/tumor_any': 0.7882, 'Pre/nonTIL_stromal': 0.6481, 'Rec/nonTIL_stromal': 0.7394, 'F1/nonTIL_stromal': 0.6907, 'Pre/sTIL': 0.6548, 'Rec/sTIL': 0.9378, 'F1/sTIL': 0.7711, 'Pre/other_nucleus': 0.9545, 'Rec/other_nucleus': 0.0739, 'F1/other_nucleus': 0.1373, 'mF1': 0.596825}
+[37m2024-07-10 20:16:03,245 [INFO] - **************************************************
+[37m2024-07-10 20:16:03,251 [INFO] - {
+  "cellvit_scores": {
+    "F1": 0.7703041760251617,
+    "Prec": 0.8832641121519952,
+    "Rec": 0.695454830249982
+  },
+  "classifier": {
+    "global": {
+      "F1": 0.8072924613952637,
+      "Prec": 0.8072924613952637,
+      "Rec": 0.8072924613952637,
+      "Acc": 0.8072924613952637,
+      "Auroc": 0.9412822723388672,
+      "AP": 0.7740782499313354
+    }
+  },
+  "pipeline": {
+    "detection_scores_tia": {
+      "binary": {
+        "f1": 0.7757627741698321,
+        "prec": 0.6958672235656188,
+        "rec": 0.8763842746400886
+      },
+      "cell_types": {
+        "tumor_any": {
+          "f1": 0.6002170206169586,
+          "prec": 0.5379272020005557,
+          "rec": 0.6788218793828892
+        },
+        "nonTIL_stromal": {
+          "f1": 0.36178960096735185,
+          "prec": 0.352,
+          "rec": 0.37213930348258706
+        },
+        "sTIL": {
+          "f1": 0.6314274499542064,
+          "prec": 0.5278932399912492,
+          "rec": 0.7854817708333334
+        },
+        "other_nucleus": {
+          "f1": 0.0525328330206379,
+          "prec": 0.6086956521739131,
+          "rec": 0.027450980392156862
+        }
+      }
+    },
+    "scores_ocelot": {
+      "Pre/tumor_any": 0.704,
+      "Rec/tumor_any": 0.8953,
+      "F1/tumor_any": 0.7882,
+      "Pre/nonTIL_stromal": 0.6481,
+      "Rec/nonTIL_stromal": 0.7394,
+      "F1/nonTIL_stromal": 0.6907,
+      "Pre/sTIL": 0.6548,
+      "Rec/sTIL": 0.9378,
+      "F1/sTIL": 0.7711,
+      "Pre/other_nucleus": 0.9545,
+      "Rec/other_nucleus": 0.0739,
+      "F1/other_nucleus": 0.1373,
+      "mF1": 0.596825
+    }
+  }
+}

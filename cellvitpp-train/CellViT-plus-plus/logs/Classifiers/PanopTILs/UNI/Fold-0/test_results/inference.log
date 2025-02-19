@@ -1,0 +1,73 @@
+[37m2024-08-06 10:01:52,170 [INFO] - <All keys matched successfully>
+[37m2024-08-06 10:01:52,989 [INFO] - <All keys matched successfully>
+[37m2024-08-06 10:01:52,991 [INFO] - Loading inference transformations
+[37m2024-08-06 10:15:17,264 [INFO] - Extraction detection metrics - F1: 0.769, Precision: 0.728, Recall: 0.836
+[37m2024-08-06 10:15:19,183 [INFO] - Global Scores - Without taking cell detection quality into account:
+[37m2024-08-06 10:15:19,183 [INFO] - F1: 0.731 - Prec: 0.731 - Rec: 0.731 - Acc: 0.731 - Auroc: 0.848
+[37m2024-08-06 10:15:22,100 [INFO] - Updating PanNuke-cell-preds with dataset specific classes
+[37m2024-08-06 10:15:26,156 [INFO] - Calculating dataset scores according to TIA Evaluation guidelines
+[37m2024-08-06 10:15:34,580 [INFO] - {'Pre/Other Cells': 0.5974, 'Rec/Other Cells': 0.1799, 'F1/Other Cells': 0.2766, 'Pre/Epithelial Cells': 0.8325, 'Rec/Epithelial Cells': 0.7459, 'F1/Epithelial Cells': 0.7868, 'Pre/Stromal Cells': 0.5546, 'Rec/Stromal Cells': 0.7456, 'F1/Stromal Cells': 0.6361, 'Pre/TILs': 0.8426, 'Rec/TILs': 0.7664, 'F1/TILs': 0.8027, 'mF1': 0.62555}
+[37m2024-08-06 10:15:34,609 [INFO] - **************************************************
+[37m2024-08-06 10:15:34,610 [INFO] - {
+  "cellvit_scores": {
+    "F1": 0.7692730642329909,
+    "Prec": 0.728165467888316,
+    "Rec": 0.8364986361055589
+  },
+  "classifier": {
+    "global": {
+      "F1": 0.7309826612472534,
+      "Prec": 0.7309826612472534,
+      "Rec": 0.7309826612472534,
+      "Acc": 0.7309826612472534,
+      "Auroc": 0.8477604985237122,
+      "AP": 0.6466768383979797
+    }
+  },
+  "pipeline": {
+    "detection_scores_tia": {
+      "binary": {
+        "f1": 0.7690331097726282,
+        "prec": 0.8112503730229782,
+        "rec": 0.7309924485177135
+      },
+      "cell_types": {
+        "Other Cells": {
+          "f1": 0.07341750982523622,
+          "prec": 0.1581981981981982,
+          "rec": 0.047800522648083626
+        },
+        "Epithelial Cells": {
+          "f1": 0.5944072240023304,
+          "prec": 0.6233123587268617,
+          "rec": 0.5680641389677635
+        },
+        "Stromal Cells": {
+          "f1": 0.3248751739379553,
+          "prec": 0.2644589552238806,
+          "rec": 0.4210693825588797
+        },
+        "TILs": {
+          "f1": 0.5811415957111321,
+          "prec": 0.6201790401830787,
+          "rec": 0.5467275855930694
+        }
+      }
+    },
+    "scores_ocelot": {
+      "Pre/Other Cells": 0.5974,
+      "Rec/Other Cells": 0.1799,
+      "F1/Other Cells": 0.2766,
+      "Pre/Epithelial Cells": 0.8325,
+      "Rec/Epithelial Cells": 0.7459,
+      "F1/Epithelial Cells": 0.7868,
+      "Pre/Stromal Cells": 0.5546,
+      "Rec/Stromal Cells": 0.7456,
+      "F1/Stromal Cells": 0.6361,
+      "Pre/TILs": 0.8426,
+      "Rec/TILs": 0.7664,
+      "F1/TILs": 0.8027,
+      "mF1": 0.62555
+    }
+  }
+}

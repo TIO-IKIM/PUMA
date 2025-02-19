@@ -1,0 +1,14 @@
+services:
+  viewer:
+    volumes:
+      - "./Viewer/main.js:/app/main.js:ro"
+      - "./Viewer/index.html:/app/index.html:ro"
+      - "./Viewer/style.css:/app/style.css:ro"
+
+    # direct mapping files for hot reloading instead of mapping volumes with subdirs
+    # otherwise, hot reloading would not work
+    # another option would be to use the same naming for both folders, e.g.,
+  slide-provider:
+    volumes:
+      - "./SlideProvider/slide_provider.py:/app/slide_provider.py"
+      - "./SlideProvider/documentation:/app/documentation"

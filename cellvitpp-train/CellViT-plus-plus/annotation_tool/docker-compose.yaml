@@ -1,0 +1,15 @@
+services:
+  web:
+    image: ikimhoerst/slide-annotator:1.0
+    volumes:
+      - ./example_dataset:/dataset # This is the volume for the dataset
+      - db_data:/app # This is the volume for the database
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
+
+volumes:
+  db_data:

@@ -1,0 +1,103 @@
+[37m2024-06-26 12:21:29,366 [INFO] - <All keys matched successfully>
+[37m2024-06-26 12:21:29,947 [INFO] - <All keys matched successfully>
+[37m2024-06-26 12:21:29,948 [INFO] - Loading inference transformations
+[37m2024-06-26 12:21:40,120 [INFO] - Extraction detection metrics - F1: 0.728, Precision: 0.709, Recall: 0.758
+[37m2024-06-26 12:21:40,290 [INFO] - Global Scores - Without taking cell detection quality into account:
+[37m2024-06-26 12:21:40,290 [INFO] - F1: 0.804 - Prec: 0.804 - Rec: 0.804 - Acc: 0.804 - Auroc: 0.935
+[37m2024-06-26 12:21:42,492 [INFO] - Updating PanNuke-cell-preds with dataset specific classes
+[37m2024-06-26 12:21:51,010 [INFO] - Calculating dataset scores according to TIA Evaluation guidelines
+[37m2024-06-26 12:24:57,441 [INFO] - **************************************************
+[37m2024-06-26 12:24:57,442 [INFO] - {
+  "cellvit_scores": {
+    "F1": 0.7284005110898673,
+    "Prec": 0.709121389108423,
+    "Rec": 0.7582051584941027
+  },
+  "classifier": {
+    "global": {
+      "F1": 0.8035426735877991,
+      "Prec": 0.8035426735877991,
+      "Rec": 0.8035426735877991,
+      "Acc": 0.8035426735877991,
+      "Auroc": 0.9351712465286255,
+      "AP": 0.7481546401977539
+    }
+  },
+  "pipeline": {
+    "segmentation_scores": {
+      "binary": {
+        "dice": 0.8183275259284951,
+        "fast_aji": 0.5251523707129515,
+        "fast_aji_plus": 0.5521867988361312
+      }
+    },
+    "detection_scores": {
+      "binary": {
+        "f1": 0.7195136347538661,
+        "prec": 0.7461133553678541,
+        "rec": 0.6947452410805882
+      },
+      "cell_types": {
+        "Miscellaneous": {
+          "f1": 0.0,
+          "prec": 0.0,
+          "rec": 0.0
+        },
+        "Inflammatory": {
+          "f1": 0.547394540942928,
+          "prec": 0.5292706333973128,
+          "rec": 0.5668036998972251
+        },
+        "Epithelium": {
+          "f1": 0.5695268412675445,
+          "prec": 0.5650301464254953,
+          "rec": 0.574095682613769
+        },
+        "Spindle-Shaped": {
+          "f1": 0.48031809145129223,
+          "prec": 0.4755905511811024,
+          "rec": 0.485140562248996
+        }
+      }
+    },
+    "pq_scores": {
+      "binary": {
+        "pq": 0.4922004153930962,
+        "dq": 0.6492108964823046,
+        "sq": 0.7558080860227232
+      },
+      "mean": {
+        "pq": 0.32669169342736215,
+        "dq": 0.4243191843941311,
+        "sq": 0.6342964444604008
+      },
+      "mean+": {
+        "pq": 0.3263511710833927,
+        "dq": 0.4218140469484667,
+        "sq": 0.5765184028885934
+      },
+      "cell_types+": {
+        "Miscellaneous": {
+          "pq": 0.0,
+          "dq": 0.0,
+          "sq": 0.0
+        },
+        "Inflammatory": {
+          "pq": 0.5388458343069625,
+          "dq": 0.6588235290142844,
+          "sq": 0.8178909989950882
+        },
+        "Epithelium": {
+          "pq": 0.4256117150520661,
+          "dq": 0.5615337042172128,
+          "sq": 0.7579450919074854
+        },
+        "Spindle-Shaped": {
+          "pq": 0.3409471349745421,
+          "dq": 0.4668989545623697,
+          "sq": 0.7302375206517997
+        }
+      }
+    }
+  }
+}

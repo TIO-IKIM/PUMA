@@ -1,0 +1,69 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 19
+gpu: 0
+data:
+  dataset: CoNSeP
+  dataset_path: /Consep
+  train_filelist: /Consep/splits/fold_3/train.csv
+  val_filelist: /Consep/splits/fold_3/val.csv
+  normalize_stains_train: false
+  normalize_stains_val: false
+  label_map:
+    0: Other
+    1: Inflammatory
+    2: Epithelial
+    3: Spindle-Shaped
+  num_classes: 4
+cellvit_path: ./checkpoints/CellViT-Virchow2-x40-AMP.pth
+model:
+  hidden_dim: 128
+training:
+  cache_cell_dataset: false
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.00568059820179996
+    weight_decay: 0.0004714549691487939
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  scheduler:
+    scheduler_type: constant
+transformations:
+  randomrotate90:
+    p: 0.5
+  horizontalflip:
+    p: 0.5
+  verticalflip:
+    p: 0.5
+  downscale:
+    p: 0.15
+    scale: 0.5
+  blur:
+    p: 0.2
+    blur_limit: 10
+  gaussnoise:
+    p: 0.25
+    var_limit: 50
+  colorjitter:
+    p: 0.2
+    scale_setting: 0.25
+    scale_color: 0.1
+  superpixels:
+    p: 0.1
+  zoomblur:
+    p: 0.1
+  randomsizedcrop:
+    p: 0.1

@@ -1,0 +1,100 @@
+Matrix :
+
+Predict              tumor_any            nonTIL_stromal       sTIL                 other_nucleus
+Actual
+tumor_any            2049                 94                   52                   19
+
+nonTIL_stromal       63                   944                  222                  2
+
+sTIL                 32                   299                  2329                 0
+
+other_nucleus        45                   97                   21                   99
+
+
+
+Normalized Matrix :
+
+Predict              tumor_any            nonTIL_stromal       sTIL                 other_nucleus
+Actual
+tumor_any            0.92547              0.04246              0.02349              0.00858
+
+nonTIL_stromal       0.05118              0.76686              0.18034              0.00162
+
+sTIL                 0.01203              0.11241              0.87556              0.0
+
+other_nucleus        0.17176              0.37023              0.08015              0.37786
+
+
+
+Overall Statistics :
+
+ACC Macro                                                         0.92571
+F1 Macro                                                          0.75976
+FPR Macro                                                         0.05303
+Kappa                                                             0.77622
+NPV Macro                                                         0.94695
+Overall ACC                                                       0.85142
+PPV Macro                                                         0.82673
+SOA1(Landis & Koch)                                               Substantial
+TPR Macro                                                         0.73644
+Zero-one Loss                                                     946
+
+Class Statistics :
+
+Classes                                                           tumor_any          nonTIL_stromal     sTIL               other_nucleus
+ACC(Accuracy)                                                     0.9521             0.87796            0.90168            0.9711
+AUC(Area under the ROC curve)                                     0.94588            0.83573            0.89799            0.68721
+AUCI(AUC value interpretation)                                    Excellent          Very Good          Very Good          Fair
+F1(F1 score - harmonic mean of precision and sensitivity)         0.93073            0.70844            0.88153            0.51832
+FN(False negative/miss/type 2 error)                              165                287                331                163
+FP(False positive/type 1 error/false alarm)                       140                490                295                21
+FPR(Fall-out or false positive rate)                              0.03371            0.0954             0.07958            0.00344
+N(Condition negative)                                             4153               5136               3707               6105
+P(Condition positive or support)                                  2214               1231               2660               262
+POP(Population)                                                   6367               6367               6367               6367
+PPV(Precision or positive predictive value)                       0.93604            0.6583             0.88758            0.825
+TN(True negative/correct rejection)                               4013               4646               3412               6084
+TON(Test outcome negative)                                        4178               4933               3743               6247
+TOP(Test outcome positive)                                        2189               1434               2624               120
+TP(True positive/hit)                                             2049               944                2329               99
+TPR(Sensitivity, recall, hit rate, or true positive rate)         0.92547            0.76686            0.87556            0.37786
+
+One-Vs-All :
+
+tumor_any-Vs-All :
+
+Predict         tumor_any       ~
+Actual
+tumor_any       2049            165
+
+~               140             4013
+
+
+
+nonTIL_stromal-Vs-All :
+
+Predict              nonTIL_stromal       ~
+Actual
+nonTIL_stromal       944                  287
+
+~                    490                  4646
+
+
+
+sTIL-Vs-All :
+
+Predict    sTIL       ~
+Actual
+sTIL       2329       331
+
+~          295        3412
+
+
+
+other_nucleus-Vs-All :
+
+Predict             other_nucleus       ~
+Actual
+other_nucleus       99                  163
+
+~                   21                  6084

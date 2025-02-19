@@ -1,0 +1,40 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 20
+gpu: 0
+data:
+  dataset: Ocelot
+  dataset_path: /OCELOT-Orig
+  train_filelist: /OCELOT-Orig/splits/5.csv
+  normalize_stains_train: false
+  normalize_stains_val: false
+  label_map:
+    0: Other Cell
+    1: Tumor Cell
+  num_classes: 2
+cellvit_path: ./checkpoints/CellViT-Virchow2-x40-AMP.pth
+model:
+  hidden_dim: 128
+training:
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.009409727686291442
+    weight_decay: 0.00014345992571792625
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  scheduler:
+    scheduler_type: constant

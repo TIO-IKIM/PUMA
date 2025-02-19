@@ -1,0 +1,142 @@
+Matrix :
+
+Predict                   tumor_nonMitotic          tumor_mitotic             nonTILnonMQ_stromal       macrophage                lymphocyte                plasma_cell               other_nucleus
+Actual
+tumor_nonMitotic          1949                      0                         84                        1                         99                        4                         0
+
+tumor_mitotic             25                        4                         2                         0                         11                        0                         0
+
+nonTILnonMQ_stromal       100                       0                         781                       3                         144                       70                        0
+
+macrophage                15                        0                         38                        8                         22                        22                        0
+
+lymphocyte                38                        3                         181                       3                         1233                      182                       0
+
+plasma_cell               17                        0                         62                        1                         556                       390                       0
+
+other_nucleus             139                       0                         81                        0                         3                         33                        0
+
+
+
+Normalized Matrix :
+
+Predict                   tumor_nonMitotic          tumor_mitotic             nonTILnonMQ_stromal       macrophage                lymphocyte                plasma_cell               other_nucleus
+Actual
+tumor_nonMitotic          0.91203                   0.0                       0.03931                   0.00047                   0.04633                   0.00187                   0.0
+
+tumor_mitotic             0.59524                   0.09524                   0.04762                   0.0                       0.2619                    0.0                       0.0
+
+nonTILnonMQ_stromal       0.09107                   0.0                       0.71129                   0.00273                   0.13115                   0.06375                   0.0
+
+macrophage                0.14286                   0.0                       0.3619                    0.07619                   0.20952                   0.20952                   0.0
+
+lymphocyte                0.02317                   0.00183                   0.11037                   0.00183                   0.75183                   0.11098                   0.0
+
+plasma_cell               0.01657                   0.0                       0.06043                   0.00097                   0.54191                   0.38012                   0.0
+
+other_nucleus             0.54297                   0.0                       0.31641                   0.0                       0.01172                   0.12891                   0.0
+
+
+
+Overall Statistics :
+
+ACC Macro                                                         0.91212
+F1 Macro                                                          0.42362
+FPR Macro                                                         0.05799
+Kappa                                                             0.58423
+NPV Macro                                                         0.94559
+Overall ACC                                                       0.69242
+PPV Macro                                                         None
+SOA1(Landis & Koch)                                               Moderate
+TPR Macro                                                         0.4181
+Zero-one Loss                                                     1939
+
+Class Statistics :
+
+Classes                                                           tumor_nonMitotic        tumor_mitotic           nonTILnonMQ_stromal     macrophage              lymphocyte              plasma_cell             other_nucleus
+ACC(Accuracy)                                                     0.9172                  0.9935                  0.87865                 0.98334                 0.80298                 0.84978                 0.95939
+AUC(Area under the ROC curve)                                     0.91594                 0.54738                 0.81262                 0.53745                 0.7864                  0.6606                  0.5
+AUCI(AUC value interpretation)                                    Excellent               Poor                    Very Good               Poor                    Good                    Fair                    Poor
+F1(F1 score - harmonic mean of precision and sensitivity)         0.8819                  0.16327                 0.67125                 0.13223                 0.66505                 0.45165                 0.0
+FN(False negative/miss/type 2 error)                              188                     38                      317                     97                      407                     636                     256
+FP(False positive/type 1 error/false alarm)                       334                     3                       448                     8                       835                     311                     0
+FPR(Fall-out or false positive rate)                              0.08015                 0.00048                 0.08605                 0.00129                 0.17903                 0.05892                 0.0
+N(Condition negative)                                             4167                    6262                    5206                    6199                    4664                    5278                    6048
+P(Condition positive or support)                                  2137                    42                      1098                    105                     1640                    1026                    256
+POP(Population)                                                   6304                    6304                    6304                    6304                    6304                    6304                    6304
+PPV(Precision or positive predictive value)                       0.8537                  0.57143                 0.63548                 0.5                     0.59623                 0.55635                 None
+TN(True negative/correct rejection)                               3833                    6259                    4758                    6191                    3829                    4967                    6048
+TON(Test outcome negative)                                        4021                    6297                    5075                    6288                    4236                    5603                    6304
+TOP(Test outcome positive)                                        2283                    7                       1229                    16                      2068                    701                     0
+TP(True positive/hit)                                             1949                    4                       781                     8                       1233                    390                     0
+TPR(Sensitivity, recall, hit rate, or true positive rate)         0.91203                 0.09524                 0.71129                 0.07619                 0.75183                 0.38012                 0.0
+
+One-Vs-All :
+
+tumor_nonMitotic-Vs-All :
+
+Predict                tumor_nonMitotic       ~
+Actual
+tumor_nonMitotic       1949                   188
+
+~                      334                    3833
+
+
+
+tumor_mitotic-Vs-All :
+
+Predict             tumor_mitotic       ~
+Actual
+tumor_mitotic       4                   38
+
+~                   3                   6259
+
+
+
+nonTILnonMQ_stromal-Vs-All :
+
+Predict                   nonTILnonMQ_stromal       ~
+Actual
+nonTILnonMQ_stromal       781                       317
+
+~                         448                       4758
+
+
+
+macrophage-Vs-All :
+
+Predict          macrophage       ~
+Actual
+macrophage       8                97
+
+~                8                6191
+
+
+
+lymphocyte-Vs-All :
+
+Predict          lymphocyte       ~
+Actual
+lymphocyte       1233             407
+
+~                835              3829
+
+
+
+plasma_cell-Vs-All :
+
+Predict           plasma_cell       ~
+Actual
+plasma_cell       390               636
+
+~                 311               4967
+
+
+
+other_nucleus-Vs-All :
+
+Predict             other_nucleus       ~
+Actual
+other_nucleus       0                   256
+
+~                   0                   6048

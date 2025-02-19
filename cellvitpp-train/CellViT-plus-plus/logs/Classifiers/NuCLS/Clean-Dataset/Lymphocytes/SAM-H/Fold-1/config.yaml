@@ -1,0 +1,41 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 19
+gpu: 0
+data:
+  dataset: nucls_label
+  dataset_path: /NuCLS/corrected-dataset-ouf-of-bounds
+  normalize_stains_train: false
+  normalize_stains_val: false
+  num_classes: 2
+  classification_level: main_classification
+  hash_info: main_classification
+  train_filelist: /NuCLS/splits/fold_1/train.csv
+  val_filelist: /NuCLS/splits/fold_1/val.csv
+  label: lymphocyte
+cellvit_path: ./checkpoints/CellViT-SAM-H-x40-AMP.pth
+model:
+  hidden_dim: 128
+training:
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.0047192849700088925
+    weight_decay: 0.00015918739130688466
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  scheduler:
+    scheduler_type: constant

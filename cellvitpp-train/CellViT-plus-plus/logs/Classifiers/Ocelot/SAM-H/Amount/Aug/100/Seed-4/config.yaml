@@ -1,0 +1,65 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 22
+gpu: 0
+data:
+  dataset: Ocelot
+  dataset_path: /OCELOT-Orig
+  normalize_stains_train: false
+  normalize_stains_val: false
+  label_map:
+    0: Other Cell
+    1: Tumor Cell
+  num_classes: 2
+cellvit_path: ./checkpoints/CellViT-SAM-H-x40-AMP.pth
+model:
+  hidden_dim: 256
+training:
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    lr: 0.000454128407501709
+    betas:
+    - 0.85
+    - 0.9
+    weight_decay: 0.00021428574971482908
+  early_stopping_patience: 10
+  scheduler:
+    scheduler_type: exponential
+  mixed_precision: true
+  eval_every: 1
+  cache_cell_dataset: false
+transformations:
+  randomrotate90:
+    p: 0.5
+  horizontalflip:
+    p: 0.5
+  verticalflip:
+    p: 0.5
+  downscale:
+    p: 0.15
+    scale: 0.5
+  blur:
+    p: 0.2
+    blur_limit: 10
+  gaussnoise:
+    p: 0.25
+    var_limit: 50
+  colorjitter:
+    p: 0.2
+    scale_setting: 0.25
+    scale_color: 0.1
+  superpixels:
+    p: 0.1
+  zoomblur:
+    p: 0.1
+  randomsizedcrop:
+    p: 0.1

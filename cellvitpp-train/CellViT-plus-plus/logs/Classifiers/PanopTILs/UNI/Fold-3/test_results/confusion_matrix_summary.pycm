@@ -1,0 +1,100 @@
+Matrix :
+
+Predict                Other Cells            Epithelial Cells       Stromal Cells          TILs
+Actual
+Other Cells            400                    883                    1358                   1128
+
+Epithelial Cells       399                    10576                  715                    142
+
+Stromal Cells          237                    523                    3930                   898
+
+TILs                   196                    227                    2022                   9520
+
+
+
+Normalized Matrix :
+
+Predict                Other Cells            Epithelial Cells       Stromal Cells          TILs
+Actual
+Other Cells            0.10613                0.23428                0.36031                0.29928
+
+Epithelial Cells       0.03372                0.89385                0.06043                0.012
+
+Stromal Cells          0.04241                0.09359                0.70329                0.1607
+
+TILs                   0.01638                0.01897                0.16899                0.79565
+
+
+
+Overall Statistics :
+
+ACC Macro                                                         0.86837
+F1 Macro                                                          0.60554
+FPR Macro                                                         0.08894
+Kappa                                                             0.62194
+NPV Macro                                                         0.91365
+Overall ACC                                                       0.73674
+PPV Macro                                                         0.62379
+SOA1(Landis & Koch)                                               Substantial
+TPR Macro                                                         0.62473
+Zero-one Loss                                                     8728
+
+Class Statistics :
+
+Classes                                                           Other Cells          Epithelial Cells     Stromal Cells        TILs
+ACC(Accuracy)                                                     0.87329              0.91286              0.82648              0.86086
+AUC(Area under the ROC curve)                                     0.53891              0.90863              0.77737              0.84667
+AUCI(AUC value interpretation)                                    Poor                 Excellent            Good                 Very Good
+F1(F1 score - harmonic mean of precision and sensitivity)         0.15997              0.87983              0.57739              0.80497
+FN(False negative/miss/type 2 error)                              3369                 1256                 1658                 2445
+FP(False positive/type 1 error/false alarm)                       832                  1633                 4095                 2168
+FPR(Fall-out or false positive rate)                              0.02831              0.07659              0.14855              0.10232
+N(Condition negative)                                             29385                21322                27566                21189
+P(Condition positive or support)                                  3769                 11832                5588                 11965
+POP(Population)                                                   33154                33154                33154                33154
+PPV(Precision or positive predictive value)                       0.32468              0.86625              0.48972              0.81451
+TN(True negative/correct rejection)                               28553                19689                23471                19021
+TON(Test outcome negative)                                        31922                20945                25129                21466
+TOP(Test outcome positive)                                        1232                 12209                8025                 11688
+TP(True positive/hit)                                             400                  10576                3930                 9520
+TPR(Sensitivity, recall, hit rate, or true positive rate)         0.10613              0.89385              0.70329              0.79565
+
+One-Vs-All :
+
+Other Cells-Vs-All :
+
+Predict           Other Cells       ~
+Actual
+Other Cells       400               3369
+
+~                 832               28553
+
+
+
+Epithelial Cells-Vs-All :
+
+Predict                Epithelial Cells       ~
+Actual
+Epithelial Cells       10576                  1256
+
+~                      1633                   19689
+
+
+
+Stromal Cells-Vs-All :
+
+Predict             Stromal Cells       ~
+Actual
+Stromal Cells       3930                1658
+
+~                   4095                23471
+
+
+
+TILs-Vs-All :
+
+Predict     TILs        ~
+Actual
+TILs        9520        2445
+
+~           2168        19021

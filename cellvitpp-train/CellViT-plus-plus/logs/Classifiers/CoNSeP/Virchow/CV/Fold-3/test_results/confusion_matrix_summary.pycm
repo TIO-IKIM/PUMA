@@ -1,0 +1,100 @@
+Matrix :
+
+Predict              Miscellaneous        Inflammatory         Epithelium           Spindle-Shaped
+Actual
+Miscellaneous        273                  8                    32                   38
+
+Inflammatory         7                    1079                 12                   276
+
+Epithelium           11                   21                   2208                 212
+
+Spindle-Shaped       5                    241                  64                   1964
+
+
+
+Normalized Matrix :
+
+Predict              Miscellaneous        Inflammatory         Epithelium           Spindle-Shaped
+Actual
+Miscellaneous        0.77778              0.02279              0.09117              0.10826
+
+Inflammatory         0.00509              0.7853               0.00873              0.20087
+
+Epithelium           0.00449              0.00856              0.90049              0.08646
+
+Spindle-Shaped       0.0022               0.10598              0.02814              0.86368
+
+
+
+Overall Statistics :
+
+ACC Macro                                                         0.92815
+F1 Macro                                                          0.84677
+FPR Macro                                                         0.05247
+Kappa                                                             0.78882
+NPV Macro                                                         0.94806
+Overall ACC                                                       0.8563
+PPV Macro                                                         0.86607
+SOA1(Landis & Koch)                                               Substantial
+TPR Macro                                                         0.83181
+Zero-one Loss                                                     927
+
+Class Statistics :
+
+Classes                                                           Miscellaneous      Inflammatory       Epithelium         Spindle-Shaped
+ACC(Accuracy)                                                     0.98434            0.91242            0.94543            0.87041
+AUC(Area under the ROC curve)                                     0.887              0.86606            0.93674            0.86887
+AUCI(AUC value interpretation)                                    Very Good          Very Good          Excellent          Very Good
+F1(F1 score - harmonic mean of precision and sensitivity)         0.84389            0.79251            0.92617            0.82452
+FN(False negative/miss/type 2 error)                              78                 295                244                310
+FP(False positive/type 1 error/false alarm)                       23                 270                108                526
+FPR(Fall-out or false positive rate)                              0.00377            0.05318            0.02701            0.12593
+N(Condition negative)                                             6100               5077               3999               4177
+P(Condition positive or support)                                  351                1374               2452               2274
+POP(Population)                                                   6451               6451               6451               6451
+PPV(Precision or positive predictive value)                       0.9223             0.79985            0.95337            0.78876
+TN(True negative/correct rejection)                               6077               4807               3891               3651
+TON(Test outcome negative)                                        6155               5102               4135               3961
+TOP(Test outcome positive)                                        296                1349               2316               2490
+TP(True positive/hit)                                             273                1079               2208               1964
+TPR(Sensitivity, recall, hit rate, or true positive rate)         0.77778            0.7853             0.90049            0.86368
+
+One-Vs-All :
+
+Miscellaneous-Vs-All :
+
+Predict             Miscellaneous       ~
+Actual
+Miscellaneous       273                 78
+
+~                   23                  6077
+
+
+
+Inflammatory-Vs-All :
+
+Predict            Inflammatory       ~
+Actual
+Inflammatory       1079               295
+
+~                  270                4807
+
+
+
+Epithelium-Vs-All :
+
+Predict          Epithelium       ~
+Actual
+Epithelium       2208             244
+
+~                108              3891
+
+
+
+Spindle-Shaped-Vs-All :
+
+Predict              Spindle-Shaped       ~
+Actual
+Spindle-Shaped       1964                 310
+
+~                    526                  3651

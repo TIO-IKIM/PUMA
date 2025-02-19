@@ -1,0 +1,157 @@
+[37m2024-05-28 08:38:20,211 [INFO] - Instantiated Logger. WandB init and config update finished.
+[37m2024-05-28 08:38:20,213 [INFO] - Run ist stored here: /cellvit/logs_paper/Head-Evaluation/MIDOG/single-domain/all/SAM-H/anchor_20/best_hp/2024-05-28T083811_CellViT-SAM-H-Classifier-Head-Fold-3
+[37m2024-05-28 08:38:20,277 [INFO] - Cuda devices: [<torch.cuda.device object at 0x7f6478748040>]
+[37m2024-05-28 08:38:20,283 [INFO] - Using GPU: cuda:0
+[37m2024-05-28 08:38:20,288 [INFO] - Using device: cuda:0
+[37m2024-05-28 08:38:20,316 [INFO] - Loss function:
+[37m2024-05-28 08:38:20,322 [INFO] - CrossEntropyLoss()
+[37m2024-05-28 08:38:35,039 [INFO] - <All keys matched successfully>
+[37m2024-05-28 08:38:35,899 [INFO] -
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+LinearClassifier                         [1, 2]                    --
+├─Linear: 1-1                            [1, 512]                  655,872
+├─ReLU: 1-2                              [1, 512]                  --
+├─Dropout: 1-3                           [1, 512]                  --
+├─Linear: 1-4                            [1, 2]                    1,026
+==========================================================================================
+Total params: 656,898
+Trainable params: 656,898
+Non-trainable params: 0
+Total mult-adds (M): 0.66
+==========================================================================================
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.00
+Params size (MB): 2.63
+Estimated Total Size (MB): 2.64
+==========================================================================================
+[37m2024-05-28 08:38:35,907 [INFO] - Loaded AdamW Optimizer with following hyperparameters:
+[37m2024-05-28 08:38:35,912 [INFO] - {'betas': [0.85, 0.9], 'lr': 1.3720338613429816e-05, 'weight_decay': 0.0009752830235894076}
+[37m2024-05-28 08:38:35,917 [INFO] - Using early stopping with a range of 5 and maximize strategy
+[37m2024-05-28 08:38:36,785 [INFO] - Instantiate Trainer
+[37m2024-05-28 08:38:36,840 [INFO] - Calling Trainer Fit
+[37m2024-05-28 08:38:36,845 [INFO] - Dataset is cached after first epoch
+[37m2024-05-28 08:38:36,849 [INFO] - Starting training, total number of epochs: 100
+[37m2024-05-28 08:38:36,853 [INFO] - Epoch: 1/100
+[37m2024-05-28 08:39:19,612 [INFO] - Loaded dataset from cache: midog-volume/data/cache/37d57197df07feba25b6abd3caedf589ce766bfa3536479ed967103a992b9650.h5
+[37m2024-05-28 08:39:25,639 [INFO] - Training epoch stats:     Loss: 0.1049 - F1-Score: 0.9753 - Accuracy-Score: 0.9534 - AUROC: 0.9706 - AP: 0.9979
+[37m2024-05-28 08:39:35,263 [INFO] - Loaded dataset from cache: midog-volume/data/cache/046d478acf9dfdaf0fdfb4aa62d833edefefe52b3933bffa8e631bdabcf4643d.h5
+[37m2024-05-28 08:39:36,482 [INFO] - Validation epoch stats:   Loss: 0.0847 - F1-Score: 0.9776 - Accuracy-Score: 0.9584 - AUROC: 0.9849 - AP: 0.9987
+[37m2024-05-28 08:39:36,483 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:42:27,462 [INFO] - Final WSI level detection score (mAP): 0.3461
+[37m2024-05-28 08:42:27,525 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:42:27,868 [INFO] - Epoch: 2/100
+[37m2024-05-28 08:42:33,533 [INFO] - Training epoch stats:     Loss: 0.0735 - F1-Score: 0.9817 - Accuracy-Score: 0.9657 - AUROC: 0.9862 - AP: 0.9990
+[37m2024-05-28 08:42:34,293 [INFO] - Validation epoch stats:   Loss: 0.0784 - F1-Score: 0.9796 - Accuracy-Score: 0.9621 - AUROC: 0.9867 - AP: 0.9989
+[37m2024-05-28 08:42:34,301 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:43:31,808 [INFO] - Final WSI level detection score (mAP): 0.3972
+[37m2024-05-28 08:43:31,869 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:43:32,212 [INFO] - Epoch: 3/100
+[37m2024-05-28 08:43:38,365 [INFO] - Training epoch stats:     Loss: 0.0682 - F1-Score: 0.9833 - Accuracy-Score: 0.9688 - AUROC: 0.9881 - AP: 0.9992
+[37m2024-05-28 08:43:39,152 [INFO] - Validation epoch stats:   Loss: 0.0762 - F1-Score: 0.9799 - Accuracy-Score: 0.9628 - AUROC: 0.9873 - AP: 0.9989
+[37m2024-05-28 08:43:39,158 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:44:42,568 [INFO] - Final WSI level detection score (mAP): 0.4208
+[37m2024-05-28 08:44:42,624 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:44:42,958 [INFO] - Epoch: 4/100
+[37m2024-05-28 08:44:48,343 [INFO] - Training epoch stats:     Loss: 0.0649 - F1-Score: 0.9842 - Accuracy-Score: 0.9704 - AUROC: 0.9893 - AP: 0.9993
+[37m2024-05-28 08:44:48,990 [INFO] - Validation epoch stats:   Loss: 0.0757 - F1-Score: 0.9801 - Accuracy-Score: 0.9631 - AUROC: 0.9877 - AP: 0.9990
+[37m2024-05-28 08:44:48,994 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:45:57,112 [INFO] - Final WSI level detection score (mAP): 0.4479
+[37m2024-05-28 08:45:57,175 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:45:57,520 [INFO] - Epoch: 5/100
+[37m2024-05-28 08:46:02,739 [INFO] - Training epoch stats:     Loss: 0.0623 - F1-Score: 0.9850 - Accuracy-Score: 0.9719 - AUROC: 0.9902 - AP: 0.9993
+[37m2024-05-28 08:46:03,379 [INFO] - Validation epoch stats:   Loss: 0.0746 - F1-Score: 0.9805 - Accuracy-Score: 0.9638 - AUROC: 0.9879 - AP: 0.9990
+[37m2024-05-28 08:46:03,385 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:46:56,807 [INFO] - Final WSI level detection score (mAP): 0.4518
+[37m2024-05-28 08:46:56,853 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:46:57,184 [INFO] - Epoch: 6/100
+[37m2024-05-28 08:47:02,449 [INFO] - Training epoch stats:     Loss: 0.0600 - F1-Score: 0.9855 - Accuracy-Score: 0.9728 - AUROC: 0.9909 - AP: 0.9994
+[37m2024-05-28 08:47:03,079 [INFO] - Validation epoch stats:   Loss: 0.0729 - F1-Score: 0.9809 - Accuracy-Score: 0.9648 - AUROC: 0.9882 - AP: 0.9990
+[37m2024-05-28 08:47:03,084 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:47:59,167 [INFO] - Final WSI level detection score (mAP): 0.4693
+[37m2024-05-28 08:47:59,220 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:47:59,558 [INFO] - Epoch: 7/100
+[37m2024-05-28 08:48:04,762 [INFO] - Training epoch stats:     Loss: 0.0585 - F1-Score: 0.9861 - Accuracy-Score: 0.9740 - AUROC: 0.9914 - AP: 0.9994
+[37m2024-05-28 08:48:05,521 [INFO] - Validation epoch stats:   Loss: 0.0735 - F1-Score: 0.9808 - Accuracy-Score: 0.9644 - AUROC: 0.9885 - AP: 0.9990
+[37m2024-05-28 08:48:05,526 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:48:55,859 [INFO] - Final WSI level detection score (mAP): 0.4692
+[37m2024-05-28 08:48:56,177 [INFO] - Epoch: 8/100
+[37m2024-05-28 08:49:02,364 [INFO] - Training epoch stats:     Loss: 0.0568 - F1-Score: 0.9866 - Accuracy-Score: 0.9748 - AUROC: 0.9919 - AP: 0.9994
+[37m2024-05-28 08:49:03,384 [INFO] - Validation epoch stats:   Loss: 0.0725 - F1-Score: 0.9811 - Accuracy-Score: 0.9650 - AUROC: 0.9886 - AP: 0.9990
+[37m2024-05-28 08:49:03,421 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:49:56,800 [INFO] - Final WSI level detection score (mAP): 0.4647
+[37m2024-05-28 08:49:56,979 [INFO] - Epoch: 9/100
+[37m2024-05-28 08:50:02,558 [INFO] - Training epoch stats:     Loss: 0.0552 - F1-Score: 0.9870 - Accuracy-Score: 0.9757 - AUROC: 0.9924 - AP: 0.9995
+[37m2024-05-28 08:50:03,481 [INFO] - Validation epoch stats:   Loss: 0.0718 - F1-Score: 0.9813 - Accuracy-Score: 0.9654 - AUROC: 0.9885 - AP: 0.9990
+[37m2024-05-28 08:50:03,481 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:50:58,069 [INFO] - Final WSI level detection score (mAP): 0.4729
+[37m2024-05-28 08:50:58,115 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:50:58,471 [INFO] - Epoch: 10/100
+[37m2024-05-28 08:51:03,743 [INFO] - Training epoch stats:     Loss: 0.0539 - F1-Score: 0.9874 - Accuracy-Score: 0.9764 - AUROC: 0.9928 - AP: 0.9995
+[37m2024-05-28 08:51:04,373 [INFO] - Validation epoch stats:   Loss: 0.0727 - F1-Score: 0.9813 - Accuracy-Score: 0.9653 - AUROC: 0.9887 - AP: 0.9991
+[37m2024-05-28 08:51:04,373 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:51:54,011 [INFO] - Final WSI level detection score (mAP): 0.4761
+[37m2024-05-28 08:51:54,047 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:51:54,382 [INFO] - Epoch: 11/100
+[37m2024-05-28 08:51:59,957 [INFO] - Training epoch stats:     Loss: 0.0530 - F1-Score: 0.9876 - Accuracy-Score: 0.9769 - AUROC: 0.9931 - AP: 0.9995
+[37m2024-05-28 08:52:00,575 [INFO] - Validation epoch stats:   Loss: 0.0741 - F1-Score: 0.9810 - Accuracy-Score: 0.9648 - AUROC: 0.9888 - AP: 0.9991
+[37m2024-05-28 08:52:00,575 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:52:48,972 [INFO] - Final WSI level detection score (mAP): 0.4774
+[37m2024-05-28 08:52:49,005 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:52:49,363 [INFO] - Epoch: 12/100
+[37m2024-05-28 08:52:55,060 [INFO] - Training epoch stats:     Loss: 0.0517 - F1-Score: 0.9879 - Accuracy-Score: 0.9773 - AUROC: 0.9935 - AP: 0.9995
+[37m2024-05-28 08:52:55,708 [INFO] - Validation epoch stats:   Loss: 0.0713 - F1-Score: 0.9815 - Accuracy-Score: 0.9658 - AUROC: 0.9889 - AP: 0.9991
+[37m2024-05-28 08:52:55,708 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:53:45,174 [INFO] - Final WSI level detection score (mAP): 0.4792
+[37m2024-05-28 08:53:45,214 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:53:45,593 [INFO] - Epoch: 13/100
+[37m2024-05-28 08:53:50,943 [INFO] - Training epoch stats:     Loss: 0.0505 - F1-Score: 0.9886 - Accuracy-Score: 0.9786 - AUROC: 0.9938 - AP: 0.9996
+[37m2024-05-28 08:53:51,573 [INFO] - Validation epoch stats:   Loss: 0.0717 - F1-Score: 0.9813 - Accuracy-Score: 0.9655 - AUROC: 0.9888 - AP: 0.9991
+[37m2024-05-28 08:53:51,573 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:54:47,163 [INFO] - Final WSI level detection score (mAP): 0.4817
+[37m2024-05-28 08:54:47,202 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:54:47,532 [INFO] - Epoch: 14/100
+[37m2024-05-28 08:54:53,133 [INFO] - Training epoch stats:     Loss: 0.0497 - F1-Score: 0.9886 - Accuracy-Score: 0.9786 - AUROC: 0.9940 - AP: 0.9996
+[37m2024-05-28 08:54:53,772 [INFO] - Validation epoch stats:   Loss: 0.0707 - F1-Score: 0.9817 - Accuracy-Score: 0.9663 - AUROC: 0.9890 - AP: 0.9991
+[37m2024-05-28 08:54:53,772 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:55:46,865 [INFO] - Final WSI level detection score (mAP): 0.4772
+[37m2024-05-28 08:55:47,074 [INFO] - Epoch: 15/100
+[37m2024-05-28 08:55:52,447 [INFO] - Training epoch stats:     Loss: 0.0490 - F1-Score: 0.9889 - Accuracy-Score: 0.9791 - AUROC: 0.9942 - AP: 0.9996
+[37m2024-05-28 08:55:53,223 [INFO] - Validation epoch stats:   Loss: 0.0714 - F1-Score: 0.9815 - Accuracy-Score: 0.9659 - AUROC: 0.9889 - AP: 0.9991
+[37m2024-05-28 08:55:53,224 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:56:41,954 [INFO] - Final WSI level detection score (mAP): 0.4839
+[37m2024-05-28 08:56:41,991 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:56:42,337 [INFO] - Epoch: 16/100
+[37m2024-05-28 08:56:47,235 [INFO] - Training epoch stats:     Loss: 0.0482 - F1-Score: 0.9890 - Accuracy-Score: 0.9794 - AUROC: 0.9944 - AP: 0.9996
+[37m2024-05-28 08:56:47,867 [INFO] - Validation epoch stats:   Loss: 0.0713 - F1-Score: 0.9816 - Accuracy-Score: 0.9660 - AUROC: 0.9890 - AP: 0.9991
+[37m2024-05-28 08:56:47,868 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:57:35,260 [INFO] - Final WSI level detection score (mAP): 0.4840
+[37m2024-05-28 08:57:35,296 [INFO] - New best model - save checkpoint
+[37m2024-05-28 08:57:35,629 [INFO] - Epoch: 17/100
+[37m2024-05-28 08:57:40,932 [INFO] - Training epoch stats:     Loss: 0.0474 - F1-Score: 0.9893 - Accuracy-Score: 0.9800 - AUROC: 0.9947 - AP: 0.9996
+[37m2024-05-28 08:57:41,583 [INFO] - Validation epoch stats:   Loss: 0.0719 - F1-Score: 0.9815 - Accuracy-Score: 0.9658 - AUROC: 0.9889 - AP: 0.9991
+[37m2024-05-28 08:57:41,583 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:58:29,079 [INFO] - Final WSI level detection score (mAP): 0.4804
+[37m2024-05-28 08:58:29,258 [INFO] - Epoch: 18/100
+[37m2024-05-28 08:58:34,245 [INFO] - Training epoch stats:     Loss: 0.0468 - F1-Score: 0.9895 - Accuracy-Score: 0.9803 - AUROC: 0.9948 - AP: 0.9996
+[37m2024-05-28 08:58:34,883 [INFO] - Validation epoch stats:   Loss: 0.0709 - F1-Score: 0.9817 - Accuracy-Score: 0.9662 - AUROC: 0.9890 - AP: 0.9991
+[37m2024-05-28 08:58:34,883 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 08:59:22,925 [INFO] - Final WSI level detection score (mAP): 0.4813
+[37m2024-05-28 08:59:23,097 [INFO] - Epoch: 19/100
+[37m2024-05-28 08:59:27,940 [INFO] - Training epoch stats:     Loss: 0.0460 - F1-Score: 0.9897 - Accuracy-Score: 0.9807 - AUROC: 0.9950 - AP: 0.9997
+[37m2024-05-28 08:59:28,553 [INFO] - Validation epoch stats:   Loss: 0.0713 - F1-Score: 0.9818 - Accuracy-Score: 0.9663 - AUROC: 0.9890 - AP: 0.9991
+[37m2024-05-28 08:59:28,553 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 09:00:15,310 [INFO] - Final WSI level detection score (mAP): 0.4830
+[37m2024-05-28 09:00:15,498 [INFO] - Epoch: 20/100
+[37m2024-05-28 09:00:20,432 [INFO] - Training epoch stats:     Loss: 0.0453 - F1-Score: 0.9900 - Accuracy-Score: 0.9813 - AUROC: 0.9952 - AP: 0.9997
+[37m2024-05-28 09:00:21,071 [INFO] - Validation epoch stats:   Loss: 0.0713 - F1-Score: 0.9817 - Accuracy-Score: 0.9660 - AUROC: 0.9891 - AP: 0.9991
+[37m2024-05-28 09:00:21,071 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 09:01:07,127 [INFO] - Final WSI level detection score (mAP): 0.4808
+[37m2024-05-28 09:01:07,303 [INFO] - Epoch: 21/100
+[37m2024-05-28 09:01:12,859 [INFO] - Training epoch stats:     Loss: 0.0445 - F1-Score: 0.9902 - Accuracy-Score: 0.9817 - AUROC: 0.9954 - AP: 0.9997
+[37m2024-05-28 09:01:13,636 [INFO] - Validation epoch stats:   Loss: 0.0707 - F1-Score: 0.9819 - Accuracy-Score: 0.9666 - AUROC: 0.9891 - AP: 0.9991
+[37m2024-05-28 09:01:13,636 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 09:01:59,904 [INFO] - Final WSI level detection score (mAP): 0.4828
+[37m2024-05-28 09:01:59,940 [INFO] - Performing early stopping!
+[37m2024-05-28 09:01:59,950 [INFO] - Finished run ci2xuasd

@@ -1,0 +1,151 @@
+[37m2024-08-15 18:15:37,099 [INFO] - Instantiated Logger. WandB init and config update finished.
+[37m2024-08-15 18:15:37,101 [INFO] - Run ist stored here: /cellvit/logs_paper/Head-Evaluation/ocelot/Virchow2/Amount/Aug/25/Seed-5/2024-08-15T181525_CellViT-Virchow2-25Percent
+[37m2024-08-15 18:15:37,168 [INFO] - Cuda devices: [<torch.cuda.device object at 0x7fbf164143d0>]
+[37m2024-08-15 18:15:37,175 [INFO] - Using GPU: cuda:0
+[37m2024-08-15 18:15:37,181 [INFO] - Using device: cuda:0
+[37m2024-08-15 18:15:37,187 [INFO] - Loss function:
+[37m2024-08-15 18:15:37,193 [INFO] - CrossEntropyLoss()
+[37m2024-08-15 18:15:42,860 [INFO] - Loading checkpoint ./checkpoints/CellViT-Virchow2-x40-AMP.pth
+[37m2024-08-15 18:15:42,972 [INFO] - <All keys matched successfully>
+[37m2024-08-15 18:15:43,860 [INFO] -
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+LinearClassifier                         [1, 2]                    --
+├─Linear: 1-1                            [1, 128]                  163,968
+├─ReLU: 1-2                              [1, 128]                  --
+├─Dropout: 1-3                           [1, 128]                  --
+├─Linear: 1-4                            [1, 2]                    258
+==========================================================================================
+Total params: 164,226
+Trainable params: 164,226
+Non-trainable params: 0
+Total mult-adds (M): 0.16
+==========================================================================================
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.00
+Params size (MB): 0.66
+Estimated Total Size (MB): 0.66
+==========================================================================================
+[37m2024-08-15 18:15:43,866 [INFO] - Loaded AdamW Optimizer with following hyperparameters:
+[37m2024-08-15 18:15:43,871 [INFO] - {'betas': [0.85, 0.9], 'lr': 0.009409727686291442, 'weight_decay': 0.00014345992571792625}
+[37m2024-08-15 18:15:43,877 [INFO] - Using early stopping with a range of 20 and maximize strategy
+[37m2024-08-15 18:15:43,898 [INFO] - Caching datasets
+[37m2024-08-15 18:15:46,289 [INFO] - Instantiate Trainer
+[37m2024-08-15 18:15:46,299 [INFO] - Calling Trainer Fit
+[37m2024-08-15 18:15:46,304 [INFO] - Starting training, total number of epochs: 50
+[37m2024-08-15 18:15:46,309 [INFO] - Epoch: 1/50
+[37m2024-08-15 18:15:46,314 [INFO] - Extracting training cells
+[37m2024-08-15 18:17:27,490 [INFO] - Extraction detection metrics - F1: 0.618, Precision: 0.596, Recall: 0.722, Detected-Cells: 12339
+[37m2024-08-15 18:17:27,971 [INFO] - Training epoch stats:     Loss: 0.2004 - F1-Score: 0.9358 - Accuracy-Score: 0.9196 - AUROC: 0.9737 - AP: 0.9827
+[37m2024-08-15 18:17:31,563 [INFO] - Loaded dataset from cache: /OCELOT-Orig/cache/d3f39bcf5e12d4434d29435a83ab7bcf9794a8be57cbfca649b939673729a883.h5
+[37m2024-08-15 18:17:32,003 [INFO] - Validation epoch stats:   Loss: 0.3720 - F1-Score: 0.8962 - Accuracy-Score: 0.8634 - AUROC: 0.9284 - AP: 0.9540
+[37m2024-08-15 18:17:32,010 [INFO] - New best model - save checkpoint
+[37m2024-08-15 18:17:32,213 [INFO] - Epoch: 2/50
+[37m2024-08-15 18:17:32,219 [INFO] - Extracting training cells
+[37m2024-08-15 18:19:02,086 [INFO] - Extraction detection metrics - F1: 0.621, Precision: 0.601, Recall: 0.720, Detected-Cells: 12301
+[37m2024-08-15 18:19:02,479 [INFO] - Training epoch stats:     Loss: 0.1402 - F1-Score: 0.9575 - Accuracy-Score: 0.9452 - AUROC: 0.9859 - AP: 0.9913
+[37m2024-08-15 18:19:02,782 [INFO] - Validation epoch stats:   Loss: 0.3896 - F1-Score: 0.8998 - Accuracy-Score: 0.8712 - AUROC: 0.9354 - AP: 0.9588
+[37m2024-08-15 18:19:02,788 [INFO] - New best model - save checkpoint
+[37m2024-08-15 18:19:02,959 [INFO] - Epoch: 3/50
+[37m2024-08-15 18:19:02,964 [INFO] - Extracting training cells
+[37m2024-08-15 18:20:33,426 [INFO] - Extraction detection metrics - F1: 0.628, Precision: 0.595, Recall: 0.731, Detected-Cells: 12751
+[37m2024-08-15 18:20:33,837 [INFO] - Training epoch stats:     Loss: 0.1257 - F1-Score: 0.9629 - Accuracy-Score: 0.9535 - AUROC: 0.9892 - AP: 0.9926
+[37m2024-08-15 18:20:34,342 [INFO] - Validation epoch stats:   Loss: 0.4527 - F1-Score: 0.8824 - Accuracy-Score: 0.8536 - AUROC: 0.9251 - AP: 0.9539
+[37m2024-08-15 18:20:34,419 [INFO] - Epoch: 4/50
+[37m2024-08-15 18:20:34,425 [INFO] - Extracting training cells
+[37m2024-08-15 18:22:05,434 [INFO] - Extraction detection metrics - F1: 0.633, Precision: 0.603, Recall: 0.728, Detected-Cells: 12236
+[37m2024-08-15 18:22:05,943 [INFO] - Training epoch stats:     Loss: 0.1262 - F1-Score: 0.9614 - Accuracy-Score: 0.9507 - AUROC: 0.9889 - AP: 0.9926
+[37m2024-08-15 18:22:06,397 [INFO] - Validation epoch stats:   Loss: 0.4143 - F1-Score: 0.8882 - Accuracy-Score: 0.8561 - AUROC: 0.9258 - AP: 0.9536
+[37m2024-08-15 18:22:06,464 [INFO] - Epoch: 5/50
+[37m2024-08-15 18:22:06,469 [INFO] - Extracting training cells
+[37m2024-08-15 18:23:36,869 [INFO] - Extraction detection metrics - F1: 0.632, Precision: 0.610, Recall: 0.733, Detected-Cells: 12618
+[37m2024-08-15 18:23:37,167 [INFO] - Training epoch stats:     Loss: 0.1272 - F1-Score: 0.9622 - Accuracy-Score: 0.9519 - AUROC: 0.9891 - AP: 0.9929
+[37m2024-08-15 18:23:37,473 [INFO] - Validation epoch stats:   Loss: 0.4042 - F1-Score: 0.8898 - Accuracy-Score: 0.8567 - AUROC: 0.9261 - AP: 0.9537
+[37m2024-08-15 18:23:37,552 [INFO] - Epoch: 6/50
+[37m2024-08-15 18:23:37,558 [INFO] - Extracting training cells
+[37m2024-08-15 18:25:07,898 [INFO] - Extraction detection metrics - F1: 0.618, Precision: 0.591, Recall: 0.710, Detected-Cells: 12456
+[37m2024-08-15 18:25:08,290 [INFO] - Training epoch stats:     Loss: 0.1144 - F1-Score: 0.9645 - Accuracy-Score: 0.9548 - AUROC: 0.9912 - AP: 0.9945
+[37m2024-08-15 18:25:08,597 [INFO] - Validation epoch stats:   Loss: 0.4436 - F1-Score: 0.8863 - Accuracy-Score: 0.8559 - AUROC: 0.9205 - AP: 0.9475
+[37m2024-08-15 18:25:08,677 [INFO] - Epoch: 7/50
+[37m2024-08-15 18:25:08,683 [INFO] - Extracting training cells
+[37m2024-08-15 18:26:38,711 [INFO] - Extraction detection metrics - F1: 0.626, Precision: 0.590, Recall: 0.728, Detected-Cells: 12771
+[37m2024-08-15 18:26:39,116 [INFO] - Training epoch stats:     Loss: 0.1073 - F1-Score: 0.9671 - Accuracy-Score: 0.9583 - AUROC: 0.9926 - AP: 0.9953
+[37m2024-08-15 18:26:39,421 [INFO] - Validation epoch stats:   Loss: 0.5327 - F1-Score: 0.8766 - Accuracy-Score: 0.8495 - AUROC: 0.9215 - AP: 0.9491
+[37m2024-08-15 18:26:39,486 [INFO] - Epoch: 8/50
+[37m2024-08-15 18:26:39,492 [INFO] - Extracting training cells
+[37m2024-08-15 18:28:08,567 [INFO] - Extraction detection metrics - F1: 0.620, Precision: 0.589, Recall: 0.721, Detected-Cells: 12175
+[37m2024-08-15 18:28:08,958 [INFO] - Training epoch stats:     Loss: 0.1334 - F1-Score: 0.9636 - Accuracy-Score: 0.9545 - AUROC: 0.9883 - AP: 0.9915
+[37m2024-08-15 18:28:09,260 [INFO] - Validation epoch stats:   Loss: 0.4273 - F1-Score: 0.8904 - Accuracy-Score: 0.8582 - AUROC: 0.9221 - AP: 0.9463
+[37m2024-08-15 18:28:09,341 [INFO] - Epoch: 9/50
+[37m2024-08-15 18:28:09,346 [INFO] - Extracting training cells
+[37m2024-08-15 18:29:38,490 [INFO] - Extraction detection metrics - F1: 0.606, Precision: 0.583, Recall: 0.704, Detected-Cells: 11650
+[37m2024-08-15 18:29:38,873 [INFO] - Training epoch stats:     Loss: 0.1161 - F1-Score: 0.9665 - Accuracy-Score: 0.9580 - AUROC: 0.9912 - AP: 0.9940
+[37m2024-08-15 18:29:39,178 [INFO] - Validation epoch stats:   Loss: 0.4269 - F1-Score: 0.8960 - Accuracy-Score: 0.8666 - AUROC: 0.9271 - AP: 0.9519
+[37m2024-08-15 18:29:39,253 [INFO] - Epoch: 10/50
+[37m2024-08-15 18:29:39,259 [INFO] - Extracting training cells
+[37m2024-08-15 18:31:10,108 [INFO] - Extraction detection metrics - F1: 0.609, Precision: 0.580, Recall: 0.713, Detected-Cells: 12192
+[37m2024-08-15 18:31:10,626 [INFO] - Training epoch stats:     Loss: 0.1192 - F1-Score: 0.9627 - Accuracy-Score: 0.9523 - AUROC: 0.9907 - AP: 0.9939
+[37m2024-08-15 18:31:11,098 [INFO] - Validation epoch stats:   Loss: 0.4677 - F1-Score: 0.8837 - Accuracy-Score: 0.8503 - AUROC: 0.9155 - AP: 0.9437
+[37m2024-08-15 18:31:11,170 [INFO] - Epoch: 11/50
+[37m2024-08-15 18:31:11,176 [INFO] - Extracting training cells
+[37m2024-08-15 18:32:42,056 [INFO] - Extraction detection metrics - F1: 0.625, Precision: 0.595, Recall: 0.729, Detected-Cells: 12461
+[37m2024-08-15 18:32:42,451 [INFO] - Training epoch stats:     Loss: 0.1062 - F1-Score: 0.9688 - Accuracy-Score: 0.9604 - AUROC: 0.9925 - AP: 0.9952
+[37m2024-08-15 18:32:42,767 [INFO] - Validation epoch stats:   Loss: 0.4624 - F1-Score: 0.8794 - Accuracy-Score: 0.8483 - AUROC: 0.9148 - AP: 0.9418
+[37m2024-08-15 18:32:42,844 [INFO] - Epoch: 12/50
+[37m2024-08-15 18:32:42,849 [INFO] - Extracting training cells
+[37m2024-08-15 18:34:13,591 [INFO] - Extraction detection metrics - F1: 0.621, Precision: 0.584, Recall: 0.724, Detected-Cells: 12428
+[37m2024-08-15 18:34:13,994 [INFO] - Training epoch stats:     Loss: 0.1257 - F1-Score: 0.9629 - Accuracy-Score: 0.9534 - AUROC: 0.9899 - AP: 0.9932
+[37m2024-08-15 18:34:14,297 [INFO] - Validation epoch stats:   Loss: 0.4425 - F1-Score: 0.8911 - Accuracy-Score: 0.8596 - AUROC: 0.9213 - AP: 0.9458
+[37m2024-08-15 18:34:14,377 [INFO] - Epoch: 13/50
+[37m2024-08-15 18:34:14,382 [INFO] - Extracting training cells
+[37m2024-08-15 18:35:43,416 [INFO] - Extraction detection metrics - F1: 0.634, Precision: 0.601, Recall: 0.740, Detected-Cells: 12518
+[37m2024-08-15 18:35:43,927 [INFO] - Training epoch stats:     Loss: 0.0999 - F1-Score: 0.9691 - Accuracy-Score: 0.9612 - AUROC: 0.9937 - AP: 0.9960
+[37m2024-08-15 18:35:44,388 [INFO] - Validation epoch stats:   Loss: 0.4813 - F1-Score: 0.8819 - Accuracy-Score: 0.8479 - AUROC: 0.9110 - AP: 0.9367
+[37m2024-08-15 18:35:44,473 [INFO] - Epoch: 14/50
+[37m2024-08-15 18:35:44,479 [INFO] - Extracting training cells
+[37m2024-08-15 18:37:15,144 [INFO] - Extraction detection metrics - F1: 0.622, Precision: 0.595, Recall: 0.721, Detected-Cells: 12177
+[37m2024-08-15 18:37:15,547 [INFO] - Training epoch stats:     Loss: 0.1082 - F1-Score: 0.9697 - Accuracy-Score: 0.9607 - AUROC: 0.9921 - AP: 0.9951
+[37m2024-08-15 18:37:15,859 [INFO] - Validation epoch stats:   Loss: 0.4950 - F1-Score: 0.8759 - Accuracy-Score: 0.8403 - AUROC: 0.9087 - AP: 0.9396
+[37m2024-08-15 18:37:15,918 [INFO] - Epoch: 15/50
+[37m2024-08-15 18:37:15,923 [INFO] - Extracting training cells
+[37m2024-08-15 18:38:46,287 [INFO] - Extraction detection metrics - F1: 0.610, Precision: 0.576, Recall: 0.713, Detected-Cells: 11512
+[37m2024-08-15 18:38:46,661 [INFO] - Training epoch stats:     Loss: 0.1087 - F1-Score: 0.9685 - Accuracy-Score: 0.9599 - AUROC: 0.9922 - AP: 0.9950
+[37m2024-08-15 18:38:46,977 [INFO] - Validation epoch stats:   Loss: 0.4611 - F1-Score: 0.8911 - Accuracy-Score: 0.8622 - AUROC: 0.9241 - AP: 0.9487
+[37m2024-08-15 18:38:47,051 [INFO] - Epoch: 16/50
+[37m2024-08-15 18:38:47,057 [INFO] - Extracting training cells
+[37m2024-08-15 18:40:18,517 [INFO] - Extraction detection metrics - F1: 0.625, Precision: 0.598, Recall: 0.719, Detected-Cells: 12417
+[37m2024-08-15 18:40:19,015 [INFO] - Training epoch stats:     Loss: 0.0870 - F1-Score: 0.9743 - Accuracy-Score: 0.9676 - AUROC: 0.9950 - AP: 0.9967
+[37m2024-08-15 18:40:19,490 [INFO] - Validation epoch stats:   Loss: 0.5006 - F1-Score: 0.8947 - Accuracy-Score: 0.8651 - AUROC: 0.9251 - AP: 0.9479
+[37m2024-08-15 18:40:19,557 [INFO] - Epoch: 17/50
+[37m2024-08-15 18:40:19,571 [INFO] - Extracting training cells
+[37m2024-08-15 18:41:51,376 [INFO] - Extraction detection metrics - F1: 0.639, Precision: 0.614, Recall: 0.738, Detected-Cells: 12878
+[37m2024-08-15 18:41:51,804 [INFO] - Training epoch stats:     Loss: 0.0788 - F1-Score: 0.9766 - Accuracy-Score: 0.9699 - AUROC: 0.9957 - AP: 0.9973
+[37m2024-08-15 18:41:52,119 [INFO] - Validation epoch stats:   Loss: 0.5394 - F1-Score: 0.8926 - Accuracy-Score: 0.8615 - AUROC: 0.9205 - AP: 0.9426
+[37m2024-08-15 18:41:52,179 [INFO] - Epoch: 18/50
+[37m2024-08-15 18:41:52,184 [INFO] - Extracting training cells
+[37m2024-08-15 18:43:22,401 [INFO] - Extraction detection metrics - F1: 0.614, Precision: 0.585, Recall: 0.716, Detected-Cells: 12149
+[37m2024-08-15 18:43:22,900 [INFO] - Training epoch stats:     Loss: 0.0940 - F1-Score: 0.9743 - Accuracy-Score: 0.9676 - AUROC: 0.9939 - AP: 0.9957
+[37m2024-08-15 18:43:23,360 [INFO] - Validation epoch stats:   Loss: 0.5332 - F1-Score: 0.8831 - Accuracy-Score: 0.8516 - AUROC: 0.9145 - AP: 0.9392
+[37m2024-08-15 18:43:23,441 [INFO] - Epoch: 19/50
+[37m2024-08-15 18:43:23,447 [INFO] - Extracting training cells
+[37m2024-08-15 18:44:53,042 [INFO] - Extraction detection metrics - F1: 0.625, Precision: 0.591, Recall: 0.732, Detected-Cells: 12464
+[37m2024-08-15 18:44:53,550 [INFO] - Training epoch stats:     Loss: 0.0897 - F1-Score: 0.9741 - Accuracy-Score: 0.9671 - AUROC: 0.9950 - AP: 0.9968
+[37m2024-08-15 18:44:54,024 [INFO] - Validation epoch stats:   Loss: 0.5424 - F1-Score: 0.8915 - Accuracy-Score: 0.8630 - AUROC: 0.9194 - AP: 0.9407
+[37m2024-08-15 18:44:54,102 [INFO] - Epoch: 20/50
+[37m2024-08-15 18:44:54,108 [INFO] - Extracting training cells
+[37m2024-08-15 18:46:23,482 [INFO] - Extraction detection metrics - F1: 0.626, Precision: 0.594, Recall: 0.723, Detected-Cells: 12753
+[37m2024-08-15 18:46:23,880 [INFO] - Training epoch stats:     Loss: 0.1003 - F1-Score: 0.9730 - Accuracy-Score: 0.9657 - AUROC: 0.9937 - AP: 0.9959
+[37m2024-08-15 18:46:24,180 [INFO] - Validation epoch stats:   Loss: 0.5116 - F1-Score: 0.8789 - Accuracy-Score: 0.8446 - AUROC: 0.9047 - AP: 0.9304
+[37m2024-08-15 18:46:24,254 [INFO] - Epoch: 21/50
+[37m2024-08-15 18:46:24,260 [INFO] - Extracting training cells
+[37m2024-08-15 18:47:54,162 [INFO] - Extraction detection metrics - F1: 0.629, Precision: 0.606, Recall: 0.727, Detected-Cells: 12560
+[37m2024-08-15 18:47:54,688 [INFO] - Training epoch stats:     Loss: 0.0788 - F1-Score: 0.9775 - Accuracy-Score: 0.9715 - AUROC: 0.9957 - AP: 0.9972
+[37m2024-08-15 18:47:55,149 [INFO] - Validation epoch stats:   Loss: 0.6063 - F1-Score: 0.8840 - Accuracy-Score: 0.8531 - AUROC: 0.9078 - AP: 0.9300
+[37m2024-08-15 18:47:55,228 [INFO] - Epoch: 22/50
+[37m2024-08-15 18:47:55,234 [INFO] - Extracting training cells
+[37m2024-08-15 18:49:26,460 [INFO] - Extraction detection metrics - F1: 0.623, Precision: 0.597, Recall: 0.721, Detected-Cells: 12489
+[37m2024-08-15 18:49:26,986 [INFO] - Training epoch stats:     Loss: 0.1093 - F1-Score: 0.9712 - Accuracy-Score: 0.9630 - AUROC: 0.9929 - AP: 0.9954
+[37m2024-08-15 18:49:27,453 [INFO] - Validation epoch stats:   Loss: 0.4923 - F1-Score: 0.8846 - Accuracy-Score: 0.8517 - AUROC: 0.9080 - AP: 0.9338
+[37m2024-08-15 18:49:27,460 [INFO] - Performing early stopping!
+[37m2024-08-15 18:49:27,474 [INFO] - Finished run mxv56td7

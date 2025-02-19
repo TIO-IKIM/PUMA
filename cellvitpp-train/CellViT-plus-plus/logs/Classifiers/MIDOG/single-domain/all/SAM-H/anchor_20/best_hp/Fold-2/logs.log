@@ -1,0 +1,110 @@
+[37m2024-05-28 09:54:09,983 [INFO] - Instantiated Logger. WandB init and config update finished.
+[37m2024-05-28 09:54:09,985 [INFO] - Run ist stored here: /cellvit/logs_paper/Head-Evaluation/MIDOG/single-domain/all/SAM-H/anchor_20/best_hp/2024-05-28T095403_CellViT-SAM-H-Classifier-Head-Fold-2
+[37m2024-05-28 09:54:10,062 [INFO] - Cuda devices: [<torch.cuda.device object at 0x7fc5a7d708e0>]
+[37m2024-05-28 09:54:10,064 [INFO] - Using GPU: cuda:0
+[37m2024-05-28 09:54:10,069 [INFO] - Using device: cuda:0
+[37m2024-05-28 09:54:10,098 [INFO] - Loss function:
+[37m2024-05-28 09:54:10,099 [INFO] - CrossEntropyLoss()
+[37m2024-05-28 09:54:26,330 [INFO] - <All keys matched successfully>
+[37m2024-05-28 09:54:27,776 [INFO] -
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+LinearClassifier                         [1, 2]                    --
+├─Linear: 1-1                            [1, 512]                  655,872
+├─ReLU: 1-2                              [1, 512]                  --
+├─Dropout: 1-3                           [1, 512]                  --
+├─Linear: 1-4                            [1, 2]                    1,026
+==========================================================================================
+Total params: 656,898
+Trainable params: 656,898
+Non-trainable params: 0
+Total mult-adds (M): 0.66
+==========================================================================================
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.00
+Params size (MB): 2.63
+Estimated Total Size (MB): 2.64
+==========================================================================================
+[37m2024-05-28 09:54:27,780 [INFO] - Loaded AdamW Optimizer with following hyperparameters:
+[37m2024-05-28 09:54:27,784 [INFO] - {'betas': [0.85, 0.9], 'lr': 1.3720338613429816e-05, 'weight_decay': 0.0009752830235894076}
+[37m2024-05-28 09:54:27,791 [INFO] - Using early stopping with a range of 5 and maximize strategy
+[37m2024-05-28 09:54:30,171 [INFO] - Instantiate Trainer
+[37m2024-05-28 09:54:30,268 [INFO] - Calling Trainer Fit
+[37m2024-05-28 09:54:30,268 [INFO] - Dataset is cached after first epoch
+[37m2024-05-28 09:54:30,274 [INFO] - Starting training, total number of epochs: 100
+[37m2024-05-28 09:54:30,279 [INFO] - Epoch: 1/100
+[37m2024-05-28 09:55:17,636 [INFO] - Loaded dataset from cache: midog-volume/data/cache/4ea96c8e5bbbe7ace2c60701c7e90b5870c5ffd7fb8970c94713c20dfc94d0b9.h5
+[37m2024-05-28 09:55:24,452 [INFO] - Training epoch stats:     Loss: 0.1067 - F1-Score: 0.9750 - Accuracy-Score: 0.9529 - AUROC: 0.9698 - AP: 0.9978
+[37m2024-05-28 09:55:39,788 [INFO] - Loaded dataset from cache: midog-volume/data/cache/2c29cfe86c150fbb1d8f4822af94bcc04ad65c80079844308f327df2a41260f4.h5
+[37m2024-05-28 09:55:41,007 [INFO] - Validation epoch stats:   Loss: 0.0867 - F1-Score: 0.9778 - Accuracy-Score: 0.9587 - AUROC: 0.9837 - AP: 0.9987
+[37m2024-05-28 09:55:41,008 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:03:09,766 [INFO] - Final WSI level detection score (mAP): 0.3668
+[37m2024-05-28 10:03:09,838 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:03:10,146 [INFO] - Epoch: 2/100
+[37m2024-05-28 10:03:18,352 [INFO] - Training epoch stats:     Loss: 0.0739 - F1-Score: 0.9816 - Accuracy-Score: 0.9654 - AUROC: 0.9862 - AP: 0.9990
+[37m2024-05-28 10:03:19,204 [INFO] - Validation epoch stats:   Loss: 0.0813 - F1-Score: 0.9795 - Accuracy-Score: 0.9620 - AUROC: 0.9853 - AP: 0.9988
+[37m2024-05-28 10:03:19,204 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:04:29,791 [INFO] - Final WSI level detection score (mAP): 0.4224
+[37m2024-05-28 10:04:29,857 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:04:30,236 [INFO] - Epoch: 3/100
+[37m2024-05-28 10:04:37,262 [INFO] - Training epoch stats:     Loss: 0.0684 - F1-Score: 0.9831 - Accuracy-Score: 0.9683 - AUROC: 0.9882 - AP: 0.9992
+[37m2024-05-28 10:04:38,103 [INFO] - Validation epoch stats:   Loss: 0.0793 - F1-Score: 0.9804 - Accuracy-Score: 0.9635 - AUROC: 0.9862 - AP: 0.9989
+[37m2024-05-28 10:04:38,103 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:05:42,167 [INFO] - Final WSI level detection score (mAP): 0.4392
+[37m2024-05-28 10:05:42,223 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:05:42,547 [INFO] - Epoch: 4/100
+[37m2024-05-28 10:05:48,747 [INFO] - Training epoch stats:     Loss: 0.0650 - F1-Score: 0.9844 - Accuracy-Score: 0.9707 - AUROC: 0.9894 - AP: 0.9993
+[37m2024-05-28 10:05:49,588 [INFO] - Validation epoch stats:   Loss: 0.0781 - F1-Score: 0.9804 - Accuracy-Score: 0.9637 - AUROC: 0.9865 - AP: 0.9989
+[37m2024-05-28 10:05:49,589 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:06:52,593 [INFO] - Final WSI level detection score (mAP): 0.4489
+[37m2024-05-28 10:06:52,669 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:06:53,012 [INFO] - Epoch: 5/100
+[37m2024-05-28 10:06:59,248 [INFO] - Training epoch stats:     Loss: 0.0623 - F1-Score: 0.9851 - Accuracy-Score: 0.9720 - AUROC: 0.9903 - AP: 0.9993
+[37m2024-05-28 10:07:00,082 [INFO] - Validation epoch stats:   Loss: 0.0776 - F1-Score: 0.9807 - Accuracy-Score: 0.9643 - AUROC: 0.9866 - AP: 0.9989
+[37m2024-05-28 10:07:00,082 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:08:04,527 [INFO] - Final WSI level detection score (mAP): 0.4453
+[37m2024-05-28 10:08:04,724 [INFO] - Epoch: 6/100
+[37m2024-05-28 10:08:10,840 [INFO] - Training epoch stats:     Loss: 0.0602 - F1-Score: 0.9856 - Accuracy-Score: 0.9730 - AUROC: 0.9910 - AP: 0.9994
+[37m2024-05-28 10:08:11,695 [INFO] - Validation epoch stats:   Loss: 0.0775 - F1-Score: 0.9806 - Accuracy-Score: 0.9640 - AUROC: 0.9868 - AP: 0.9989
+[37m2024-05-28 10:08:11,695 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:09:12,919 [INFO] - Final WSI level detection score (mAP): 0.4451
+[37m2024-05-28 10:09:13,098 [INFO] - Epoch: 7/100
+[37m2024-05-28 10:09:19,247 [INFO] - Training epoch stats:     Loss: 0.0584 - F1-Score: 0.9860 - Accuracy-Score: 0.9739 - AUROC: 0.9915 - AP: 0.9994
+[37m2024-05-28 10:09:20,069 [INFO] - Validation epoch stats:   Loss: 0.0770 - F1-Score: 0.9809 - Accuracy-Score: 0.9646 - AUROC: 0.9870 - AP: 0.9989
+[37m2024-05-28 10:09:20,069 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:10:20,786 [INFO] - Final WSI level detection score (mAP): 0.4542
+[37m2024-05-28 10:10:20,836 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:10:21,226 [INFO] - Epoch: 8/100
+[37m2024-05-28 10:10:27,348 [INFO] - Training epoch stats:     Loss: 0.0568 - F1-Score: 0.9866 - Accuracy-Score: 0.9750 - AUROC: 0.9920 - AP: 0.9994
+[37m2024-05-28 10:10:28,159 [INFO] - Validation epoch stats:   Loss: 0.0763 - F1-Score: 0.9810 - Accuracy-Score: 0.9648 - AUROC: 0.9871 - AP: 0.9989
+[37m2024-05-28 10:10:28,160 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:11:29,297 [INFO] - Final WSI level detection score (mAP): 0.4627
+[37m2024-05-28 10:11:29,367 [INFO] - New best model - save checkpoint
+[37m2024-05-28 10:11:29,705 [INFO] - Epoch: 9/100
+[37m2024-05-28 10:11:36,261 [INFO] - Training epoch stats:     Loss: 0.0552 - F1-Score: 0.9871 - Accuracy-Score: 0.9760 - AUROC: 0.9925 - AP: 0.9995
+[37m2024-05-28 10:11:37,067 [INFO] - Validation epoch stats:   Loss: 0.0763 - F1-Score: 0.9809 - Accuracy-Score: 0.9646 - AUROC: 0.9871 - AP: 0.9989
+[37m2024-05-28 10:11:37,067 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:12:37,777 [INFO] - Final WSI level detection score (mAP): 0.4616
+[37m2024-05-28 10:12:38,039 [INFO] - Epoch: 10/100
+[37m2024-05-28 10:12:44,537 [INFO] - Training epoch stats:     Loss: 0.0539 - F1-Score: 0.9875 - Accuracy-Score: 0.9767 - AUROC: 0.9929 - AP: 0.9995
+[37m2024-05-28 10:12:45,387 [INFO] - Validation epoch stats:   Loss: 0.0762 - F1-Score: 0.9810 - Accuracy-Score: 0.9647 - AUROC: 0.9873 - AP: 0.9990
+[37m2024-05-28 10:12:45,387 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:13:45,330 [INFO] - Final WSI level detection score (mAP): 0.4553
+[37m2024-05-28 10:13:45,508 [INFO] - Epoch: 11/100
+[37m2024-05-28 10:13:51,952 [INFO] - Training epoch stats:     Loss: 0.0528 - F1-Score: 0.9878 - Accuracy-Score: 0.9772 - AUROC: 0.9932 - AP: 0.9995
+[37m2024-05-28 10:13:52,802 [INFO] - Validation epoch stats:   Loss: 0.0765 - F1-Score: 0.9809 - Accuracy-Score: 0.9646 - AUROC: 0.9873 - AP: 0.9990
+[37m2024-05-28 10:13:52,802 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:14:51,379 [INFO] - Final WSI level detection score (mAP): 0.4600
+[37m2024-05-28 10:14:51,554 [INFO] - Epoch: 12/100
+[37m2024-05-28 10:14:58,438 [INFO] - Training epoch stats:     Loss: 0.0518 - F1-Score: 0.9880 - Accuracy-Score: 0.9776 - AUROC: 0.9935 - AP: 0.9995
+[37m2024-05-28 10:14:59,247 [INFO] - Validation epoch stats:   Loss: 0.0769 - F1-Score: 0.9811 - Accuracy-Score: 0.9649 - AUROC: 0.9874 - AP: 0.9990
+[37m2024-05-28 10:14:59,248 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:15:57,505 [INFO] - Final WSI level detection score (mAP): 0.4514
+[37m2024-05-28 10:15:57,675 [INFO] - Epoch: 13/100
+[37m2024-05-28 10:16:05,350 [INFO] - Training epoch stats:     Loss: 0.0506 - F1-Score: 0.9886 - Accuracy-Score: 0.9786 - AUROC: 0.9939 - AP: 0.9996
+[37m2024-05-28 10:16:06,175 [INFO] - Validation epoch stats:   Loss: 0.0759 - F1-Score: 0.9812 - Accuracy-Score: 0.9652 - AUROC: 0.9875 - AP: 0.9990
+[37m2024-05-28 10:16:06,175 [INFO] - Calculating mAP for all cells in validation dataset
+[37m2024-05-28 10:17:04,144 [INFO] - Final WSI level detection score (mAP): 0.4601
+[37m2024-05-28 10:17:04,185 [INFO] - Performing early stopping!
+[37m2024-05-28 10:17:04,196 [INFO] - Finished run glxdbuze

@@ -1,0 +1,699 @@
+[37m2024-08-06 07:21:58,030 [INFO] - Loading train: /Lizard-CellViT-Histomics/cache/3bf02842c471d9674529f3e2b013575d7430dd3713f0dd891ffabcc08f89e6e2.h5
+[37m2024-08-06 07:22:00,678 [INFO] - Loading val: /Lizard-CellViT-Histomics/cache/f4e366dedfd70ca65c6e5984ad3e2469bd93d97a95857884292cf5beaf5f69bf.h5
+[37m2024-08-06 07:22:04,491 [INFO] - Setup.....
+[37m2024-08-06 07:22:04,499 [INFO] - PyCaret ClassificationExperiment
+[37m2024-08-06 07:22:04,499 [INFO] - Logging name: clf-default-name
+[37m2024-08-06 07:22:04,504 [INFO] - ML Usecase: MLUsecase.CLASSIFICATION
+[37m2024-08-06 07:22:04,508 [INFO] - version 3.3.2
+[37m2024-08-06 07:22:04,513 [INFO] - Initializing setup()
+[37m2024-08-06 07:22:04,517 [INFO] - self.USI: f97f
+[37m2024-08-06 07:22:04,522 [INFO] - self._variable_keys: {'fix_imbalance', 'log_plots_param', '_ml_usecase', 'gpu_n_jobs_param', 'is_multiclass', 'gpu_param', 'fold_generator', 'y_train', 'exp_name_log', 'n_jobs_param', 'USI', 'X', 'seed', 'target_param', 'fold_groups_param', 'y', 'exp_id', 'idx', '_available_plots', 'html_param', 'X_test', 'fold_shuffle_param', 'pipeline', 'logging_param', 'data', 'y_test', 'X_train', 'memory'}
+[37m2024-08-06 07:22:04,526 [INFO] - Checking environment
+[37m2024-08-06 07:22:04,531 [INFO] - python_version: 3.11.9
+[37m2024-08-06 07:22:04,535 [INFO] - python_build: ('main', 'Apr 19 2024 18:36:13')
+[37m2024-08-06 07:22:04,540 [INFO] - machine: x86_64
+[37m2024-08-06 07:22:04,553 [INFO] - platform: Linux-5.15.131-0515131-generic-x86_64-with-glibc2.35
+[37m2024-08-06 07:22:04,554 [INFO] - Memory: svmem(total=1081606041600, available=854371123200, percent=21.0, used=205078142976, free=573694705664, active=124400975872, inactive=355924045824, buffers=4270047232, cached=298563145728, shared=16175230976, slab=19408232448)
+[37m2024-08-06 07:22:04,567 [INFO] - Physical Core: 64
+[37m2024-08-06 07:22:04,568 [INFO] - Logical Core: 128
+[37m2024-08-06 07:22:04,573 [INFO] - Checking libraries
+[37m2024-08-06 07:22:04,577 [INFO] - System:
+[37m2024-08-06 07:22:04,582 [INFO] -     python: 3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:36:13) [GCC 12.3.0]
+[37m2024-08-06 07:22:04,586 [INFO] - executable: /environment/pycaret/bin/python3
+[37m2024-08-06 07:22:04,591 [INFO] -    machine: Linux-5.15.131-0515131-generic-x86_64-with-glibc2.35
+[37m2024-08-06 07:22:04,596 [INFO] - PyCaret required dependencies:
+[37m2024-08-06 07:22:05,718 [INFO] -                  pip: 24.2
+[37m2024-08-06 07:22:05,718 [INFO] -           setuptools: 72.1.0
+[37m2024-08-06 07:22:05,724 [INFO] -              pycaret: 3.3.2
+[37m2024-08-06 07:22:05,729 [INFO] -              IPython: 8.26.0
+[37m2024-08-06 07:22:05,733 [INFO] -           ipywidgets: 8.1.3
+[37m2024-08-06 07:22:05,738 [INFO] -                 tqdm: 4.66.5
+[37m2024-08-06 07:22:05,743 [INFO] -                numpy: 1.26.4
+[37m2024-08-06 07:22:05,748 [INFO] -               pandas: 2.1.4
+[37m2024-08-06 07:22:05,753 [INFO] -               jinja2: 3.1.4
+[37m2024-08-06 07:22:05,757 [INFO] -                scipy: 1.11.4
+[37m2024-08-06 07:22:05,762 [INFO] -               joblib: 1.3.2
+[37m2024-08-06 07:22:05,767 [INFO] -              sklearn: 1.4.2
+[37m2024-08-06 07:22:05,771 [INFO] -                 pyod: 2.0.1
+[37m2024-08-06 07:22:05,776 [INFO] -             imblearn: 0.12.3
+[37m2024-08-06 07:22:05,780 [INFO] -    category_encoders: 2.6.3
+[37m2024-08-06 07:22:05,784 [INFO] -             lightgbm: 4.5.0
+[37m2024-08-06 07:22:05,789 [INFO] -                numba: 0.60.0
+[37m2024-08-06 07:22:05,793 [INFO] -             requests: 2.32.3
+[37m2024-08-06 07:22:05,798 [INFO] -           matplotlib: 3.7.5
+[37m2024-08-06 07:22:05,803 [INFO] -           scikitplot: 0.3.7
+[37m2024-08-06 07:22:05,808 [INFO] -          yellowbrick: 1.5
+[37m2024-08-06 07:22:05,812 [INFO] -               plotly: 5.23.0
+[37m2024-08-06 07:22:05,817 [INFO] -     plotly-resampler: Not installed
+[37m2024-08-06 07:22:05,821 [INFO] -              kaleido: 0.2.1
+[37m2024-08-06 07:22:05,826 [INFO] -            schemdraw: 0.15
+[37m2024-08-06 07:22:05,831 [INFO] -          statsmodels: 0.14.2
+[37m2024-08-06 07:22:05,836 [INFO] -               sktime: 0.26.0
+[37m2024-08-06 07:22:05,841 [INFO] -                tbats: 1.1.3
+[37m2024-08-06 07:22:05,845 [INFO] -             pmdarima: 2.0.4
+[37m2024-08-06 07:22:05,850 [INFO] -               psutil: 6.0.0
+[37m2024-08-06 07:22:05,854 [INFO] -           markupsafe: 2.1.5
+[37m2024-08-06 07:22:05,859 [INFO] -              pickle5: Not installed
+[37m2024-08-06 07:22:05,864 [INFO] -          cloudpickle: 3.0.0
+[37m2024-08-06 07:22:05,868 [INFO] -          deprecation: 2.1.0
+[37m2024-08-06 07:22:05,872 [INFO] -               xxhash: 3.4.1
+[37m2024-08-06 07:22:05,877 [INFO] -            wurlitzer: 3.1.1
+[37m2024-08-06 07:22:05,881 [INFO] - PyCaret optional dependencies:
+[37m2024-08-06 07:22:08,418 [INFO] -                 shap: 0.44.1
+[37m2024-08-06 07:22:08,418 [INFO] -            interpret: 0.6.2
+[37m2024-08-06 07:22:08,424 [INFO] -                 umap: 0.5.6
+[37m2024-08-06 07:22:08,428 [INFO] -      ydata_profiling: 4.9.0
+[37m2024-08-06 07:22:08,433 [INFO] -   explainerdashboard: 0.4.7
+[37m2024-08-06 07:22:08,438 [INFO] -              autoviz: Not installed
+[37m2024-08-06 07:22:08,443 [INFO] -            fairlearn: 0.7.0
+[37m2024-08-06 07:22:08,449 [INFO] -           deepchecks: Not installed
+[37m2024-08-06 07:22:08,454 [INFO] -              xgboost: 2.1.1
+[37m2024-08-06 07:22:08,458 [INFO] -             catboost: 1.2.5
+[37m2024-08-06 07:22:08,463 [INFO] -               kmodes: 0.12.2
+[37m2024-08-06 07:22:08,468 [INFO] -              mlxtend: 0.23.1
+[37m2024-08-06 07:22:08,472 [INFO] -        statsforecast: 1.5.0
+[37m2024-08-06 07:22:08,477 [INFO] -         tune_sklearn: Not installed
+[37m2024-08-06 07:22:08,482 [INFO] -                  ray: Not installed
+[37m2024-08-06 07:22:08,486 [INFO] -             hyperopt: 0.2.7
+[37m2024-08-06 07:22:08,491 [INFO] -               optuna: 3.6.1
+[37m2024-08-06 07:22:08,496 [INFO] -                skopt: 0.10.2
+[37m2024-08-06 07:22:08,500 [INFO] -               mlflow: 2.15.0
+[37m2024-08-06 07:22:08,505 [INFO] -               gradio: 4.40.0
+[37m2024-08-06 07:22:08,509 [INFO] -              fastapi: 0.112.0
+[37m2024-08-06 07:22:08,514 [INFO] -              uvicorn: 0.30.5
+[37m2024-08-06 07:22:08,518 [INFO] -               m2cgen: 0.10.0
+[37m2024-08-06 07:22:08,523 [INFO] -            evidently: 0.4.33
+[37m2024-08-06 07:22:08,527 [INFO] -                fugue: 0.8.7
+[37m2024-08-06 07:22:08,532 [INFO] -            streamlit: Not installed
+[37m2024-08-06 07:22:08,537 [INFO] -              prophet: Not installed
+[37m2024-08-06 07:22:08,541 [INFO] - None
+[37m2024-08-06 07:22:08,546 [INFO] - Set up GPU usage.
+[93m2024-08-06 07:22:08,551 [WARNING] - cuML is outdated or not found. Required version is >=23.08.
+                Please visit https://rapids.ai/install for installation instructions.
+[37m2024-08-06 07:22:08,555 [INFO] - Set up data.
+[37m2024-08-06 07:22:08,775 [INFO] - Set up folding strategy.
+[37m2024-08-06 07:22:08,775 [INFO] - Set up train/test split.
+[37m2024-08-06 07:22:08,780 [INFO] - Set up data.
+[37m2024-08-06 07:22:09,128 [INFO] - Set up index.
+[37m2024-08-06 07:22:09,135 [INFO] - Assigning column types.
+[37m2024-08-06 07:22:09,656 [INFO] - Engine successfully changes for model 'lr' to 'sklearn'.
+[37m2024-08-06 07:22:09,689 [INFO] - Engine for model 'knn' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:09,695 [INFO] - Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:09,835 [INFO] - Engine for model 'knn' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:09,841 [INFO] - Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:09,882 [INFO] - Engine successfully changes for model 'knn' to 'sklearn'.
+[37m2024-08-06 07:22:09,934 [INFO] - Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:10,025 [INFO] - Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+[37m2024-08-06 07:22:10,066 [INFO] - Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+[37m2024-08-06 07:22:10,248 [INFO] - Preparing preprocessing pipeline...
+[37m2024-08-06 07:22:10,361 [INFO] - Set up simple imputation.
+[37m2024-08-06 07:22:10,424 [INFO] - Set up column name cleaning.
+[37m2024-08-06 07:22:11,216 [INFO] - Finished creating preprocessing pipeline.
+[37m2024-08-06 07:22:11,221 [INFO] - Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+')))],
+         verbose=False)
+[37m2024-08-06 07:22:11,230 [INFO] - Creating final display dataframe.
+[37m2024-08-06 07:22:13,871 [INFO] - Setup _display_container:                     Description             Value
+0                    Session id               967
+1                        Target            target
+2                   Target type        Multiclass
+3           Original data shape     (232457, 129)
+4        Transformed data shape     (232457, 129)
+5   Transformed train set shape      (98793, 129)
+6    Transformed test set shape     (133664, 129)
+7              Numeric features               128
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                16
+15                      Use GPU              True
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              f97f
+[37m2024-08-06 07:22:14,063 [INFO] - setup() successfully completed in 9.57s...............
+[37m2024-08-06 07:22:14,063 [INFO] - Initializing set_config()
+[37m2024-08-06 07:22:14,068 [INFO] - set_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, variable=seed, value=123, kwargs={})
+[37m2024-08-06 07:22:14,073 [INFO] - Global variable: seed updated to 123
+[37m2024-08-06 07:22:14,078 [INFO] - set_config() successfully completed......................................
+[37m2024-08-06 07:22:14,083 [INFO] - Initializing create_model()
+[37m2024-08-06 07:22:14,087 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=xgboost, fold=None, round=4, cross_validation=False, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={'n_jobs': 16})
+[37m2024-08-06 07:22:14,092 [INFO] - Checking exceptions
+[37m2024-08-06 07:22:14,099 [INFO] - Importing libraries
+[37m2024-08-06 07:22:14,102 [INFO] - Copying training dataset
+[37m2024-08-06 07:22:14,553 [INFO] - Defining folds
+[37m2024-08-06 07:22:14,554 [INFO] - Declaring metric variables
+[37m2024-08-06 07:22:14,560 [INFO] - Importing untrained model
+[37m2024-08-06 07:22:14,565 [INFO] - Extreme Gradient Boosting Imported successfully
+[37m2024-08-06 07:22:14,571 [INFO] - Cross validation set to False
+[37m2024-08-06 07:22:14,575 [INFO] - Fitting Model
+[37m2024-08-06 07:22:17,472 [INFO] - Initializing predict_model()
+[37m2024-08-06 07:22:17,472 [INFO] - predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=None, max_leaves=None,
+                               min_child_weight=None, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=None, n_jobs=16,
+                               num_parallel_tree=None,
+                               objective='multi:softprob', ...))],
+         verbose=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x7f277dea36a0>)
+[37m2024-08-06 07:22:17,507 [INFO] - Checking exceptions
+[37m2024-08-06 07:22:17,512 [INFO] - Preloading libraries
+[37m2024-08-06 07:22:19,839 [INFO] - _display_container: 2
+[37m2024-08-06 07:22:19,840 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...)
+[37m2024-08-06 07:22:19,845 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:22:20,026 [INFO] - Scores on Val-set before tuning
+      Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
+Test    0.7588  0.9275  0.7588  0.7433  0.7408  0.6184  0.6225
+[37m2024-08-06 07:22:20,027 [INFO] - Initializing tune_model()
+[37m2024-08-06 07:22:20,033 [INFO] - tune_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), fold=10, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={})
+[37m2024-08-06 07:22:20,038 [INFO] - Checking exceptions
+[37m2024-08-06 07:22:20,343 [INFO] - Copying training dataset
+[37m2024-08-06 07:22:20,606 [INFO] - Checking base model
+[37m2024-08-06 07:22:20,606 [INFO] - Base model : Extreme Gradient Boosting
+[37m2024-08-06 07:22:20,612 [INFO] - Declaring metric variables
+[37m2024-08-06 07:22:20,616 [INFO] - Defining Hyperparameters
+[37m2024-08-06 07:22:20,759 [INFO] - Tuning with n_jobs=1
+[37m2024-08-06 07:22:20,759 [INFO] - Initializing RandomizedSearchCV
+[37m2024-08-06 07:31:08,825 [INFO] - best_params: {'actual_estimator__subsample': 0.7, 'actual_estimator__scale_pos_weight': 37.1, 'actual_estimator__reg_lambda': 0.7, 'actual_estimator__reg_alpha': 2, 'actual_estimator__n_estimators': 290, 'actual_estimator__min_child_weight': 3, 'actual_estimator__max_depth': 7, 'actual_estimator__learning_rate': 0.15, 'actual_estimator__colsample_bytree': 0.9}
+[37m2024-08-06 07:31:08,827 [INFO] - Hyperparameter search completed
+[37m2024-08-06 07:31:08,856 [INFO] - SubProcess create_model() called ==================================
+[37m2024-08-06 07:31:08,863 [INFO] - Initializing create_model()
+[37m2024-08-06 07:31:08,866 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f27a84f38d0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'subsample': 0.7, 'scale_pos_weight': 37.1, 'reg_lambda': 0.7, 'reg_alpha': 2, 'n_estimators': 290, 'min_child_weight': 3, 'max_depth': 7, 'learning_rate': 0.15, 'colsample_bytree': 0.9})
+[37m2024-08-06 07:31:08,870 [INFO] - Checking exceptions
+[37m2024-08-06 07:31:08,876 [INFO] - Importing libraries
+[37m2024-08-06 07:31:08,880 [INFO] - Copying training dataset
+[37m2024-08-06 07:31:09,226 [INFO] - Defining folds
+[37m2024-08-06 07:31:09,226 [INFO] - Declaring metric variables
+[37m2024-08-06 07:31:09,231 [INFO] - Importing untrained model
+[37m2024-08-06 07:31:09,235 [INFO] - Declaring custom model
+[37m2024-08-06 07:31:09,242 [INFO] - Extreme Gradient Boosting Imported successfully
+[37m2024-08-06 07:31:09,247 [INFO] - Starting cross validation
+[37m2024-08-06 07:31:09,253 [INFO] - Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+[37m2024-08-06 07:32:25,216 [INFO] - Calculating mean and std
+[37m2024-08-06 07:32:25,219 [INFO] - Creating metrics dataframe
+[37m2024-08-06 07:32:25,226 [INFO] - Finalizing model
+[37m2024-08-06 07:32:32,740 [INFO] - Uploading results into container
+[37m2024-08-06 07:32:32,740 [INFO] - Uploading model into container now
+[37m2024-08-06 07:32:32,746 [INFO] - _master_model_container: 1
+[37m2024-08-06 07:32:32,750 [INFO] - _display_container: 3
+[37m2024-08-06 07:32:32,755 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...)
+[37m2024-08-06 07:32:32,759 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:32:32,947 [INFO] - SubProcess create_model() end ==================================
+[37m2024-08-06 07:32:32,947 [INFO] - choose_better activated
+[37m2024-08-06 07:32:32,952 [INFO] - SubProcess create_model() called ==================================
+[37m2024-08-06 07:32:32,957 [INFO] - Initializing create_model()
+[37m2024-08-06 07:32:32,961 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+[37m2024-08-06 07:32:32,966 [INFO] - Checking exceptions
+[37m2024-08-06 07:32:32,971 [INFO] - Importing libraries
+[37m2024-08-06 07:32:32,974 [INFO] - Copying training dataset
+[37m2024-08-06 07:32:33,310 [INFO] - Defining folds
+[37m2024-08-06 07:32:33,310 [INFO] - Declaring metric variables
+[37m2024-08-06 07:32:33,316 [INFO] - Importing untrained model
+[37m2024-08-06 07:32:33,320 [INFO] - Declaring custom model
+[37m2024-08-06 07:32:33,328 [INFO] - Extreme Gradient Boosting Imported successfully
+[37m2024-08-06 07:32:33,332 [INFO] - Starting cross validation
+[37m2024-08-06 07:32:33,338 [INFO] - Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+[37m2024-08-06 07:32:56,015 [INFO] - Calculating mean and std
+[37m2024-08-06 07:32:56,016 [INFO] - Creating metrics dataframe
+[37m2024-08-06 07:32:56,024 [INFO] - Finalizing model
+[37m2024-08-06 07:32:58,325 [INFO] - Uploading results into container
+[37m2024-08-06 07:32:58,326 [INFO] - Uploading model into container now
+[37m2024-08-06 07:32:58,332 [INFO] - _master_model_container: 2
+[37m2024-08-06 07:32:58,336 [INFO] - _display_container: 4
+[37m2024-08-06 07:32:58,342 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...)
+[37m2024-08-06 07:32:58,347 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:32:58,511 [INFO] - SubProcess create_model() end ==================================
+[37m2024-08-06 07:32:58,512 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...) result for Accuracy is 0.7636
+[37m2024-08-06 07:32:58,517 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...) result for Accuracy is 0.7701
+[37m2024-08-06 07:32:58,522 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...) is best model
+[37m2024-08-06 07:32:58,526 [INFO] - choose_better completed
+[37m2024-08-06 07:32:58,539 [INFO] - _master_model_container: 2
+[37m2024-08-06 07:32:58,539 [INFO] - _display_container: 3
+[37m2024-08-06 07:32:58,545 [INFO] - XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...)
+[37m2024-08-06 07:32:58,548 [INFO] - tune_model() successfully completed......................................
+[37m2024-08-06 07:32:58,695 [INFO] - Initializing finalize_model()
+[37m2024-08-06 07:32:58,695 [INFO] - finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+[37m2024-08-06 07:32:58,701 [INFO] - Finalizing XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...)
+[37m2024-08-06 07:32:59,047 [INFO] - Initializing create_model()
+[37m2024-08-06 07:32:59,047 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+[37m2024-08-06 07:32:59,052 [INFO] - Checking exceptions
+[37m2024-08-06 07:32:59,058 [INFO] - Importing libraries
+[37m2024-08-06 07:32:59,062 [INFO] - Copying training dataset
+[37m2024-08-06 07:32:59,160 [INFO] - Defining folds
+[37m2024-08-06 07:32:59,160 [INFO] - Declaring metric variables
+[37m2024-08-06 07:32:59,166 [INFO] - Importing untrained model
+[37m2024-08-06 07:32:59,170 [INFO] - Declaring custom model
+[37m2024-08-06 07:32:59,175 [INFO] - Extreme Gradient Boosting Imported successfully
+[37m2024-08-06 07:32:59,180 [INFO] - Cross validation set to False
+[37m2024-08-06 07:32:59,183 [INFO] - Fitting Model
+[37m2024-08-06 07:33:10,405 [INFO] - Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.15,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=7, max_leaves=None, min_child_weight=3,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=290, n_jobs=16,
+                               num_parallel_tree=None,
+                               objective='multi:softprob', ...))],
+         verbose=False)
+[37m2024-08-06 07:33:10,406 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:33:10,588 [INFO] - _master_model_container: 2
+[37m2024-08-06 07:33:10,588 [INFO] - _display_container: 3
+[37m2024-08-06 07:33:10,599 [INFO] - Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=0.15,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=7, max_leaves=None, min_child_weight=3,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=290, n_jobs=16,
+                               num_parallel_tree=None,
+                               objective='multi:softprob', ...))],
+         verbose=False)
+[37m2024-08-06 07:33:10,599 [INFO] - finalize_model() successfully completed......................................
+[37m2024-08-06 07:33:11,093 [INFO] - Initializing predict_model()
+[37m2024-08-06 07:33:11,094 [INFO] - predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=0.9, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.15, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=7, max_leaves=None,
+              min_child_weight=3, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=290, n_jobs=16,
+              num_parallel_tree=None, objective='multi:softprob', ...), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x7f279afc6de0>)
+[37m2024-08-06 07:33:11,099 [INFO] - Checking exceptions
+[37m2024-08-06 07:33:11,103 [INFO] - Preloading libraries
+[37m2024-08-06 07:33:11,108 [INFO] - Set up data.
+[37m2024-08-06 07:33:11,381 [INFO] - Set up index.
+[37m2024-08-06 07:33:13,074 [INFO] - Scores on Val-set after tuning
+                       Model  Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
+0  Extreme Gradient Boosting    0.7643  0.9305  0.7643  0.7495  0.7464  0.6274  0.6314
+[37m2024-08-06 07:33:13,074 [INFO] - Shap.....
+[37m2024-08-06 07:33:24,833 [INFO] - Shap: neutrophil
+[37m2024-08-06 07:34:14,790 [INFO] - Shap: epithelial
+[37m2024-08-06 07:34:57,889 [INFO] - Shap: lymphocyte
+[37m2024-08-06 07:35:44,308 [INFO] - Shap: plasma
+[37m2024-08-06 07:36:28,358 [INFO] - Shap: eosinophil
+[37m2024-08-06 07:37:13,765 [INFO] - Shap: connective tissue
+[37m2024-08-06 07:38:02,409 [INFO] - Initializing create_model()
+[37m2024-08-06 07:38:02,409 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=catboost, fold=None, round=4, cross_validation=False, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+[37m2024-08-06 07:38:02,414 [INFO] - Checking exceptions
+[37m2024-08-06 07:38:02,421 [INFO] - Importing libraries
+[37m2024-08-06 07:38:02,424 [INFO] - Copying training dataset
+[37m2024-08-06 07:38:03,108 [INFO] - Defining folds
+[37m2024-08-06 07:38:03,108 [INFO] - Declaring metric variables
+[37m2024-08-06 07:38:03,114 [INFO] - Importing untrained model
+[37m2024-08-06 07:38:03,119 [INFO] - CatBoost Classifier Imported successfully
+[37m2024-08-06 07:38:03,124 [INFO] - Cross validation set to False
+[37m2024-08-06 07:38:03,128 [INFO] - Fitting Model
+[37m2024-08-06 07:38:08,974 [INFO] - Initializing predict_model()
+[37m2024-08-06 07:38:08,975 [INFO] - predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+'))),
+                ('actual_estimator',
+                 <catboost.core.CatBoostClassifier object at 0x7f274c7ec410>)],
+         verbose=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=False, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x7f277dc47100>)
+[37m2024-08-06 07:38:08,980 [INFO] - Checking exceptions
+[37m2024-08-06 07:38:08,985 [INFO] - Preloading libraries
+[37m2024-08-06 07:38:11,672 [INFO] - _display_container: 5
+[37m2024-08-06 07:38:11,672 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c7ec410>
+[37m2024-08-06 07:38:11,680 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:38:11,841 [INFO] - Scores on Val-set before tuning
+      Accuracy     AUC  Recall   Prec.      F1  Kappa     MCC
+Test    0.7639  0.9301  0.7639  0.7485  0.7473  0.628  0.6312
+[37m2024-08-06 07:38:11,841 [INFO] - Initializing tune_model()
+[37m2024-08-06 07:38:11,847 [INFO] - tune_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7ec410>, fold=10, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={})
+[37m2024-08-06 07:38:11,852 [INFO] - Checking exceptions
+[37m2024-08-06 07:38:12,001 [INFO] - Copying training dataset
+[37m2024-08-06 07:38:12,238 [INFO] - Checking base model
+[37m2024-08-06 07:38:12,239 [INFO] - Base model : CatBoost Classifier
+[37m2024-08-06 07:38:12,246 [INFO] - Declaring metric variables
+[37m2024-08-06 07:38:12,255 [INFO] - Defining Hyperparameters
+[37m2024-08-06 07:38:12,411 [INFO] - Tuning with n_jobs=1
+[37m2024-08-06 07:38:12,411 [INFO] - Initializing RandomizedSearchCV
+[37m2024-08-06 07:43:10,879 [INFO] - best_params: {'actual_estimator__random_strength': 0.3, 'actual_estimator__n_estimators': 50, 'actual_estimator__l2_leaf_reg': 10, 'actual_estimator__eta': 0.4, 'actual_estimator__depth': 5}
+[37m2024-08-06 07:43:10,881 [INFO] - Hyperparameter search completed
+[37m2024-08-06 07:43:10,887 [INFO] - SubProcess create_model() called ==================================
+[37m2024-08-06 07:43:10,891 [INFO] - Initializing create_model()
+[37m2024-08-06 07:43:10,896 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7ec1d0>, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f274c75c250>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'random_strength': 0.3, 'n_estimators': 50, 'l2_leaf_reg': 10, 'eta': 0.4, 'depth': 5})
+[37m2024-08-06 07:43:10,900 [INFO] - Checking exceptions
+[37m2024-08-06 07:43:10,905 [INFO] - Importing libraries
+[37m2024-08-06 07:43:10,910 [INFO] - Copying training dataset
+[37m2024-08-06 07:43:11,412 [INFO] - Defining folds
+[37m2024-08-06 07:43:11,412 [INFO] - Declaring metric variables
+[37m2024-08-06 07:43:11,417 [INFO] - Importing untrained model
+[37m2024-08-06 07:43:11,422 [INFO] - Declaring custom model
+[37m2024-08-06 07:43:11,428 [INFO] - CatBoost Classifier Imported successfully
+[37m2024-08-06 07:43:11,433 [INFO] - Starting cross validation
+[37m2024-08-06 07:43:11,439 [INFO] - Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+[37m2024-08-06 07:43:36,051 [INFO] - Calculating mean and std
+[37m2024-08-06 07:43:36,052 [INFO] - Creating metrics dataframe
+[37m2024-08-06 07:43:36,059 [INFO] - Finalizing model
+[37m2024-08-06 07:43:38,489 [INFO] - Uploading results into container
+[37m2024-08-06 07:43:38,491 [INFO] - Uploading model into container now
+[37m2024-08-06 07:43:38,496 [INFO] - _master_model_container: 3
+[37m2024-08-06 07:43:38,500 [INFO] - _display_container: 6
+[37m2024-08-06 07:43:38,505 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c770e50>
+[37m2024-08-06 07:43:38,509 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:43:38,732 [INFO] - SubProcess create_model() end ==================================
+[37m2024-08-06 07:43:38,733 [INFO] - choose_better activated
+[37m2024-08-06 07:43:38,738 [INFO] - SubProcess create_model() called ==================================
+[37m2024-08-06 07:43:38,743 [INFO] - Initializing create_model()
+[37m2024-08-06 07:43:38,748 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7ec410>, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+[37m2024-08-06 07:43:38,753 [INFO] - Checking exceptions
+[37m2024-08-06 07:43:38,758 [INFO] - Importing libraries
+[37m2024-08-06 07:43:38,762 [INFO] - Copying training dataset
+[37m2024-08-06 07:43:39,211 [INFO] - Defining folds
+[37m2024-08-06 07:43:39,211 [INFO] - Declaring metric variables
+[37m2024-08-06 07:43:39,216 [INFO] - Importing untrained model
+[37m2024-08-06 07:43:39,221 [INFO] - Declaring custom model
+[37m2024-08-06 07:43:39,226 [INFO] - CatBoost Classifier Imported successfully
+[37m2024-08-06 07:43:39,231 [INFO] - Starting cross validation
+[37m2024-08-06 07:43:39,238 [INFO] - Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+[37m2024-08-06 07:44:52,874 [INFO] - Calculating mean and std
+[37m2024-08-06 07:44:52,877 [INFO] - Creating metrics dataframe
+[37m2024-08-06 07:44:52,884 [INFO] - Finalizing model
+[37m2024-08-06 07:45:00,560 [INFO] - Uploading results into container
+[37m2024-08-06 07:45:00,561 [INFO] - Uploading model into container now
+[37m2024-08-06 07:45:00,567 [INFO] - _master_model_container: 4
+[37m2024-08-06 07:45:00,571 [INFO] - _display_container: 7
+[37m2024-08-06 07:45:00,576 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>
+[37m2024-08-06 07:45:00,581 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:45:00,817 [INFO] - SubProcess create_model() end ==================================
+[37m2024-08-06 07:45:00,817 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c7d9a50> result for Accuracy is 0.7679
+[37m2024-08-06 07:45:00,823 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c770e50> result for Accuracy is 0.7509
+[37m2024-08-06 07:45:00,827 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c7d9a50> is best model
+[37m2024-08-06 07:45:00,831 [INFO] - choose_better completed
+[37m2024-08-06 07:45:00,835 [INFO] - Original model was better than the tuned model, hence it will be returned. NOTE: The display metrics are for the tuned model (not the original one).
+[37m2024-08-06 07:45:00,850 [INFO] - _master_model_container: 4
+[37m2024-08-06 07:45:00,851 [INFO] - _display_container: 6
+[37m2024-08-06 07:45:00,855 [INFO] - <catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>
+[37m2024-08-06 07:45:00,859 [INFO] - tune_model() successfully completed......................................
+[37m2024-08-06 07:45:01,010 [INFO] - Initializing finalize_model()
+[37m2024-08-06 07:45:01,010 [INFO] - finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>, fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+[37m2024-08-06 07:45:01,015 [INFO] - Finalizing <catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>
+[37m2024-08-06 07:45:01,436 [INFO] - Initializing create_model()
+[37m2024-08-06 07:45:01,436 [INFO] - create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>, fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+[37m2024-08-06 07:45:01,442 [INFO] - Checking exceptions
+[37m2024-08-06 07:45:01,448 [INFO] - Importing libraries
+[37m2024-08-06 07:45:01,452 [INFO] - Copying training dataset
+[37m2024-08-06 07:45:01,549 [INFO] - Defining folds
+[37m2024-08-06 07:45:01,549 [INFO] - Declaring metric variables
+[37m2024-08-06 07:45:01,554 [INFO] - Importing untrained model
+[37m2024-08-06 07:45:01,559 [INFO] - Declaring custom model
+[37m2024-08-06 07:45:01,565 [INFO] - CatBoost Classifier Imported successfully
+[37m2024-08-06 07:45:01,571 [INFO] - Cross validation set to False
+[37m2024-08-06 07:45:01,576 [INFO] - Fitting Model
+[37m2024-08-06 07:45:10,816 [INFO] - Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+'))),
+                ('actual_estimator',
+                 <catboost.core.CatBoostClassifier object at 0x7f274c7f4a10>)],
+         verbose=False)
+[37m2024-08-06 07:45:10,816 [INFO] - create_model() successfully completed......................................
+[37m2024-08-06 07:45:11,063 [INFO] - _master_model_container: 4
+[37m2024-08-06 07:45:11,064 [INFO] - _display_container: 6
+[37m2024-08-06 07:45:11,073 [INFO] - Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Color - nuclei - Grey_mean',
+                                             'Color - nuclei - Grey_std',
+                                             'Color - nuclei - Grey_min',
+                                             'Color - nuclei - Grey_max',
+                                             'Color - nuclei - R_mean',
+                                             'Color - nuclei - G_mean',
+                                             'Color - nuclei - B_mean',
+                                             'Color - nuclei - R_std',
+                                             'Color - nuclei - G_std',
+                                             'Color - nuclei - B_std',
+                                             'Color - nuclei - R_m...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('clean_column_names',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=CleanColumnNames(match='[\\]\\[\\,\\{\\}\\"\\:]+'))),
+                ('actual_estimator',
+                 <catboost.core.CatBoostClassifier object at 0x7f274c7f4a10>)],
+         verbose=False)
+[37m2024-08-06 07:45:11,074 [INFO] - finalize_model() successfully completed......................................
+[37m2024-08-06 07:45:11,498 [INFO] - Initializing predict_model()
+[37m2024-08-06 07:45:11,499 [INFO] - predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f279d0e1710>, estimator=<catboost.core.CatBoostClassifier object at 0x7f274c7d9a50>, probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x7f27641c0d60>)
+[37m2024-08-06 07:45:11,505 [INFO] - Checking exceptions
+[37m2024-08-06 07:45:11,509 [INFO] - Preloading libraries
+[37m2024-08-06 07:45:11,514 [INFO] - Set up data.
+[37m2024-08-06 07:45:11,814 [INFO] - Set up index.
+[37m2024-08-06 07:45:13,211 [INFO] - Scores on Val-set after tuning
+                 Model  Accuracy     AUC  Recall   Prec.      F1  Kappa     MCC
+0  CatBoost Classifier    0.7639  0.9301  0.7639  0.7485  0.7473  0.628  0.6312
+[37m2024-08-06 07:45:13,212 [INFO] - Shap.....
+[37m2024-08-06 07:45:28,320 [INFO] - Shap: neutrophil
+[37m2024-08-06 07:46:05,554 [INFO] - Shap: epithelial
+[37m2024-08-06 07:46:46,484 [INFO] - Shap: lymphocyte
+[37m2024-08-06 07:47:29,964 [INFO] - Shap: plasma
+[37m2024-08-06 07:48:12,090 [INFO] - Shap: eosinophil
+[37m2024-08-06 07:48:54,509 [INFO] - Shap: connective tissue

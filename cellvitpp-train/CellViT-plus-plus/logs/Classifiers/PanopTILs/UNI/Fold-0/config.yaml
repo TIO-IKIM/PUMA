@@ -1,0 +1,49 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 19
+gpu: 0
+data:
+  dataset: PanopTILs
+  dataset_path: /panoptils
+  train_filelist: /panoptils/train/splits/fold_0/train.csv
+  val_filelist: /panoptils/train/splits/fold_0/val.csv
+  normalize_stains_train: false
+  normalize_stains_val: false
+  label_map:
+    '0': Other Cells
+    '1': Epithelial Cells
+    '2': Stromal Cells
+    '3': TILs
+  num_classes: 4
+cellvit_path: ./checkpoints/CellViT-UNI-x40-AMP.pth
+training:
+  weighted_sampling: true
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.0002497859248731515
+    weight_decay: 0.0003219355538648545
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  weight_list:
+  - 19.62
+  - 2.41
+  - 3.43
+  - 4.12
+  scheduler:
+    scheduler_type: constant
+model:
+  hidden_dim: 128

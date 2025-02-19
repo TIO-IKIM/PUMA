@@ -1,0 +1,97 @@
+[37m2024-07-10 19:52:51,964 [INFO] - <All keys matched successfully>
+[37m2024-07-10 19:52:52,474 [INFO] - <All keys matched successfully>
+[37m2024-07-10 19:52:52,476 [INFO] - Loading inference transformations
+[37m2024-07-10 19:53:08,017 [INFO] - Extraction detection metrics - F1: 0.770, Precision: 0.883, Recall: 0.695
+[37m2024-07-10 19:53:08,260 [INFO] - Global Scores - Without taking cell detection quality into account:
+[37m2024-07-10 19:53:08,261 [INFO] - F1: 0.683 - Prec: 0.683 - Rec: 0.683 - Acc: 0.683 - Auroc: 0.909
+[37m2024-07-10 19:53:11,019 [INFO] - Updating PanNuke-cell-preds with dataset specific classes
+[37m2024-07-10 19:53:12,281 [INFO] - Calculating dataset scores according to TIA Evaluation guidelines
+[37m2024-07-10 19:53:14,296 [INFO] - {'Pre/tumor_nonMitotic': 0.679, 'Rec/tumor_nonMitotic': 0.9119, 'F1/tumor_nonMitotic': 0.7784, 'Pre/tumor_mitotic': 0.0, 'Rec/tumor_mitotic': 0.0, 'F1/tumor_mitotic': 0.0, 'Pre/nonTILnonMQ_stromal': 0.6129, 'Rec/nonTILnonMQ_stromal': 0.7776, 'F1/nonTILnonMQ_stromal': 0.6855, 'Pre/macrophage': 0.1667, 'Rec/macrophage': 0.0424, 'F1/macrophage': 0.0676, 'Pre/lymphocyte': 0.5882, 'Rec/lymphocyte': 0.8587, 'F1/lymphocyte': 0.6981, 'Pre/plasma_cell': 0.6497, 'Rec/plasma_cell': 0.7906, 'F1/plasma_cell': 0.7133, 'Pre/other_nucleus': 0.0, 'Rec/other_nucleus': 0.0, 'F1/other_nucleus': 0.0, 'mF1': 0.4204142857142857}
+[37m2024-07-10 19:53:14,298 [INFO] - **************************************************
+[37m2024-07-10 19:53:14,301 [INFO] - {
+  "cellvit_scores": {
+    "F1": 0.7703041760251617,
+    "Prec": 0.8832641121519952,
+    "Rec": 0.695454830249982
+  },
+  "classifier": {
+    "global": {
+      "F1": 0.6834755539894104,
+      "Prec": 0.6834755539894104,
+      "Rec": 0.6834755539894104,
+      "Acc": 0.6834755539894104,
+      "Auroc": 0.9085546135902405,
+      "AP": 0.5068125128746033
+    }
+  },
+  "pipeline": {
+    "detection_scores_tia": {
+      "binary": {
+        "f1": 0.7757627741698321,
+        "prec": 0.6958672235656188,
+        "rec": 0.8763842746400886
+      },
+      "cell_types": {
+        "tumor_nonMitotic": {
+          "f1": 0.5935975609756098,
+          "prec": 0.5119642387588745,
+          "rec": 0.70620239390642
+        },
+        "tumor_mitotic": {
+          "f1": 0.0,
+          "prec": NaN,
+          "rec": 0.0
+        },
+        "nonTILnonMQ_stromal": {
+          "f1": 0.34394904458598724,
+          "prec": 0.31213872832369943,
+          "rec": 0.3829787234042553
+        },
+        "macrophage": {
+          "f1": 0.0149812734082397,
+          "prec": 0.043478260869565216,
+          "rec": 0.00904977375565611
+        },
+        "lymphocyte": {
+          "f1": 0.43639672429481347,
+          "prec": 0.3626739261947973,
+          "rec": 0.5477386934673367
+        },
+        "plasma_cell": {
+          "f1": 0.28211284513805523,
+          "prec": 0.2756598240469208,
+          "rec": 0.28887523048555624
+        },
+        "other_nucleus": {
+          "f1": 0.0,
+          "prec": NaN,
+          "rec": 0.0
+        }
+      }
+    },
+    "scores_ocelot": {
+      "Pre/tumor_nonMitotic": 0.679,
+      "Rec/tumor_nonMitotic": 0.9119,
+      "F1/tumor_nonMitotic": 0.7784,
+      "Pre/tumor_mitotic": 0.0,
+      "Rec/tumor_mitotic": 0.0,
+      "F1/tumor_mitotic": 0.0,
+      "Pre/nonTILnonMQ_stromal": 0.6129,
+      "Rec/nonTILnonMQ_stromal": 0.7776,
+      "F1/nonTILnonMQ_stromal": 0.6855,
+      "Pre/macrophage": 0.1667,
+      "Rec/macrophage": 0.0424,
+      "F1/macrophage": 0.0676,
+      "Pre/lymphocyte": 0.5882,
+      "Rec/lymphocyte": 0.8587,
+      "F1/lymphocyte": 0.6981,
+      "Pre/plasma_cell": 0.6497,
+      "Rec/plasma_cell": 0.7906,
+      "F1/plasma_cell": 0.7133,
+      "Pre/other_nucleus": 0.0,
+      "Rec/other_nucleus": 0.0,
+      "F1/other_nucleus": 0.0,
+      "mF1": 0.4204142857142857
+    }
+  }
+}

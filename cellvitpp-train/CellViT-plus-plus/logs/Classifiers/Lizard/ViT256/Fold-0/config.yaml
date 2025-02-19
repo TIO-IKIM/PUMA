@@ -1,0 +1,54 @@
+logging:
+  mode: offline
+  project: cellvit++
+  notes: cellvit++
+  log_comment: cellvit++
+  wandb_dir: ./logs_local/wandb
+  log_dir: ./logs_local
+  level: Info
+random_seed: 19
+gpu: 0
+data:
+  dataset: lizard_preextracted
+  dataset_path: /Lizard-CellViT
+  train_fold: fold_1
+  val_fold: fold_2
+  normalize_stains_train: false
+  normalize_stains_val: false
+  num_classes: 6
+  label_map:
+    '0': Neutrophil
+    '1': Epithelial
+    '2': Lymphocyte
+    '3': Plasma
+    '4': Eosinophil
+    '5': Connective tissue
+  network_name: ViT256
+cellvit_path: ./checkpoints/CellViT-256-x40-AMP.pth
+model:
+  hidden_dim: 512
+training:
+  weighted_sampling: true
+  cache_cell_dataset: true
+  batch_size: 256
+  epochs: 50
+  drop_rate: 0.1
+  optimizer: AdamW
+  optimizer_hyperparameter:
+    betas:
+    - 0.85
+    - 0.9
+    lr: 0.00080922784809694
+    weight_decay: 0.0006315410730313352
+  early_stopping_patience: 20
+  mixed_precision: true
+  eval_every: 1
+  weight_list:
+  - 103.09
+  - 2.02
+  - 4.88
+  - 17.39
+  - 136.99
+  - 4.41
+  scheduler:
+    scheduler_type: exponential
