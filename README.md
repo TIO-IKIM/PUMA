@@ -42,7 +42,7 @@ Our solution consists of two frameworks (1) nnUNet for the tissue segmentation a
 - nnUNet: https://github.com/MIC-DKFZ/nnUNet
 - CellViT++: https://github.com/TIO-IKIM/CellViT-plus-plus
 
-All checkpoints can either be found in our [GDrive](https://drive.google.com/drive/folders/103MTby18DAWhiP6Vr8qnbiDPmiYkxPBX) folder or on Zenodo.
+All checkpoints can either be found in our [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) folder or on Zenodo.
 
 
 ## Docker creation for Inference (submission)
@@ -50,7 +50,7 @@ All checkpoints can either be found in our [GDrive](https://drive.google.com/dri
 ### Prerequisites
 
 #### nnU-Net Checkpoints
-Download the tissue segmentation checkpoint from our [GDrive](https://drive.google.com/drive/folders/103MTby18DAWhiP6Vr8qnbiDPmiYkxPBX) and place it in:
+Download the tissue segmentation checkpoint from our [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) and place it in:
 - Track 1: `./Track-1-Submission/nnunet-inference/weights/Dataset998_PUMA/nnUNetTrainer__nnUNetPlans__2d_512/fold_0/checkpoint_best.pth`
 - Track 2: `./Track-2-Submission/nnunet-inference/weights/Dataset998_PUMA/nnUNetTrainer__nnUNetPlans__2d_512/fold_0/checkpoint_best.pth`
 
@@ -120,7 +120,7 @@ Dataset999_Lung
 ```
 
 ##### 2. Download and prepare fine-tuning dataset (PUMA)
-Download the dataset from the challenge organizers and bring it into the nnunet format. To do so, use the provided script by the challenge organizers to convert .geojson annotations into .png files. We just used the ROI images, not the context images. For the ease of use, we reuploaded the dataset in the google-drive folder (https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46?usp=sharing). Due to the license, we cannot share the processed pre-training dataset.
+Download the dataset from the challenge organizers and bring it into the nnunet format. To do so, use the provided script by the challenge organizers to convert .geojson annotations into .png files. We just used the ROI images, not the context images. For the ease of use, we reuploaded the dataset in the google-drive folder (https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46). Due to the license, we cannot share the processed pre-training dataset.
 
 ##### 3. Pre-process the pre-training dataset
 
@@ -168,9 +168,9 @@ Just keep the best checkpoint for the submission.
 
 ### CellViT++
 
-1. Follow the installation instruction for the CellViT++ algorithm presented here: `https://github.com/TIO-IKIM/CellViT-plus-plus`. For simplicity, we added the code in the cellvitpp-train folder as well. To make the model work, download the CellViT-SAM-H-x40-AMP.pth checkpoint from the [GDrive](https://drive.google.com/drive/folders/103MTby18DAWhiP6Vr8qnbiDPmiYkxPBX) (placed in the cellvit++ folder)
+1. Follow the installation instruction for the CellViT++ algorithm presented here: `https://github.com/TIO-IKIM/CellViT-plus-plus`. For simplicity, we added the code in the cellvitpp-train folder as well. To make the model work, download the CellViT-SAM-H-x40-AMP.pth checkpoint from the [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) (placed in the cellvit++ folder)
 
-2. Download the preprocessed dataset which is already in the required CellViT++ format from the [GDrive](https://drive.google.com/drive/folders/103MTby18DAWhiP6Vr8qnbiDPmiYkxPBX) folder (placed under datasets/nuclei). There are both datasets for track 1 and track 2.
+2. Download the preprocessed dataset which is already in the required CellViT++ format from the [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) folder (placed under datasets/nuclei). There are both datasets for track 1 and track 2.
 
 3. We performed a Sweep using 100 runs and bayesian optimization to determine the best hyperparameter setting. Based on the sweep results, we retrieved to following optimal configurations:
    1. track-1: [./cellvitpp-train/track-1/training-configuration.yaml](cellvitpp-train/track-1/training-configuration.yaml)
