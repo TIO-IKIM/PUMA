@@ -3,7 +3,7 @@
 # PUMA Challenge solution IKIM
 
 > [!IMPORTANT]
-> A full version of the code including model checkpoints is hosted on Zenodo
+> A full version of the code including model checkpoints is hosted on Zenodo under https://zenodo.org/uploads/14894011
 
 This repository contains the training instructions as well as the Dockerized environment for running the PUMA challenge evaluation for track 1 and track 2 for the team "UME". The container includes all necessary dependencies to execute the model and run inference on input data. The training instructions are provided in the train folder. 
 
@@ -42,7 +42,7 @@ Our solution consists of two frameworks (1) nnUNet for the tissue segmentation a
 - nnUNet: https://github.com/MIC-DKFZ/nnUNet
 - CellViT++: https://github.com/TIO-IKIM/CellViT-plus-plus
 
-All checkpoints can either be found in our [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) folder or on Zenodo.
+All checkpoints can either be found in our [GDrive](https://drive.google.com/drive/folders/1enKbMiYK7gnbsL2nn06R146XTFo5Uq46) folder or on [Zenodo](https://zenodo.org/uploads/14894011).
 
 
 ## Docker creation for Inference (submission)
